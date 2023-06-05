@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1142304696	enemy_Die			\Default Work Unit\Enemies\enemy_Die	
+

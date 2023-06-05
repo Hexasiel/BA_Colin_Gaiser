@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="187290962" Type="User" Language="SFX" Hash="{E89A1261-C43C-820E-6E53-CF5AFEEF3366}">
+			<ShortName>DefaultBank</ShortName>
+			<Path>DefaultBank.bnk</Path>
+			<Media>
+				<File Id="526829532" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Limbo_Steps_Grass.wav</ShortName>
+					<CachePath>SFX/Limbo_Steps_Grass_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1142304696" Name="enemy_Die" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1895691808" Name="enemy_Grunt" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2453392179" Name="player_FootStep" DurationType="OneShot" DurationMin="10.5" DurationMax="10.5">
+					<MediaRefs>
+						<MediaRef Id="526829532"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1170980947" Name="player_PickUpGold" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1526036006" Name="tower_Collapse" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3672125978" Name="tower_Hit" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{986487A9-2683-E47A-8688-3D0FE6FDB954}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{F9D77F58-3C34-D82F-94AF-B01EADEBA561}</FileHash>
+</SoundBanksInfo>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{49E2D0E3-FC43-4041-8C61-57DF7C860E9B}" SchemaVersion="110">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{49E2D0E3-FC43-4041-8C61-57DF7C860E9B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Player" ID="{C7676990-2E76-4BD9-AE66-9FB9960772B5}" ShortID="1039612131">
+					<ChildrenList>
+						<Event Name="player_PickUpGold" ID="{9CFBEB7C-3727-44E4-99EA-C77B56D60C66}"/>
+						<Event Name="player_FootStep" ID="{93B77734-5FB1-4D89-A449-77B267353808}">
+							<ChildrenList>
+								<Action Name="" ID="{C406F046-7063-417C-A4FB-EE07466E0C2A}" ShortID="1002920304">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Limbo_Steps_Grass" ID="{7C2DEC75-BAE7-49A9-BCED-F791FF3A8E42}" WorkUnitID="{481E7428-1181-4879-958C-0F804E0AD950}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Buildings" ID="{9F9FCF2D-677B-4B6D-94C3-241BFBC00333}" ShortID="85005930">
+					<ChildrenList>
+						<Folder Name="Tower" ID="{64D08E1E-D079-47CE-BBD2-9BDCE469FE70}" ShortID="909958511">
+							<ChildrenList>
+								<Event Name="tower_Hit" ID="{4DEF4387-C369-470B-9EFA-E656C2C3FDF8}"/>
+								<Event Name="tower_Collapse" ID="{865C14D5-5624-450D-8AE1-8D48F95C1A12}"/>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Mine" ID="{EEBB5B26-2A83-4AF0-858E-F9104D65C2A3}" ShortID="794094856"/>
+						<Folder Name="Portal" ID="{AC2BB86B-B6AD-4F95-8BC9-BDA72909FB24}" ShortID="670377686"/>
+						<Folder Name="Wall" ID="{A0C70847-5503-4B49-A9C1-10884B81E6C2}" ShortID="302795978"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Enemies" ID="{6FE42332-EE0A-4987-9D6B-324FBED3C7F3}" ShortID="977367755">
+					<ChildrenList>
+						<Event Name="enemy_Grunt" ID="{C3D5C25A-AED8-41EA-94DB-429FA31E3B72}"/>
+						<Event Name="enemy_Die" ID="{FD3366E8-9010-49B6-9B4C-2821D212FD2E}"/>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

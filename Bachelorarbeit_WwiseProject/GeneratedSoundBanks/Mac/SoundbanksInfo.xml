@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="145">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Mac</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1142304696" Type="Event" Language="SFX" Hash="{81159C40-71EB-F2AC-F5DE-F6E6A772D298}">
+			<ShortName>enemy_Die</ShortName>
+			<Path>Event/enemy_Die.bnk</Path>
+			<Events>
+				<Event Id="1142304696" Name="enemy_Die" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1170980947" Type="Event" Language="SFX" Hash="{7BDBF200-35B0-76CE-1C44-18E53DAC1F11}">
+			<ShortName>player_PickUpGold</ShortName>
+			<Path>Event/player_PickUpGold.bnk</Path>
+			<Events>
+				<Event Id="1170980947" Name="player_PickUpGold" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F56A610C-C7C4-F874-B68B-7ADDF94EBB7A}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+		</SoundBank>
+		<SoundBank Id="1526036006" Type="Event" Language="SFX" Hash="{64C1A3B0-6E94-0E6E-1236-30750DADA983}">
+			<ShortName>tower_Collapse</ShortName>
+			<Path>Event/tower_Collapse.bnk</Path>
+			<Events>
+				<Event Id="1526036006" Name="tower_Collapse" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1895691808" Type="Event" Language="SFX" Hash="{3BB991BA-0CB7-B5E6-1EEA-6B7675B0CF59}">
+			<ShortName>enemy_Grunt</ShortName>
+			<Path>Event/enemy_Grunt.bnk</Path>
+			<Events>
+				<Event Id="1895691808" Name="enemy_Grunt" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="2453392179" Type="Event" Language="SFX" Hash="{982027FD-CB45-2C2D-B657-7AA6E7FFD1B8}">
+			<ShortName>player_FootStep</ShortName>
+			<Path>Event/player_FootStep.bnk</Path>
+			<Media>
+				<File Id="526829532" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Limbo_Steps_Grass.wav</ShortName>
+					<Path>Media/526829532.wem</Path>
+					<CachePath>SFX/Limbo_Steps_Grass_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2453392179" Name="player_FootStep" DurationType="OneShot" DurationMin="10.5" DurationMax="10.5">
+					<MediaRefs>
+						<MediaRef Id="526829532"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="3672125978" Type="Event" Language="SFX" Hash="{C2FE0125-92ED-BB06-B9C6-CC743C5FAE42}">
+			<ShortName>tower_Hit</ShortName>
+			<Path>Event/tower_Hit.bnk</Path>
+			<Events>
+				<Event Id="3672125978" Name="tower_Hit" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{E8F0D5F1-DE4D-FA88-849F-A68A5AD31B5A}</FileHash>
+</SoundBanksInfo>

@@ -1,0 +1,11 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1142304696	enemy_Die			\Default Work Unit\Enemies\enemy_Die	
+	1170980947	player_PickUpGold			\Default Work Unit\Player\player_PickUpGold	
+	1526036006	tower_Collapse			\Default Work Unit\Buildings\Tower\tower_Collapse	
+	1895691808	enemy_Grunt			\Default Work Unit\Enemies\enemy_Grunt	
+	2453392179	player_FootStep			\Default Work Unit\Player\player_FootStep	
+	3672125978	tower_Hit			\Default Work Unit\Buildings\Tower\tower_Hit	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	526829532	Limbo_Steps_Grass	D:\Work\Unity\Bachelorarbeit\Bachelorarbeit_WwiseProject\.cache\Windows\SFX\Limbo_Steps_Grass_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Limbo_Steps_Grass		1852296
+
