@@ -794,9 +794,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentMenu: {fileID: 0}
-  m_health: 10
-  m_maxHealth: 0a000000140000001e000000
-  m_upgradeCost: 00000000050000000a000000
+  m_health: 500
+  m_maxHealth: f4010000ee020000e8030000
+  m_upgradeCost: 0a0000000f0000001e000000
   m_level: 0
   m_maxLevel: 2
   m_sprites:
@@ -806,11 +806,11 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7435146924782358467, guid: 98ad0ffbaf77b7b4f8d4ef5968af6edd, type: 3}
   m_targetInRange: 0
   m_attackRange:
-  - 20
-  - 20
+  - 15
+  - 15
   - 20
   m_attackSpeed:
+  - 0.5
   - 1
-  - 2
-  - 3
+  - 1
   m_canAttack: 1

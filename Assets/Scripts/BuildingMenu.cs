@@ -127,11 +127,11 @@ public class BuildingMenu : MonoBehaviour
             Debug.LogWarning("Trying to upgrade a building, but the Building is at max Level already!");
             return;
         }
-        if (currentBuilding.m_upgradeCost[currentBuilding.m_level + 1] <= PlayerController.instance.gold)
+        if (currentBuilding.m_upgradeCost[currentBuilding.m_level +1] <= PlayerController.instance.gold)
         {
-            currentBuilding.Upgrade();
-            PlayerController.instance.gold -= currentBuilding.m_upgradeCost[currentBuilding.m_level +1];
+            PlayerController.instance.gold -= currentBuilding.m_upgradeCost[currentBuilding.m_level + 1];
             PlayerController.instance.gameUI.SetGoldText();
+            currentBuilding.Upgrade();
         }
         else
         {

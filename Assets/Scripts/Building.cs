@@ -21,7 +21,7 @@ public class Building : MonoBehaviour
         }
     }
 
-    public void Upgrade()
+    public virtual void Upgrade()
     {
         if(m_level < m_maxLevel)
         {

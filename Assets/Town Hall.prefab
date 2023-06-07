@@ -794,12 +794,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentMenu: {fileID: 0}
-  m_health: 30
-  m_maxHealth: 1e0000001e0000001e000000
-  m_upgradeCost: 010000001400000032000000
+  m_health: 1000
+  m_maxHealth: e8030000dc050000d0070000
+  m_upgradeCost: 010000003200000064000000
   m_level: 0
   m_maxLevel: 2
   m_sprites:
   - {fileID: 21300000, guid: c10a48c836ece074aae2aefb2fcb0abe, type: 3}
   - {fileID: 21300000, guid: 96c2134ac5ffd1840b4fff1f72c350b8, type: 3}
   - {fileID: 21300000, guid: 406059541fe03b7478fd91a6bb71ea5e, type: 3}
+  buildslots:
+  - {fileID: 7656855518324197571, guid: 096143b4f4385ab4e8ec21bdd55faa9b, type: 3}
+  - {fileID: 1704659770688316617, guid: a5043a694d6e5384b993dbae41403533, type: 3}
+  - {fileID: 4336438261983528480, guid: 3df9cdd379ddbfd48bb9dfd56248a778, type: 3}
