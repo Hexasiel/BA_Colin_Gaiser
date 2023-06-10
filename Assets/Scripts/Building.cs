@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Building : MonoBehaviour
+public class Building : MonoBehaviour, IAttackable
 {
     public BuildingMenu parentMenu;
     public int m_health;
@@ -12,7 +12,7 @@ public class Building : MonoBehaviour
     public int m_maxLevel;
     public Sprite[] m_sprites;
 
-    public void GetDamage(int dmg)
+    void IAttackable.GetDamage(int dmg)
     {
         m_health -= dmg;
         if(m_health <= 0)

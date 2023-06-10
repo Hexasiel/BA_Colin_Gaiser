@@ -66,6 +66,8 @@ public class BuildingMenu : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        if (PlayerController.instance.battleMode)
+            return;
         SetActiveElement(0);
       foreach( Transform t in transform)
         {
@@ -85,6 +87,8 @@ public class BuildingMenu : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
+        if (PlayerController.instance.battleMode)
+            return;
         if(activeElement == 8) { DemolishBuilding();return; }
             
         if(activeElement == 7) { UpgradeBuilding(); return; }

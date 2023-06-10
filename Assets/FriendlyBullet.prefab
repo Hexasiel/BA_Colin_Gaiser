@@ -4918,3 +4918,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_damage: 2
+  explode: 0
+  explosionRange: 1
+  ps: {fileID: 0}
+  hitTrigger: {fileID: 0}
+  damageMask:
+    serializedVersion: 2
+    m_Bits: 0
+  hitMask:
+    serializedVersion: 2
+    m_Bits: 0

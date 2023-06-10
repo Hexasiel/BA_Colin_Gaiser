@@ -107,10 +107,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8722222034058617053}
   - component: {fileID: 8722222034058617052}
-  - component: {fileID: 7139233357570627116}
   - component: {fileID: 7878232578379426615}
+  - component: {fileID: 5934130104874558049}
   m_Layer: 13
-  m_Name: Mine
+  m_Name: Workshop
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,7 +124,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8722222034058617055}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.41, z: 0}
+  m_LocalPosition: {x: 0, y: 1.7, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -173,7 +173,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 04dcffe1a2ecf0a47a4d14fda0f453a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 05484e1a821ae6e48b7df1cf08be7403, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -184,33 +184,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7139233357570627116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8722222034058617055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78cac71cf64211542a5cd08045c904dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentMenu: {fileID: 0}
-  m_health: 500
-  m_maxHealth: f4010000ee020000e8030000
-  m_upgradeCost: 0a0000000f0000001e000000
-  m_level: 0
-  m_maxLevel: 2
-  m_sprites:
-  - {fileID: 21300000, guid: 04dcffe1a2ecf0a47a4d14fda0f453a2, type: 3}
-  - {fileID: 21300000, guid: 6eb658d5f68d61f4c96598841c69ee46, type: 3}
-  - {fileID: 21300000, guid: 421b43a6930b78449822615376dc2b02, type: 3}
-  productionTimes:
-  - 30
-  - 15
-  - 6
-  goldPiece: {fileID: 1965890595711161592, guid: 5932012715be16942aa430b358b825b8, type: 3}
 --- !u!60 &7878232578379426615
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -394,3 +367,25 @@ PolygonCollider2D:
       - {x: 0.4296875, y: -1.609375}
       - {x: 0.47265625, y: -1.6054688}
       - {x: 0.5234375, y: -1.6015625}
+--- !u!114 &5934130104874558049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8722222034058617055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e12d506281b01814992366678d2389c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentMenu: {fileID: 0}
+  m_health: 500
+  m_maxHealth: f4010000ee020000e8030000
+  m_upgradeCost: 1e0000001e0000001e000000
+  m_level: 0
+  m_maxLevel: 2
+  m_sprites:
+  - {fileID: 21300000, guid: 05484e1a821ae6e48b7df1cf08be7403, type: 3}
+  - {fileID: 21300000, guid: c664f6b4067de5e48b507ba56de2cb4f, type: 3}
+  - {fileID: 21300000, guid: df65dbd123074294c8aa436399523b65, type: 3}

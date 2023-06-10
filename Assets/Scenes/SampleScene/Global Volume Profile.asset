@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
   m_Name: ColorAdjustments
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   postExposure:
     m_OverrideState: 0
     m_Value: 1.65
@@ -24,10 +24,10 @@ MonoBehaviour:
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   hueShift:
     m_OverrideState: 0
-    m_Value: -13
+    m_Value: -180
   saturation:
     m_OverrideState: 0
-    m_Value: -10.3
+    m_Value: -100
 --- !u!114 &-8003014225339810309
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -43,10 +43,10 @@ MonoBehaviour:
   active: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 1.1
+    m_Value: 1.13
   intensity:
     m_OverrideState: 1
-    m_Value: 5.46
+    m_Value: 22.17
   scatter:
     m_OverrideState: 0
     m_Value: 0.681
@@ -55,7 +55,7 @@ MonoBehaviour:
     m_Value: 65472
   tint:
     m_OverrideState: 0
-    m_Value: {r: 0.8867924, g: 0.18163706, b: 0.0292809, a: 1}
+    m_Value: {r: 0, g: 1, b: 0.8595505, a: 1}
   highQualityFiltering:
     m_OverrideState: 0
     m_Value: 1
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
   m_Name: ChromaticAberration
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   intensity:
     m_OverrideState: 1
     m_Value: 0.26
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fa0085f50d5e54f8144f766051a691, type: 3}
   m_Name: FilmGrain
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   type:
     m_OverrideState: 1
     m_Value: 0

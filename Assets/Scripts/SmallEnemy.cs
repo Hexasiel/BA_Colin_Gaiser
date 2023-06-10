@@ -23,10 +23,11 @@ public class SmallEnemy : Enemy
         if (target == null)
             return;
         base.Move();
-        if (!m_targetInRange)
+        if (!m_targetInRange && !isStunned)
         {
             Vector3 newPos = Vector3.MoveTowards(transform.position, target.transform.position, m_speed * Time.deltaTime);
             newPos.y = transform.position.y;
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
             transform.position = newPos;
         }
 
@@ -47,16 +48,13 @@ public class SmallEnemy : Enemy
         if (target == null)
             return;
         base.Attack();
-        Building bd = target.GetComponent<Building>();
-        if (bd == null) { Debug.LogWarning("Trying to attack an non Building"); return; }
-
 
         Vector3 directon = target.transform.position;
         directon.z = 0;
-        directon = (directon - transform.position).normalized;
+        directon = ((directon + Vector3.up) - transform.position).normalized;
 
         Rigidbody2D bulletrb = Instantiate(bulletPrefab, transform.position, Quaternion.identity).GetComponent<Rigidbody2D>();
-        bulletrb.AddForce(directon * 2000);
+        bulletrb.AddForce(directon * 1000);
     }
 
     IEnumerator AttackCoolDown()

@@ -32,6 +32,9 @@ public class Projectile : MonoBehaviour
         foreach(Collider2D collider2D in hitEnemies) {
             collider2D.gameObject.GetComponent<Enemy>().GetDamage(m_damage);
         }
+        GetComponent<Rigidbody2D>().velocity= Vector3.zero;
+        GetComponent<CircleCollider2D>().enabled= false;
+        GetComponent<SpriteRenderer>().enabled= false;
         yield return new WaitForSeconds(2);
         Destroy(gameObject);
     }

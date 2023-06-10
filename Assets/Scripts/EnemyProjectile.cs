@@ -8,9 +8,10 @@ public class EnemyProjectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.tag == "Building")
+
+        if (collision.transform.tag == "Building" || collision.transform.tag == "Player")
         {
-            collision.gameObject.GetComponent<Building>().GetDamage(m_damage);
+            collision.gameObject.GetComponent<IAttackable>().GetDamage(m_damage);
         }
         GameObject.Destroy(this.gameObject);
     }

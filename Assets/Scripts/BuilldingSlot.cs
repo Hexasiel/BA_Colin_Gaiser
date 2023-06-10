@@ -9,7 +9,9 @@ public class BuilldingSlot : MonoBehaviour
 
     private void OnMouseEnter()
     {
-       ShowBuildingWindow(true);
+        if (PlayerController.instance.battleMode)
+            return;
+        ShowBuildingWindow(true);
     }
 
     void ShowBuildingWindow(bool b)

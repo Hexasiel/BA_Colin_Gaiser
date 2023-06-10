@@ -3,26 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IAttackable
 {
     public static PlayerController instance;
 
     //Properties
+    public int maxHealth = 500;
+    public int health = 500;
+    public int maxShield = 20;
+    public int shield = 20;
     [SerializeField] private float speedMod = 5f;
-    [SerializeField] private float weaponCooldown = 0.5f;
-    private bool canShoot = true;
+    [SerializeField] private float gunCooldown = 0.5f;
+    [SerializeField] private float attackCooldown = 0.5f;
+    [SerializeField] private float attackRange = 4f;
+    [SerializeField] private int attackDamage = 4;
+    [SerializeField] private float attackKnockback = 4;
     [SerializeField] private float dashCooldown = 1f;
     [SerializeField] private float dashPower = 1f;
     [SerializeField] private float dashTime = 1f;
-    private bool canDash = true;
+    [SerializeField] LayerMask attackMask;
+
+    //Internal variables
     public int gold = 0;
-    public GameUI gameUI;
+    private bool canDash = true;
+    private bool canShoot = true;
+    private bool canAttack = true;
     bool faceDirection = false;
+    public bool battleMode = false;
 
     //External References
+    [SerializeField] Collider2D playerCollider;
+    [SerializeField] GameObject shieldGO;
+    [SerializeField] Animator animator;
+    [SerializeField] Transform attackPos;
     [SerializeField] SpriteRenderer sprite;
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] ParticleSystem dashParticleSystem;
+    public GameUI gameUI;
 
     private void Awake()
     {
@@ -30,15 +47,25 @@ public class PlayerController : MonoBehaviour
         GoldPiece.OnGoldPieceCollected += PickUpGoldPiece;
     }
 
-    void PickUpGoldPiece()
-    {
-        gold++;
-        gameUI.SetGoldText();
-    }
-
     // Update is called once per frame
     void Update()
     {
+       CheckInput();
+    }
+
+    void CheckInput()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            battleMode = !battleMode;
+            gameUI.SwitchBattleMode();
+        }
+        if (Input.GetKeyDown(KeyCode.Mouse1) && canDash)
+        {
+            StartCoroutine(Dash());
+        }
+
+
         Vector2 currentPos = new Vector2(transform.position.x, transform.position.y);
         if (Input.GetKey(KeyCode.A))
         {
@@ -52,21 +79,54 @@ public class PlayerController : MonoBehaviour
             sprite.flipX = true;
             faceDirection = true;
         }
-        if (Input.GetKeyDown(KeyCode.Space) && canDash)
+
+        //BattleMode Only
+        if (!battleMode)
+            return;
+        //if (Input.GetKey(KeyCode.Mouse1) && canShoot)
+        //{
+        //    StartCoroutine(Shoot());
+        //}
+        if (Input.GetKey(KeyCode.Mouse0) && canAttack)
         {
-            StartCoroutine(Dash());
-        } 
-        if (Input.GetKey(KeyCode.Mouse1) && canShoot)
-        {
-            StartCoroutine(Shoot());
+            StartCoroutine(Attack());
         }
+
     }
-    
+
+    void RefillShield()
+    {
+        shield = maxShield;
+        shieldGO.SetActive(true);
+    }
+
+    void IAttackable.GetDamage(int dmg)
+    {
+        if(shield > 0) {
+            shield -= dmg;
+            if(shield <= 0){
+                shieldGO.SetActive(false); shield = 0;
+            }
+        }
+        else
+        {
+            health -= dmg;
+        }
+        gameUI.UpdateUI();
+    }
+
+    void PickUpGoldPiece()
+    {
+        gold++;
+        gameUI.UpdateUI();
+    }
+
     IEnumerator Dash()
     {
         dashParticleSystem.Play();
         canDash = false;
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        playerCollider.enabled = false;
         if (faceDirection){
             rb.velocity = new Vector2(dashPower, 0f);
         }
@@ -74,14 +134,26 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(dashPower * -1, 0f);
         }
         yield return new WaitForSeconds(dashTime);
+        playerCollider.enabled = true;
         rb.velocity = Vector2.zero;
-        yield return new WaitForSeconds(weaponCooldown);
+        yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
 
-    void Attack()
+    IEnumerator Attack()
     {
+        canAttack = false;
 
+        animator.SetTrigger("Attack");
+
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPos.position, attackRange, attackMask);
+        foreach (Collider2D collider2D in hitEnemies)
+        {
+            Vector2 knockback = (collider2D.transform.position - transform.position).normalized * attackKnockback;
+            collider2D.gameObject.GetComponent<Enemy>().GetDamage(attackDamage, knockback);
+        }
+        yield return new WaitForSeconds(attackCooldown);
+        canAttack = true;
     }
 
     IEnumerator Shoot()
@@ -95,7 +167,7 @@ public class PlayerController : MonoBehaviour
         Rigidbody2D bulletrb = Instantiate(bulletPrefab,transform.position, Quaternion.identity).GetComponent<Rigidbody2D>();
         bulletrb.AddForce(directon * 1500);
 
-        yield return new WaitForSeconds(weaponCooldown);
+        yield return new WaitForSeconds(gunCooldown);
         canShoot= true;
     }
 
