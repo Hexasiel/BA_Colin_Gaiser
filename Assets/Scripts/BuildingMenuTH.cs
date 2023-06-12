@@ -52,6 +52,8 @@ public class BuildingMenuTH : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        if (PlayerController.instance.battleMode)
+            return;
         SetActiveElement(0);
         transform.GetChild(0).gameObject.SetActive(true);
     }
@@ -64,6 +66,8 @@ public class BuildingMenuTH : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
+        if (PlayerController.instance.battleMode)
+            return;
         if (currentBuilding == null)
             BuildTownHall();
         else

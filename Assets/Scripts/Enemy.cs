@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -9,10 +10,12 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected GameObject target;
     [SerializeField] protected SpriteRenderer sprite;
     [SerializeField] protected GameObject goldPiece;
+    [SerializeField] protected Slider healthbar;
 
     //Properties
     [SerializeField] protected float m_speed = 10f;
     [SerializeField] protected float m_attackSpeed = 1f;
+    [SerializeField] protected int m_maxHealth = 10;
     [SerializeField] protected int m_health = 10;
     [SerializeField] protected int m_damage = 1;
     [SerializeField] protected float m_attackRange = 10f;
@@ -25,7 +28,26 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Move()
     {
-        //TBI
+        if (target == null)
+            return;
+
+        if (!m_targetInRange && !isStunned)
+        {
+            Vector3 newPos = Vector3.MoveTowards(transform.position, target.transform.position, m_speed * Time.deltaTime);
+            newPos.y = transform.position.y;
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            transform.position = newPos;
+        }
+
+        Vector3 targetVector = (target.transform.position - transform.position);
+        if (targetVector.x >= 0)
+            sprite.flipX = false;
+        else
+            sprite.flipX = true;
+        if (targetVector.magnitude < m_attackRange)
+            m_targetInRange = true;
+        else
+            m_targetInRange = false;
     }
 
     protected virtual void Attack()
@@ -37,6 +59,8 @@ public class Enemy : MonoBehaviour
     {
         m_health -= dmg;
         StartCoroutine(DamageEffect());
+        healthbar.gameObject.SetActive(true);
+        healthbar.value = (float)m_health / (float)m_maxHealth;
         if (m_health <= 0)
         {
             Die();
@@ -49,6 +73,8 @@ public class Enemy : MonoBehaviour
         m_health -= dmg;
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.AddForce(knockBack);
+        healthbar.gameObject.SetActive(true);
+        healthbar.value = (float)m_health / (float)m_maxHealth;
         StartCoroutine(DamageEffect());
         if (m_health <= 0)
         {

@@ -21,7 +21,7 @@ public class GameUI : MonoBehaviour
     public void UpdateUI()
     {
         goldText.text = PlayerController.instance.gold.ToString();
-        healthSlider.value = (float)PlayerController.instance.health / (float)PlayerController.instance.maxHealth;
+        healthSlider.value = (float)PlayerController.instance.m_health / (float)PlayerController.instance.maxHealth;
     }
 
     public void SetGoldText()

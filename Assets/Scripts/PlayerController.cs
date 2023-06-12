@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour, IAttackable
 
     //Properties
     public int maxHealth = 500;
-    public int health = 500;
+    public int m_health = 500;
     public int maxShield = 20;
     public int shield = 20;
     [SerializeField] private float speedMod = 5f;
@@ -31,6 +31,12 @@ public class PlayerController : MonoBehaviour, IAttackable
     bool faceDirection = false;
     public bool battleMode = false;
 
+    //Workshop Stats/Flags
+    bool refillShieldOnDash = false;
+    bool refillShieldOnKill = false;
+    float[] dashCooldowns = new float[] { 1f, 1f, 0.75f, 0.5f };
+    int[] damageValues = new int[] {10,15,20,20};
+
     //External References
     [SerializeField] Collider2D playerCollider;
     [SerializeField] GameObject shieldGO;
@@ -45,6 +51,29 @@ public class PlayerController : MonoBehaviour, IAttackable
     {
         instance = this;
         GoldPiece.OnGoldPieceCollected += PickUpGoldPiece;
+        Workshop.OnWorkshopLevelUpdated += UpdateWorkshopStats;
+        Shrine.OnHealingTriggered += ReceiveHeal;
+    }
+
+    void ReceiveHeal(int health)
+    {
+        m_health += health;
+        if (m_health > maxHealth) m_health = maxHealth;
+    }
+
+    void UpdateWorkshopStats()
+    {
+        refillShieldOnDash= false;
+        refillShieldOnKill= false;
+        switch(Workshop.workshopHighestLevel)
+        {
+            case 0: break;
+            case 1: refillShieldOnKill = true; break;
+            case 2: refillShieldOnKill = true; break;
+            case 3: refillShieldOnKill = true; refillShieldOnDash = true; break;
+        }
+        attackDamage = damageValues[Workshop.workshopHighestLevel];
+        dashCooldown = dashCooldowns[Workshop.workshopHighestLevel];   
     }
 
     // Update is called once per frame
@@ -110,7 +139,7 @@ public class PlayerController : MonoBehaviour, IAttackable
         }
         else
         {
-            health -= dmg;
+            m_health -= dmg;
         }
         gameUI.UpdateUI();
     }

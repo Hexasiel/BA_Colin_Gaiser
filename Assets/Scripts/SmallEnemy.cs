@@ -19,28 +19,7 @@ public class SmallEnemy : Enemy
     }
     protected override void Move()
     {
-        
-        if (target == null)
-            return;
         base.Move();
-        if (!m_targetInRange && !isStunned)
-        {
-            Vector3 newPos = Vector3.MoveTowards(transform.position, target.transform.position, m_speed * Time.deltaTime);
-            newPos.y = transform.position.y;
-            Rigidbody2D rb = GetComponent<Rigidbody2D>();
-            transform.position = newPos;
-        }
-
-        Vector3 targetVector = (target.transform.position - transform.position);
-        if(targetVector.x >= 0 )
-            sprite.flipX = false;
-        else
-            sprite.flipX = true;
-        if (targetVector.magnitude < m_attackRange)
-            m_targetInRange = true;
-        else
-            m_targetInRange = false;
-
     }
 
     protected override void Attack()

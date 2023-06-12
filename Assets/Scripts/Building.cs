@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Building : MonoBehaviour, IAttackable
 {
@@ -11,11 +12,25 @@ public class Building : MonoBehaviour, IAttackable
     public int m_level;
     public int m_maxLevel;
     public Sprite[] m_sprites;
+    [SerializeField] protected Slider healthbar;
+
+    private void Start()
+    {
+        Shrine.OnHealingTriggered += ReceiveHeal;
+    }
+    
+    void ReceiveHeal(int health)
+    {
+        m_health += health;
+        if (m_health > m_maxHealth[m_level]) m_health = m_maxHealth[m_level];
+    }
 
     void IAttackable.GetDamage(int dmg)
     {
         m_health -= dmg;
-        if(m_health <= 0)
+        healthbar.gameObject.SetActive(true);
+        healthbar.value = (float)m_health / (float)m_maxHealth[m_level];
+        if (m_health <= 0)
         {
             Die();
         }

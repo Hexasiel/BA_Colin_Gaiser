@@ -94,8 +94,146 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e3d0e24943fc41408c6157df7c860e9b
     GuidInternal: 
-    m_lastTime: -8585159781167034269
+    m_lastTime: -8585151196277243853
     List:
+    - name: Building_Built_Stone
+      guid: 2e3cba4baad14040a3658bf962b112af
+      id: 2724548802
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Buildings
+        ObjectType: 4
+        guid: 2dcf9f9f7b676d4b94c3241bfbc00333
+      - ElementName: Stone
+        ObjectType: 4
+        guid: 64098babdf30df42904926843449e7b7
+      - ElementName: Building_Built_Stone
+        ObjectType: 3
+        guid: 2e3cba4baad14040a3658bf962b112af
+      Path: Events\Default Work Unit\Buildings\Stone\Building_Built_Stone
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Building_Built_Wood
+      guid: 4acbbdad0c5f084c8ff794fc4bad0b03
+      id: 2855695268
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Buildings
+        ObjectType: 4
+        guid: 2dcf9f9f7b676d4b94c3241bfbc00333
+      - ElementName: Wood
+        ObjectType: 4
+        guid: 50fe926464986b49ae861f2fa350ca21
+      - ElementName: Building_Built_Wood
+        ObjectType: 3
+        guid: 4acbbdad0c5f084c8ff794fc4bad0b03
+      Path: Events\Default Work Unit\Buildings\Wood\Building_Built_Wood
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Building_Collapse_Stone
+      guid: e71d4d084f374a4790dd1497ed7b05cc
+      id: 949613739
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Buildings
+        ObjectType: 4
+        guid: 2dcf9f9f7b676d4b94c3241bfbc00333
+      - ElementName: Stone
+        ObjectType: 4
+        guid: 64098babdf30df42904926843449e7b7
+      - ElementName: Building_Collapse_Stone
+        ObjectType: 3
+        guid: e71d4d084f374a4790dd1497ed7b05cc
+      Path: Events\Default Work Unit\Buildings\Stone\Building_Collapse_Stone
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Building_Collapse_Wood
+      guid: fb46c10d027a3f4aa9c2901116063a85
+      id: 1226288867
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Buildings
+        ObjectType: 4
+        guid: 2dcf9f9f7b676d4b94c3241bfbc00333
+      - ElementName: Wood
+        ObjectType: 4
+        guid: 50fe926464986b49ae861f2fa350ca21
+      - ElementName: Building_Collapse_Wood
+        ObjectType: 3
+        guid: fb46c10d027a3f4aa9c2901116063a85
+      Path: Events\Default Work Unit\Buildings\Wood\Building_Collapse_Wood
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Building_Hit_Stone
+      guid: 7d3bbcac8e9a0340aae900aa6530391e
+      id: 3726324797
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Buildings
+        ObjectType: 4
+        guid: 2dcf9f9f7b676d4b94c3241bfbc00333
+      - ElementName: Stone
+        ObjectType: 4
+        guid: 64098babdf30df42904926843449e7b7
+      - ElementName: Building_Hit_Stone
+        ObjectType: 3
+        guid: 7d3bbcac8e9a0340aae900aa6530391e
+      Path: Events\Default Work Unit\Buildings\Stone\Building_Hit_Stone
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Building_Hit_Wood_
+      guid: 9ceb18205e15fd4f8584275f14b49dac
+      id: 933808812
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Buildings
+        ObjectType: 4
+        guid: 2dcf9f9f7b676d4b94c3241bfbc00333
+      - ElementName: Wood
+        ObjectType: 4
+        guid: 50fe926464986b49ae861f2fa350ca21
+      - ElementName: Building_Hit_Wood_
+        ObjectType: 3
+        guid: 9ceb18205e15fd4f8584275f14b49dac
+      Path: Events\Default Work Unit\Buildings\Wood\Building_Hit_Wood_
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Buildings
       guid: 2dcf9f9f7b676d4b94c3241bfbc00333
       id: 1213198520
@@ -110,6 +248,26 @@ MonoBehaviour:
         ObjectType: 4
         guid: 2dcf9f9f7b676d4b94c3241bfbc00333
       Path: Events\Default Work Unit\Buildings
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Coin
+      guid: d7bfaa88b0288645a5e35e5914d95d8a
+      id: 3603273110
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 0be66cd7a26d864c8c4e4e6ab21c78e7
+      - ElementName: Coin
+        ObjectType: 4
+        guid: d7bfaa88b0288645a5e35e5914d95d8a
+      Path: Events\Default Work Unit\Objects\Coin
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -130,7 +288,27 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: enemy_Die
+    - name: Enemy_Attack
+      guid: 6e09e69bcc3b1a458f5b76e2334624db
+      id: 1781417190
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: 3223e46f0aee87499d6b324fbed3c7f3
+      - ElementName: Enemy_Attack
+        ObjectType: 3
+        guid: 6e09e69bcc3b1a458f5b76e2334624db
+      Path: Events\Default Work Unit\Enemies\Enemy_Attack
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Enemy_Die
       guid: e86633fd1090b6499b4c2821d212fd2e
       id: 1142304696
       PathAndIcons:
@@ -143,14 +321,14 @@ MonoBehaviour:
       - ElementName: Enemies
         ObjectType: 4
         guid: 3223e46f0aee87499d6b324fbed3c7f3
-      - ElementName: enemy_Die
+      - ElementName: Enemy_Die
         ObjectType: 3
         guid: e86633fd1090b6499b4c2821d212fd2e
-      Path: Events\Default Work Unit\Enemies\enemy_Die
+      Path: Events\Default Work Unit\Enemies\Enemy_Die
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: enemy_Grunt
+    - name: Enemy_Grunt
       guid: 5ac2d5c3d8aeea4194db429fa31e3b72
       id: 1895691808
       PathAndIcons:
@@ -163,16 +341,16 @@ MonoBehaviour:
       - ElementName: Enemies
         ObjectType: 4
         guid: 3223e46f0aee87499d6b324fbed3c7f3
-      - ElementName: enemy_Grunt
+      - ElementName: Enemy_Grunt
         ObjectType: 3
         guid: 5ac2d5c3d8aeea4194db429fa31e3b72
-      Path: Events\Default Work Unit\Enemies\enemy_Grunt
+      Path: Events\Default Work Unit\Enemies\Enemy_Grunt
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Mine
-      guid: 265bbbee832af04a858ef9104d65c2a3
-      id: 2609527548
+    - name: Enemy_Spawn
+      guid: 2f886ec51c72694db4303057fb74e13d
+      id: 1526102535
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -180,13 +358,305 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: e3d0e24943fc41408c6157df7c860e9b
-      - ElementName: Buildings
+      - ElementName: Enemies
         ObjectType: 4
-        guid: 2dcf9f9f7b676d4b94c3241bfbc00333
-      - ElementName: Mine
+        guid: 3223e46f0aee87499d6b324fbed3c7f3
+      - ElementName: Enemy_Spawn
+        ObjectType: 3
+        guid: 2f886ec51c72694db4303057fb74e13d
+      Path: Events\Default Work Unit\Enemies\Enemy_Spawn
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Enemy_Walk
+      guid: dd1e8e33a3caee4893ae1abf4f5efcbe
+      id: 582686005
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Enemies
         ObjectType: 4
-        guid: 265bbbee832af04a858ef9104d65c2a3
-      Path: Events\Default Work Unit\Buildings\Mine
+        guid: 3223e46f0aee87499d6b324fbed3c7f3
+      - ElementName: Enemy_Walk
+        ObjectType: 3
+        guid: dd1e8e33a3caee4893ae1abf4f5efcbe
+      Path: Events\Default Work Unit\Enemies\Enemy_Walk
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Gold_HitGround
+      guid: 7cebfb9c2737e44499eac77b56d60c66
+      id: 3971162776
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 0be66cd7a26d864c8c4e4e6ab21c78e7
+      - ElementName: Coin
+        ObjectType: 4
+        guid: d7bfaa88b0288645a5e35e5914d95d8a
+      - ElementName: Gold_HitGround
+        ObjectType: 3
+        guid: 7cebfb9c2737e44499eac77b56d60c66
+      Path: Events\Default Work Unit\Objects\Coin\Gold_HitGround
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Gold_PickUp
+      guid: 7b89ab987d827547957c702103578465
+      id: 3821651910
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 0be66cd7a26d864c8c4e4e6ab21c78e7
+      - ElementName: Coin
+        ObjectType: 4
+        guid: d7bfaa88b0288645a5e35e5914d95d8a
+      - ElementName: Gold_PickUp
+        ObjectType: 3
+        guid: 7b89ab987d827547957c702103578465
+      Path: Events\Default Work Unit\Objects\Coin\Gold_PickUp
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Gold_Spent
+      guid: 047410e27fc6b64fad64dac88ea5a240
+      id: 1518274198
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 0be66cd7a26d864c8c4e4e6ab21c78e7
+      - ElementName: Coin
+        ObjectType: 4
+        guid: d7bfaa88b0288645a5e35e5914d95d8a
+      - ElementName: Gold_Spent
+        ObjectType: 3
+        guid: 047410e27fc6b64fad64dac88ea5a240
+      Path: Events\Default Work Unit\Objects\Coin\Gold_Spent
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Menu
+      guid: f56599a5e2d8784cb002c53ee609d82f
+      id: 2607556080
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Menu
+        ObjectType: 4
+        guid: f56599a5e2d8784cb002c53ee609d82f
+      Path: Events\Default Work Unit\Menu
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Menu_Battlemode_Switched
+      guid: ac955054d801224094e8a4a17e5157c4
+      id: 370760792
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Menu
+        ObjectType: 4
+        guid: f56599a5e2d8784cb002c53ee609d82f
+      - ElementName: Menu_Battlemode_Switched
+        ObjectType: 3
+        guid: ac955054d801224094e8a4a17e5157c4
+      Path: Events\Default Work Unit\Menu\Menu_Battlemode_Switched
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Menu_Button_Hovered
+      guid: 6f4411e4d03a39489fab19daf62bb0b9
+      id: 3682466839
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Menu
+        ObjectType: 4
+        guid: f56599a5e2d8784cb002c53ee609d82f
+      - ElementName: Menu_Button_Hovered
+        ObjectType: 3
+        guid: 6f4411e4d03a39489fab19daf62bb0b9
+      Path: Events\Default Work Unit\Menu\Menu_Button_Hovered
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Menu_Button_Pressed
+      guid: 22a1df62d0d0d841b767fdc746227b66
+      id: 1048498120
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Menu
+        ObjectType: 4
+        guid: f56599a5e2d8784cb002c53ee609d82f
+      - ElementName: Menu_Button_Pressed
+        ObjectType: 3
+        guid: 22a1df62d0d0d841b767fdc746227b66
+      Path: Events\Default Work Unit\Menu\Menu_Button_Pressed
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Menu_Opened
+      guid: 73ab5f2dc07b8646bfdc6ecea9574f82
+      id: 353565384
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Menu
+        ObjectType: 4
+        guid: f56599a5e2d8784cb002c53ee609d82f
+      - ElementName: Menu_Opened
+        ObjectType: 3
+        guid: 73ab5f2dc07b8646bfdc6ecea9574f82
+      Path: Events\Default Work Unit\Menu\Menu_Opened
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Missle_Explode
+      guid: d4e2f40f06f13343aba7f46e1fae163c
+      id: 4235500122
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 0be66cd7a26d864c8c4e4e6ab21c78e7
+      - ElementName: Missles
+        ObjectType: 4
+        guid: 9621c9b3fa3acf498a7c42ea75be7a48
+      - ElementName: Missle_Explode
+        ObjectType: 3
+        guid: d4e2f40f06f13343aba7f46e1fae163c
+      Path: Events\Default Work Unit\Objects\Missles\Missle_Explode
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Missle_Fired
+      guid: f2e08b2f170c31439ad506bc071ee9e4
+      id: 508669141
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 0be66cd7a26d864c8c4e4e6ab21c78e7
+      - ElementName: Missles
+        ObjectType: 4
+        guid: 9621c9b3fa3acf498a7c42ea75be7a48
+      - ElementName: Missle_Fired
+        ObjectType: 3
+        guid: f2e08b2f170c31439ad506bc071ee9e4
+      Path: Events\Default Work Unit\Objects\Missles\Missle_Fired
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Missle_HitGround
+      guid: 779c7d965125074a82feb0482798ca0f
+      id: 3958138063
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 0be66cd7a26d864c8c4e4e6ab21c78e7
+      - ElementName: Missles
+        ObjectType: 4
+        guid: 9621c9b3fa3acf498a7c42ea75be7a48
+      - ElementName: Missle_HitGround
+        ObjectType: 3
+        guid: 779c7d965125074a82feb0482798ca0f
+      Path: Events\Default Work Unit\Objects\Missles\Missle_HitGround
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Missles
+      guid: 9621c9b3fa3acf498a7c42ea75be7a48
+      id: 208685939
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 0be66cd7a26d864c8c4e4e6ab21c78e7
+      - ElementName: Missles
+        ObjectType: 4
+        guid: 9621c9b3fa3acf498a7c42ea75be7a48
+      Path: Events\Default Work Unit\Objects\Missles
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Objects
+      guid: 0be66cd7a26d864c8c4e4e6ab21c78e7
+      id: 1695690031
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 0be66cd7a26d864c8c4e4e6ab21c78e7
+      Path: Events\Default Work Unit\Objects
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -207,7 +677,47 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: player_FootStep
+    - name: Player_Attack
+      guid: 3902d8baa82c354d86dc931493401619
+      id: 2824512041
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Player
+        ObjectType: 4
+        guid: 906967c7762ed94bae669fb9960772b5
+      - ElementName: Player_Attack
+        ObjectType: 3
+        guid: 3902d8baa82c354d86dc931493401619
+      Path: Events\Default Work Unit\Player\Player_Attack
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_Dash
+      guid: 44e4044b262bba42a3407c35af9dd511
+      id: 2394582229
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Player
+        ObjectType: 4
+        guid: 906967c7762ed94bae669fb9960772b5
+      - ElementName: Player_Dash
+        ObjectType: 3
+        guid: 44e4044b262bba42a3407c35af9dd511
+      Path: Events\Default Work Unit\Player\Player_Dash
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_FootStep
       guid: 3477b793b15f894da44977b267353808
       id: 2453392179
       PathAndIcons:
@@ -220,16 +730,16 @@ MonoBehaviour:
       - ElementName: Player
         ObjectType: 4
         guid: 906967c7762ed94bae669fb9960772b5
-      - ElementName: player_FootStep
+      - ElementName: Player_FootStep
         ObjectType: 3
         guid: 3477b793b15f894da44977b267353808
-      Path: Events\Default Work Unit\Player\player_FootStep
+      Path: Events\Default Work Unit\Player\Player_FootStep
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: player_PickUpGold
-      guid: 7cebfb9c2737e44499eac77b56d60c66
-      id: 1170980947
+    - name: Player_Hit
+      guid: 3b581ebb2e735040998b234bb4f353b4
+      id: 871813740
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -240,16 +750,16 @@ MonoBehaviour:
       - ElementName: Player
         ObjectType: 4
         guid: 906967c7762ed94bae669fb9960772b5
-      - ElementName: player_PickUpGold
+      - ElementName: Player_Hit
         ObjectType: 3
-        guid: 7cebfb9c2737e44499eac77b56d60c66
-      Path: Events\Default Work Unit\Player\player_PickUpGold
+        guid: 3b581ebb2e735040998b234bb4f353b4
+      Path: Events\Default Work Unit\Player\Player_Hit
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Portal
-      guid: 6bb82bacadb6954f8bc9bda72909fb24
-      id: 3118032615
+    - name: Player_Shield_Break
+      guid: 72e9226a82d7fd478bf3b212f27b41d9
+      id: 3340371270
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -257,62 +767,22 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: e3d0e24943fc41408c6157df7c860e9b
-      - ElementName: Buildings
+      - ElementName: Player
         ObjectType: 4
-        guid: 2dcf9f9f7b676d4b94c3241bfbc00333
-      - ElementName: Portal
+        guid: 906967c7762ed94bae669fb9960772b5
+      - ElementName: Shield
         ObjectType: 4
-        guid: 6bb82bacadb6954f8bc9bda72909fb24
-      Path: Events\Default Work Unit\Buildings\Portal
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Tower
-      guid: 1e8ed06479d0ce47bbd29bdce469fe70
-      id: 1737926756
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: e3d0e24943fc41408c6157df7c860e9b
-      - ElementName: Buildings
-        ObjectType: 4
-        guid: 2dcf9f9f7b676d4b94c3241bfbc00333
-      - ElementName: Tower
-        ObjectType: 4
-        guid: 1e8ed06479d0ce47bbd29bdce469fe70
-      Path: Events\Default Work Unit\Buildings\Tower
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: tower_Collapse
-      guid: d5145c8624560d458ae18d48f95c1a12
-      id: 1526036006
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: e3d0e24943fc41408c6157df7c860e9b
-      - ElementName: Buildings
-        ObjectType: 4
-        guid: 2dcf9f9f7b676d4b94c3241bfbc00333
-      - ElementName: Tower
-        ObjectType: 4
-        guid: 1e8ed06479d0ce47bbd29bdce469fe70
-      - ElementName: tower_Collapse
+        guid: 9f374755cd822849a50b50d3f1a8371e
+      - ElementName: Player_Shield_Break
         ObjectType: 3
-        guid: d5145c8624560d458ae18d48f95c1a12
-      Path: Events\Default Work Unit\Buildings\Tower\tower_Collapse
+        guid: 72e9226a82d7fd478bf3b212f27b41d9
+      Path: Events\Default Work Unit\Player\Shield\Player_Shield_Break
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: tower_Hit
-      guid: 8743ef4d69c30b479efae656c2c3fdf8
-      id: 3672125978
+    - name: Player_Shield_Hit
+      guid: 7bc8090497b5b347aa3272b1a7287fbb
+      id: 362191200
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -320,22 +790,65 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: e3d0e24943fc41408c6157df7c860e9b
-      - ElementName: Buildings
+      - ElementName: Player
         ObjectType: 4
-        guid: 2dcf9f9f7b676d4b94c3241bfbc00333
-      - ElementName: Tower
+        guid: 906967c7762ed94bae669fb9960772b5
+      - ElementName: Shield
         ObjectType: 4
-        guid: 1e8ed06479d0ce47bbd29bdce469fe70
-      - ElementName: tower_Hit
+        guid: 9f374755cd822849a50b50d3f1a8371e
+      - ElementName: Player_Shield_Hit
         ObjectType: 3
-        guid: 8743ef4d69c30b479efae656c2c3fdf8
-      Path: Events\Default Work Unit\Buildings\Tower\tower_Hit
+        guid: 7bc8090497b5b347aa3272b1a7287fbb
+      Path: Events\Default Work Unit\Player\Shield\Player_Shield_Hit
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Wall
-      guid: 4708c7a00355494ba9c110884b81e6c2
-      id: 2108779961
+    - name: Player_Shield_Refill
+      guid: e50311435f86aa488697132bb7534373
+      id: 1619382169
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Player
+        ObjectType: 4
+        guid: 906967c7762ed94bae669fb9960772b5
+      - ElementName: Shield
+        ObjectType: 4
+        guid: 9f374755cd822849a50b50d3f1a8371e
+      - ElementName: Player_Shield_Refill
+        ObjectType: 3
+        guid: e50311435f86aa488697132bb7534373
+      Path: Events\Default Work Unit\Player\Shield\Player_Shield_Refill
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Shield
+      guid: 9f374755cd822849a50b50d3f1a8371e
+      id: 1161967626
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Player
+        ObjectType: 4
+        guid: 906967c7762ed94bae669fb9960772b5
+      - ElementName: Shield
+        ObjectType: 4
+        guid: 9f374755cd822849a50b50d3f1a8371e
+      Path: Events\Default Work Unit\Player\Shield
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stone
+      guid: 64098babdf30df42904926843449e7b7
+      id: 1216965916
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -346,10 +859,30 @@ MonoBehaviour:
       - ElementName: Buildings
         ObjectType: 4
         guid: 2dcf9f9f7b676d4b94c3241bfbc00333
-      - ElementName: Wall
+      - ElementName: Stone
         ObjectType: 4
-        guid: 4708c7a00355494ba9c110884b81e6c2
-      Path: Events\Default Work Unit\Buildings\Wall
+        guid: 64098babdf30df42904926843449e7b7
+      Path: Events\Default Work Unit\Buildings\Stone
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Wood
+      guid: 50fe926464986b49ae861f2fa350ca21
+      id: 2058049674
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Buildings
+        ObjectType: 4
+        guid: 2dcf9f9f7b676d4b94c3241bfbc00333
+      - ElementName: Wood
+        ObjectType: 4
+        guid: 50fe926464986b49ae861f2fa350ca21
+      Path: Events\Default Work Unit\Buildings\Wood
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -409,9 +942,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585160535363164909
     List: []
-  ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 06000000080000000a0000000c0000000d0000000e000000
+  ExpandedFileSystemItemIds: 020000000300000006000000080000000a0000000c0000000e00000021000000
+  ExpandedWaapiItemIds: 020000000300000006000000080000000a0000000c0000000e00000021000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 

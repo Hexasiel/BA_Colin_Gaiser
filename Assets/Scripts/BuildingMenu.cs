@@ -167,31 +167,20 @@ public class BuildingMenu : MonoBehaviour
         }
     }
 
-    void UpdateUI()
-    {
+    void UpdateUI(){
         costTexts[6].text = string.Empty;
-        if(currentBuilding == null)
-        {
-            for (int i = 0; i < 6; i++)
-            {
+        if(currentBuilding == null){
+            for (int i = 0; i < 6; i++) {
                 Building building = buildingPrefabs[i].GetComponent<Building>();
                 costTexts[i].text = building.m_upgradeCost[0].ToString();
             }
         }
-        else
-        {
-            if (currentBuilding.m_level != currentBuilding.m_maxLevel)
-            {
+        else{
+            if (currentBuilding.m_level != currentBuilding.m_maxLevel){
 
                 costTexts[6].text = currentBuilding.m_upgradeCost[currentBuilding.m_level + 1].ToString();
                 return;
             }
-            else
-            {
-
-            }
         }
-        
-        
     }
 }

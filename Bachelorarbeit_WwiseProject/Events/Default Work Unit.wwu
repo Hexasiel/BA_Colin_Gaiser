@@ -5,8 +5,7 @@
 			<ChildrenList>
 				<Folder Name="Player" ID="{C7676990-2E76-4BD9-AE66-9FB9960772B5}" ShortID="1039612131">
 					<ChildrenList>
-						<Event Name="player_PickUpGold" ID="{9CFBEB7C-3727-44E4-99EA-C77B56D60C66}"/>
-						<Event Name="player_FootStep" ID="{93B77734-5FB1-4D89-A449-77B267353808}">
+						<Event Name="Player_FootStep" ID="{93B77734-5FB1-4D89-A449-77B267353808}">
 							<ChildrenList>
 								<Action Name="" ID="{C406F046-7063-417C-A4FB-EE07466E0C2A}" ShortID="1002920304">
 									<ReferenceList>
@@ -17,25 +16,69 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Player_Attack" ID="{BAD80239-2CA8-4D35-86DC-931493401619}"/>
+						<Event Name="Player_Hit" ID="{BB1E583B-732E-4050-998B-234BB4F353B4}"/>
+						<Event Name="Player_Dash" ID="{4B04E444-2B26-42BA-A340-7C35AF9DD511}"/>
+						<Folder Name="Shield" ID="{5547379F-82CD-4928-A50B-50D3F1A8371E}" ShortID="679184884">
+							<ChildrenList>
+								<Event Name="Player_Shield_Hit" ID="{0409C87B-B597-47B3-AA32-72B1A7287FBB}"/>
+								<Event Name="Player_Shield_Refill" ID="{431103E5-865F-48AA-8697-132BB7534373}"/>
+								<Event Name="Player_Shield_Break" ID="{6A22E972-D782-47FD-8BF3-B212F27B41D9}"/>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Buildings" ID="{9F9FCF2D-677B-4B6D-94C3-241BFBC00333}" ShortID="85005930">
 					<ChildrenList>
-						<Folder Name="Tower" ID="{64D08E1E-D079-47CE-BBD2-9BDCE469FE70}" ShortID="909958511">
+						<Folder Name="Stone" ID="{AB8B0964-30DF-42DF-9049-26843449E7B7}" ShortID="666446106">
 							<ChildrenList>
-								<Event Name="tower_Hit" ID="{4DEF4387-C369-470B-9EFA-E656C2C3FDF8}"/>
-								<Event Name="tower_Collapse" ID="{865C14D5-5624-450D-8AE1-8D48F95C1A12}"/>
+								<Event Name="Building_Hit_Stone" ID="{ACBC3B7D-9A8E-4003-AAE9-00AA6530391E}"/>
+								<Event Name="Building_Collapse_Stone" ID="{084D1DE7-374F-474A-90DD-1497ED7B05CC}"/>
+								<Event Name="Building_Built_Stone" ID="{4BBA3C2E-D1AA-4040-A365-8BF962B112AF}"/>
 							</ChildrenList>
 						</Folder>
-						<Folder Name="Mine" ID="{EEBB5B26-2A83-4AF0-858E-F9104D65C2A3}" ShortID="794094856"/>
-						<Folder Name="Portal" ID="{AC2BB86B-B6AD-4F95-8BC9-BDA72909FB24}" ShortID="670377686"/>
-						<Folder Name="Wall" ID="{A0C70847-5503-4B49-A9C1-10884B81E6C2}" ShortID="302795978"/>
+						<Folder Name="Wood" ID="{6492FE50-9864-496B-AE86-1F2FA350CA21}" ShortID="984974705">
+							<ChildrenList>
+								<Event Name="Building_Collapse_Wood" ID="{0DC146FB-7A02-4A3F-A9C2-901116063A85}"/>
+								<Event Name="Building_Hit_Wood_" ID="{2018EB9C-155E-4FFD-8584-275F14B49DAC}"/>
+								<Event Name="Building_Built_Wood" ID="{ADBDCB4A-5F0C-4C08-8FF7-94FC4BAD0B03}"/>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Enemies" ID="{6FE42332-EE0A-4987-9D6B-324FBED3C7F3}" ShortID="977367755">
 					<ChildrenList>
-						<Event Name="enemy_Grunt" ID="{C3D5C25A-AED8-41EA-94DB-429FA31E3B72}"/>
-						<Event Name="enemy_Die" ID="{FD3366E8-9010-49B6-9B4C-2821D212FD2E}"/>
+						<Event Name="Enemy_Grunt" ID="{C3D5C25A-AED8-41EA-94DB-429FA31E3B72}"/>
+						<Event Name="Enemy_Die" ID="{FD3366E8-9010-49B6-9B4C-2821D212FD2E}"/>
+						<Event Name="Enemy_Walk" ID="{338E1EDD-CAA3-48EE-93AE-1ABF4F5EFCBE}"/>
+						<Event Name="Enemy_Attack" ID="{9BE6096E-3BCC-451A-8F5B-76E2334624DB}"/>
+						<Event Name="Enemy_Spawn" ID="{C56E882F-721C-4D69-B430-3057FB74E13D}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Objects" ID="{D76CE60B-6DA2-4C86-8C4E-4E6AB21C78E7}" ShortID="278783196">
+					<ChildrenList>
+						<Folder Name="Coin" ID="{88AABFD7-28B0-4586-A5E3-5E5914D95D8A}" ShortID="257289749">
+							<ChildrenList>
+								<Event Name="Gold_HitGround" ID="{9CFBEB7C-3727-44E4-99EA-C77B56D60C66}"/>
+								<Event Name="Gold_PickUp" ID="{98AB897B-827D-4775-957C-702103578465}"/>
+								<Event Name="Gold_Spent" ID="{E2107404-C67F-4FB6-AD64-DAC88EA5A240}"/>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Missles" ID="{B3C92196-3AFA-49CF-8A7C-42EA75BE7A48}" ShortID="783291974">
+							<ChildrenList>
+								<Event Name="Missle_HitGround" ID="{967D9C77-2551-4A07-82FE-B0482798CA0F}"/>
+								<Event Name="Missle_Fired" ID="{2F8BE0F2-0C17-4331-9AD5-06BC071EE9E4}"/>
+								<Event Name="Missle_Explode" ID="{0FF4E2D4-F106-4333-ABA7-F46E1FAE163C}"/>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Menu" ID="{A59965F5-D8E2-4C78-B002-C53EE609D82F}" ShortID="979610816">
+					<ChildrenList>
+						<Event Name="Menu_Button_Hovered" ID="{E411446F-3AD0-4839-9FAB-19DAF62BB0B9}"/>
+						<Event Name="Menu_Button_Pressed" ID="{62DFA122-D0D0-41D8-B767-FDC746227B66}"/>
+						<Event Name="Menu_Opened" ID="{2D5FAB73-7BC0-4686-BFDC-6ECEA9574F82}"/>
+						<Event Name="Menu_Battlemode_Switched" ID="{545095AC-01D8-4022-94E8-A4A17E5157C4}"/>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
