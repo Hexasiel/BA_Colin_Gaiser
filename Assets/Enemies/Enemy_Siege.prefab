@@ -669,8 +669,8 @@ MonoBehaviour:
   healthbar: {fileID: 6229517087629017472}
   m_speed: 5
   m_attackSpeed: 0.25
-  m_maxHealth: 120
-  m_health: 120
+  m_maxHealth: 40
+  m_health: 40
   m_damage: 10
   m_attackRange: 25
   m_canAttack: 1

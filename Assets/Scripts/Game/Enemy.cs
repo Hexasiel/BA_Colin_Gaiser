@@ -21,13 +21,17 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected float m_speed = 10f;
     [SerializeField] protected float m_attackSpeed = 1f;
     [SerializeField] protected int m_maxHealth = 10;
-    [SerializeField] protected int m_health = 10;
+    [SerializeField] protected int m_health = 10; 
     [SerializeField] protected int m_damage = 1;
     [SerializeField] protected float m_attackRange = 10f;
     [SerializeField] protected bool m_canAttack = true;
     [SerializeField] protected bool m_targetInRange = false;
     [SerializeField] protected LayerMask attackLayer;
 
+
+    public int GetHealth() {
+        return m_health;
+    }
     //Internal Variables
     protected bool isStunned = false;
 

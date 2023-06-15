@@ -14,7 +14,7 @@ public class Building : MonoBehaviour, IAttackable
     public Sprite[] m_sprites;
     [SerializeField] protected Slider healthbar;
 
-    private void Start()
+    private void Awake()
     {
         Shrine.OnHealingTriggered += ReceiveHeal;
     }
@@ -22,7 +22,12 @@ public class Building : MonoBehaviour, IAttackable
     void ReceiveHeal(int health)
     {
         m_health += health;
-        if (m_health > m_maxHealth[m_level]) m_health = m_maxHealth[m_level];
+        if (m_health > m_maxHealth[m_level]) {
+            m_health = m_maxHealth[m_level];
+            healthbar.gameObject.SetActive(false);
+        }
+        PlayerController.instance.gameUI.UpdateUI();
+
     }
 
     void IAttackable.GetDamage(int dmg)

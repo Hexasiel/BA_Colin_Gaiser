@@ -29,8 +29,11 @@ public class MageTower : Building
     {
         target = null;
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        if (enemies.Length < 1)
+        if (enemies.Length < 1) {
+            m_targetInRange = false;
             return;
+        }
+
         foreach (GameObject enemy in enemies){
             if (target == null || (enemy.transform.position - transform.position).magnitude < (target.transform.position - transform.position).magnitude){
                 target = enemy;

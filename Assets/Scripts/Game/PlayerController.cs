@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour, IAttackable
     {
         m_health += health;
         if (m_health > maxHealth) m_health = maxHealth;
+        gameUI.UpdateUI();
     }
 
     void UpdateWorkshopStats()
@@ -156,6 +157,7 @@ public class PlayerController : MonoBehaviour, IAttackable
 
     IEnumerator Dash()
     {
+        if(refillShieldOnDash) RefillShield();
         dashParticleSystem.Play();
         canDash = false;
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
@@ -182,10 +184,11 @@ public class PlayerController : MonoBehaviour, IAttackable
         animator.SetTrigger("Attack");
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPos.position, attackRange, attackMask);
-        foreach (Collider2D collider2D in hitEnemies)
-        {
+        foreach (Collider2D collider2D in hitEnemies) {
             Vector2 knockback = (collider2D.transform.position - transform.position).normalized * attackKnockback;
-            collider2D.gameObject.GetComponent<Enemy>().GetDamage(attackDamage, knockback);
+            Enemy enemy = collider2D.GetComponent<Enemy>();
+            if (enemy.GetHealth() <= attackDamage && refillShieldOnKill) RefillShield();
+            enemy.GetDamage(attackDamage, knockback);
         }
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
