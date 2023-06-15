@@ -46,7 +46,7 @@ public class PlayerAnalizer : MonoBehaviour
             difficulty = pastWavePerformanceList.Last<WavePerformance>().waveDifficulty + 0.5f;
         }
         else {
-            difficulty = 3f;
+            difficulty = 0.5f;
         }
         return difficulty;
     }

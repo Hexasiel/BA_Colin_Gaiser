@@ -27,7 +27,7 @@ public class EnemySpawner : MonoBehaviour
         Instantiate(prefab, transform.position, Quaternion.identity);
     }
 
-    private void Start()
+    private void Awake()
     {
         //StartCoroutine(SpawnContinuously());
         if(instance == null)instance= this;
