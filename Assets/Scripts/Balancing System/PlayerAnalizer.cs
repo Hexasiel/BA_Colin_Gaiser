@@ -43,10 +43,10 @@ public class PlayerAnalizer : MonoBehaviour
 
         //Placeholder
         if(pastWavePerformanceList.Count > 0) {
-            difficulty = pastWavePerformanceList.Last<WavePerformance>().waveDifficulty + 0.5f;
+            difficulty = pastWavePerformanceList.Last<WavePerformance>().waveDifficulty + 0.4f;
         }
         else {
-            difficulty = 0.5f;
+            difficulty = 0.4f;
         }
         return difficulty;
     }
@@ -65,7 +65,7 @@ public class PlayerAnalizer : MonoBehaviour
 
     float CalculatePauseDuration() {
         //Placeholder
-        float duration = 10;
+        float duration = 20;
         return duration;
     }
 }

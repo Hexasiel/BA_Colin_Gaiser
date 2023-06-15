@@ -426,8 +426,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 2.51
-  m_PointLightOuterRadius: 11.09
+  m_PointLightInnerRadius: 1.85
+  m_PointLightOuterRadius: 14.49
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -6145,7 +6145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 500
-  health: 500
+  m_health: 500
   maxShield: 20
   shield: 20
   speedMod: 10

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -108,7 +109,7 @@ public class BuildingMenu : MonoBehaviour
             currentBuilding.parentMenu = this;
             ShowBanner(false);
             PlayerController.instance.gold -= currentBuilding.m_upgradeCost[0];
-            PlayerController.instance.gameUI.SetGoldText();
+            PlayerController.instance.gameUI.UpdateUI();
         }
         else
         {
@@ -134,7 +135,7 @@ public class BuildingMenu : MonoBehaviour
         if (currentBuilding.m_upgradeCost[currentBuilding.m_level +1] <= PlayerController.instance.gold)
         {
             PlayerController.instance.gold -= currentBuilding.m_upgradeCost[currentBuilding.m_level + 1];
-            PlayerController.instance.gameUI.SetGoldText();
+            PlayerController.instance.gameUI.UpdateUI();
             currentBuilding.Upgrade();
         }
         else

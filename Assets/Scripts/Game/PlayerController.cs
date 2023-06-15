@@ -142,6 +142,10 @@ public class PlayerController : MonoBehaviour, IAttackable
             m_health -= dmg;
         }
         gameUI.UpdateUI();
+
+        if(m_health <= 0) {
+            Time.timeScale = 0;
+        }
     }
 
     void PickUpGoldPiece()

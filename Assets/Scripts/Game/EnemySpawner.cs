@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using static EnemyWave;
 
 public class EnemySpawner : MonoBehaviour
@@ -20,7 +21,14 @@ public class EnemySpawner : MonoBehaviour
     public GameObject rightPortal;
     public int spawnTime;
 
+    [SerializeField] Light2D globalLight;
+    [SerializeField] SpriteRenderer[] backGround;
 
+    [SerializeField] Color nightColor;
+    [SerializeField] Color dayColor;
+    [SerializeField] float dayIntensity;
+    [SerializeField] float nightIntensity;
+    [SerializeField] float nightDayFadeDuration;
 
     void SpawnEnemy(GameObject prefab)
     {
@@ -32,7 +40,7 @@ public class EnemySpawner : MonoBehaviour
         //StartCoroutine(SpawnContinuously());
         if(instance == null)instance= this;
         PlayerAnalizer.OnNewWave +=  SpawnWave;
-
+        Enemy.OnAllEnemiesDefeated += FadeToDay;
     }
 
     void SpawnWave(EnemyWave wave) {
@@ -40,9 +48,15 @@ public class EnemySpawner : MonoBehaviour
         StartCoroutine(SpawnWaveCoroutine(wave));
     }
 
+    void FadeToDay() {
+        StartCoroutine(FadeDaytime(dayColor, dayIntensity, nightDayFadeDuration));
+    }
+
     IEnumerator SpawnWaveCoroutine(EnemyWave wave) {
         isSpawning = true;
         float passedTime = 0;
+
+        StartCoroutine(FadeDaytime(nightColor, nightIntensity, nightDayFadeDuration));
 
         while(passedTime < wave.m_duration) {
             //Enemies
@@ -78,6 +92,20 @@ public class EnemySpawner : MonoBehaviour
         isSpawning = false;
     }
 
+    IEnumerator FadeDaytime(Color newColor, float newIntesity, float fadeDuration) {
+        float passedTime = 0f;
+        Color currentColor = backGround[0].color;
+        float currentIntensity = globalLight.intensity;
+        while(passedTime < fadeDuration) {
+
+            globalLight.intensity = Mathf.Lerp(currentIntensity, newIntesity, passedTime / fadeDuration);
+            foreach(SpriteRenderer bg in backGround)
+                bg.color = Color.Lerp(currentColor, newColor, passedTime / fadeDuration);
+            passedTime += Time.deltaTime;
+            yield return null;
+        }
+    }
+
     void SpawnLightning(LightningSpawn lightningSpawn) {
         Instantiate(lightningPrefab, lightningSpawn.m_position, Quaternion.identity);
     }
@@ -96,13 +124,4 @@ public class EnemySpawner : MonoBehaviour
         else Instantiate(prefab, rightPortal.transform.position, Quaternion.identity);
     }
 
-    IEnumerator SpawnContinuously()
-    {
-        while(true)
-        {
-            yield return new WaitForSeconds(spawnTime);
-            SpawnEnemy(smallEnemyPrefab);
-        }
-
-    }
 }

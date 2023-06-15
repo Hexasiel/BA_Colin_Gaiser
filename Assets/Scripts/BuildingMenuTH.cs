@@ -83,7 +83,7 @@ public class BuildingMenuTH : MonoBehaviour
         }
         currentBuilding = Instantiate(thPrefab, transform.parent).GetComponent<TownHall>();
         PlayerController.instance.gold -= currentBuilding.m_upgradeCost[0];
-        PlayerController.instance.gameUI.SetGoldText();
+        PlayerController.instance.gameUI.UpdateUI();
         ShowBanner(false);
         UpdateUI();
     }
@@ -104,7 +104,7 @@ public class BuildingMenuTH : MonoBehaviour
         {
             PlayerController.instance.gold -= currentBuilding.m_upgradeCost[currentBuilding.m_level +1];
             currentBuilding.Upgrade();
-            PlayerController.instance.gameUI.SetGoldText();
+            PlayerController.instance.gameUI.UpdateUI();
         }
         else
         {

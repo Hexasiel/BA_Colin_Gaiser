@@ -8,7 +8,7 @@ public class EnemyWave
 {
     public List<Spawn> spawns;
     public List<LightningSpawn> lightnings;
-    public float m_duration = 5f;
+    public float m_duration = 20f;
 
     public EnemyWave(float difficulty){
         GenerateWave(difficulty);
@@ -21,7 +21,7 @@ public class EnemyWave
         bool side = Random.Range(0, 2) == 1;
 
         if ( difficulty > 0) {
-           int countSmallEnemies = (int)(difficulty / 0.1f);
+           int countSmallEnemies = (int)(difficulty / 0.2f);
             Debug.Log("Spawn " + countSmallEnemies + "Small Enemies");
            for (int i = 0; i < countSmallEnemies; i++) {
                 float randomTime = Random.Range(0, m_duration);
@@ -29,7 +29,7 @@ public class EnemyWave
            }
         }
         if (difficulty >= 1) {
-            int countSiegeEnemies = (int)(difficulty / 0.4f);
+            int countSiegeEnemies = (int)(difficulty / 0.5f);
             for (int i = 0; i < countSiegeEnemies; i++) {
                 float randomTime = Random.Range(0, m_duration);
                 spawns.Add(new Spawn(EnemyType.Siege, randomTime, RandomSide(side, difficulty)));
@@ -43,14 +43,14 @@ public class EnemyWave
             }
         }
         if (difficulty >= 3) {
-            int countBigEnemies = (int)(difficulty / 1f);
+            int countBigEnemies = (int)(difficulty / 1.5f);
             for (int i = 0; i < countBigEnemies; i++) {
                 float randomTime = Random.Range(0, m_duration);
                 spawns.Add(new Spawn(EnemyType.Big, randomTime, RandomSide(side, difficulty)));
             }
         }
         if (difficulty >= 5) {
-            int countFlyingEnemies = (int)(difficulty / 1f);
+            int countFlyingEnemies = (int)(difficulty / 1.5f);
             for (int i = 0; i < countFlyingEnemies; i++) {
                 float randomTime = Random.Range(0, m_duration);
                 spawns.Add(new Spawn(EnemyType.Flying, randomTime, RandomSide(side, difficulty)));
@@ -74,10 +74,11 @@ public class EnemyWave
         randomPos.y = 100;
         LayerMask mask = LayerMask.GetMask("Terrain");
 
-        RaycastHit2D hit = Physics2D.Raycast(randomPos, Vector2.down, mask);
+        RaycastHit2D hit = Physics2D.Raycast(randomPos, Vector2.down, 200, mask);
 
         if (hit.collider != null) {
             randomPos.y = hit.point.y;
+            Debug.Log(hit.collider.transform);
         }
         return randomPos;
     }

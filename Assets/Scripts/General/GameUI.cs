@@ -15,18 +15,13 @@ public class GameUI : MonoBehaviour
     private void Start()
     {
         PlayerController.instance.gameUI = this;
-        SetGoldText();
+        UpdateUI();
     }
 
     public void UpdateUI()
     {
         goldText.text = PlayerController.instance.gold.ToString();
         healthSlider.value = (float)PlayerController.instance.m_health / (float)PlayerController.instance.maxHealth;
-    }
-
-    public void SetGoldText()
-    {
-       
     }
 
     public void SwitchBattleMode()
