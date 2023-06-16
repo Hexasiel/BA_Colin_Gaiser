@@ -1,6 +1,349 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{C55E50FA-144D-4B2A-A9AA-217B01C98B19}" SchemaVersion="110">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{C55E50FA-144D-4B2A-A9AA-217B01C98B19}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{C55E50FA-144D-4B2A-A9AA-217B01C98B19}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Main" ID="{B0C30158-A682-42E7-B5E4-232399655B60}" ShortID="497622589">
+					<ChildrenList>
+						<MusicPlaylistContainer Name="Main_Playlist" ID="{C51B15CD-9226-4022-8927-14E17DF59D68}" ShortID="801789730">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Bachelorarbeit Edit 1 Export 1 Track 1 Render 0" ID="{372522A4-BD39-40BC-80AD-2FA203D443B3}" ShortID="698498430">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="16000"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Bachelorarbeit Edit 1 Export 1 Track 1 Render 0" ID="{00BBA3D1-AFDE-4B54-8D7E-982CC78D156C}" ShortID="752757943">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 1 Track 1 Render 0" ID="{456D4931-26C9-42B2-AF88-B28B62E5C66F}">
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 1 Track 1 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="582513179"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{BDF69135-AE4A-4BD7-9C20-89589EE1546E}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{24303E7C-AF5B-467A-9D85-1627DCBC9C04}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Bachelorarbeit Edit 1 Export 1 Track 1 Render 0" ID="{8BC3955B-25C0-4EF5-B5EB-DBCAA6F2C6BD}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="16000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Bachelorarbeit Edit 1 Export 1 Track 1 Render 0" ID="{456D4931-26C9-42B2-AF88-B28B62E5C66F}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="Bachelorarbeit Edit 1 Export 1 Track 2 Render 0" ID="{C248F06A-9CD4-43A9-9EB7-5E8122072FD7}" ShortID="304415240">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 1 Track 2 Render 0" ID="{CC7FD03B-C40F-4486-9D44-D8AE7176FB44}">
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 1 Track 2 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="932312110"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{7914EA64-33AB-4355-97E0-8C7D9AA2C126}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{3246C228-5981-439E-B262-36E2E3E9EF2F}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Bachelorarbeit Edit 1 Export 1 Track 2 Render 0" ID="{004BCC0D-C09D-46B0-AD62-84CE718AD44C}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="16000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Bachelorarbeit Edit 1 Export 1 Track 2 Render 0" ID="{CC7FD03B-C40F-4486-9D44-D8AE7176FB44}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="Bachelorarbeit Edit 1 Export 1 Track 3 Render 0" ID="{68181CBF-93B0-44FA-AB37-EB733A2AB38B}" ShortID="863073225">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 1 Track 3 Render 0" ID="{A439E9BD-14D6-4E2B-AD9B-50662A9EF5AC}">
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 1 Track 3 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="707965317"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{0BB04B93-E396-4721-91AB-63D487242913}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{77A8C660-9EE0-4506-B66C-A97822EAE8E1}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Bachelorarbeit Edit 1 Export 1 Track 3 Render 0" ID="{7B5694F8-377F-4DFA-A17A-8840E5304A2D}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="16000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Bachelorarbeit Edit 1 Export 1 Track 3 Render 0" ID="{A439E9BD-14D6-4E2B-AD9B-50662A9EF5AC}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="Bachelorarbeit Edit 1 Export 1 Track 4 Render 0" ID="{200CD39A-8970-4224-85A6-9681F46BBA1B}" ShortID="12638092">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 1 Track 4 Render 0" ID="{987F1AAF-973C-405F-AD8F-D73A9DA59FD0}">
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 1 Track 4 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="560656724"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{B4C36F92-0596-48C6-8E2D-15D8C980ECB3}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{C6902561-A0EB-43E6-9709-E4DA12A1ADC2}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Bachelorarbeit Edit 1 Export 1 Track 4 Render 0" ID="{F75528AB-DC68-4E69-8034-2D0580CC609F}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="16000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Bachelorarbeit Edit 1 Export 1 Track 4 Render 0" ID="{987F1AAF-973C-405F-AD8F-D73A9DA59FD0}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="Bachelorarbeit Edit 1 Export 1 Track 5 Render 0" ID="{122E5C68-C3E6-4E02-B9DD-207943CDA24F}" ShortID="706013233">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 1 Track 5 Render 0" ID="{12304A1A-BA45-44B0-869F-CFD777FFA1CD}">
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 1 Track 5 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="492581841"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{AD56F277-AF51-44BF-ABDF-F1B390CA1971}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{84145537-89EA-4FC0-951A-F9E158FDB190}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Bachelorarbeit Edit 1 Export 1 Track 5 Render 0" ID="{07A0F8BD-8F1C-453F-A2FC-71F3BD10B818}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="16000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Bachelorarbeit Edit 1 Export 1 Track 5 Render 0" ID="{12304A1A-BA45-44B0-869F-CFD777FFA1CD}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{4CC55D9A-09D3-46F2-8B64-53A6D797144B}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{188A8107-CD50-4677-B799-524D7FABBB4A}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="16000"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{30B6F74F-D9F2-4A4D-AB51-9EC6411EC36F}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{F33F5721-AA89-4292-9EED-650A1D862327}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{6FACC837-B7C2-4D2F-B582-84290143A404}" ShortID="664574201">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{FE9BD72C-6C91-4EFB-89D4-CF3B5321C541}" ShortID="1050405568">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Bachelorarbeit Edit 1 Export 1 Track 1 Render 0" ID="{372522A4-BD39-40BC-80AD-2FA203D443B3}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>

@@ -50,8 +50,28 @@
 					<ChildrenList>
 						<Event Name="Enemy_Grunt" ID="{C3D5C25A-AED8-41EA-94DB-429FA31E3B72}"/>
 						<Event Name="Enemy_Die" ID="{FD3366E8-9010-49B6-9B4C-2821D212FD2E}"/>
-						<Event Name="Enemy_Walk" ID="{338E1EDD-CAA3-48EE-93AE-1ABF4F5EFCBE}"/>
-						<Event Name="Enemy_Attack" ID="{9BE6096E-3BCC-451A-8F5B-76E2334624DB}"/>
+						<Event Name="Enemy_Walk" ID="{338E1EDD-CAA3-48EE-93AE-1ABF4F5EFCBE}">
+							<ChildrenList>
+								<Action Name="" ID="{0169331C-078A-4373-9DB9-C45166D5ACDD}" ShortID="262177833">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Steps" ID="{2F34958D-81D1-45D7-A806-FD12BF7778A3}" WorkUnitID="{481E7428-1181-4879-958C-0F804E0AD950}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Enemy_Attack" ID="{9BE6096E-3BCC-451A-8F5B-76E2334624DB}">
+							<ChildrenList>
+								<Action Name="" ID="{939BD854-19D9-4EE2-B68D-13488AF38EAA}" ShortID="522530176">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Attack" ID="{9BB06BCB-127E-4DC9-806B-C7ACC025BA65}" WorkUnitID="{481E7428-1181-4879-958C-0F804E0AD950}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Enemy_Spawn" ID="{C56E882F-721C-4D69-B430-3057FB74E13D}"/>
 					</ChildrenList>
 				</Folder>
@@ -69,6 +89,12 @@
 								<Event Name="Missle_HitGround" ID="{967D9C77-2551-4A07-82FE-B0482798CA0F}"/>
 								<Event Name="Missle_Fired" ID="{2F8BE0F2-0C17-4331-9AD5-06BC071EE9E4}"/>
 								<Event Name="Missle_Explode" ID="{0FF4E2D4-F106-4333-ABA7-F46E1FAE163C}"/>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Lightning" ID="{69248A55-6C6E-45D7-BAA3-56A9B60E3B57}" ShortID="80930050">
+							<ChildrenList>
+								<Event Name="Lightning_Explode" ID="{99BC4FB1-4924-4C41-B67A-26925597DFBC}"/>
+								<Event Name="Lightning_Charge" ID="{DC156C1F-93ED-4D25-8BC4-9444C0AEF740}"/>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>

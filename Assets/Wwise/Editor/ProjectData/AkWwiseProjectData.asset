@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e3d0e24943fc41408c6157df7c860e9b
     GuidInternal: 
-    m_lastTime: -8585151196277243853
+    m_lastTime: -8585146947394356389
     List:
     - name: Building_Built_Stone
       guid: 2e3cba4baad14040a3658bf962b112af
@@ -454,6 +454,72 @@ MonoBehaviour:
         ObjectType: 3
         guid: 047410e27fc6b64fad64dac88ea5a240
       Path: Events\Default Work Unit\Objects\Coin\Gold_Spent
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lightning
+      guid: 558a24696e6cd745baa356a9b60e3b57
+      id: 3334464137
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 0be66cd7a26d864c8c4e4e6ab21c78e7
+      - ElementName: Lightning
+        ObjectType: 4
+        guid: 558a24696e6cd745baa356a9b60e3b57
+      Path: Events\Default Work Unit\Objects\Lightning
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lightning_Charge
+      guid: 1f6c15dced93254d8bc49444c0aef740
+      id: 877173992
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 0be66cd7a26d864c8c4e4e6ab21c78e7
+      - ElementName: Lightning
+        ObjectType: 4
+        guid: 558a24696e6cd745baa356a9b60e3b57
+      - ElementName: Lightning_Charge
+        ObjectType: 3
+        guid: 1f6c15dced93254d8bc49444c0aef740
+      Path: Events\Default Work Unit\Objects\Lightning\Lightning_Charge
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lightning_Explode
+      guid: b14fbc992449414cb67a26925597dfbc
+      id: 863959723
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 0be66cd7a26d864c8c4e4e6ab21c78e7
+      - ElementName: Lightning
+        ObjectType: 4
+        guid: 558a24696e6cd745baa356a9b60e3b57
+      - ElementName: Lightning_Explode
+        ObjectType: 3
+        guid: b14fbc992449414cb67a26925597dfbc
+      Path: Events\Default Work Unit\Objects\Lightning\Lightning_Explode
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
