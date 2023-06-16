@@ -9,9 +9,10 @@ public class Shrine : Building
     public static event Action<int> OnHealingTriggered;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         StartCoroutine(HealEverySecond());
+        Shrine.OnHealingTriggered += ReceiveHeal;
     }
 
     // Update is called once per frame

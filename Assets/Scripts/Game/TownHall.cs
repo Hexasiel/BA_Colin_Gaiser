@@ -12,6 +12,7 @@ public class TownHall : Building
         buildslots[1] = Instantiate(buildslots[1]);
         buildslots[2] = Instantiate(buildslots[2]);
         buildslots[m_level].SetActive(true);
+        Shrine.OnHealingTriggered += ReceiveHeal;
     }
 
     protected override void Die()

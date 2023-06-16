@@ -152,7 +152,7 @@ public class BuildingMenu : MonoBehaviour
             Debug.LogWarning("Trying to destroy a building, but these is nothing built in this slot!");
             return;
         }
-        PlayerController.instance.gold += (int)(currentBuilding.m_upgradeCost[currentBuilding.m_level] * (currentBuilding.m_health / currentBuilding.m_maxHealth[currentBuilding.m_level]) * 0.9);
+        PlayerController.instance.gold += (int)(currentBuilding.m_upgradeCost[currentBuilding.m_level] * ((float)currentBuilding.m_health / (float)currentBuilding.m_maxHealth[currentBuilding.m_level]) * 0.9);
         PlayerController.instance.gameUI.UpdateUI();
         Destroy(currentBuilding.gameObject);
         currentBuilding = null;

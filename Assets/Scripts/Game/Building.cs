@@ -24,6 +24,7 @@ public class Building : MonoBehaviour, IAttackable
         m_health += health;
         if (m_health > m_maxHealth[m_level]) {
             m_health = m_maxHealth[m_level];
+            Debug.Log(gameObject);
             healthbar.gameObject.SetActive(false);
         }
         healthbar.value = (float)m_health / (float)m_maxHealth[m_level];
@@ -52,6 +53,7 @@ public class Building : MonoBehaviour, IAttackable
 
     protected virtual void Die()
     {
+        Shrine.OnHealingTriggered -= ReceiveHeal;
         parentMenu.ShowBanner(true);
         Destroy(gameObject);
     }

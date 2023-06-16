@@ -58,6 +58,7 @@ public class PlayerController : MonoBehaviour, IAttackable
         GoldPiece.OnGoldPieceCollected += PickUpGoldPiece;
         Workshop.OnWorkshopLevelUpdated += UpdateWorkshopStats;
         Shrine.OnHealingTriggered += ReceiveHeal;
+        StartCoroutine(HealEverySecond());
     }
 
     void ReceiveHeal(int health)
@@ -65,6 +66,13 @@ public class PlayerController : MonoBehaviour, IAttackable
         m_health += health;
         if (m_health > maxHealth) m_health = maxHealth;
         gameUI.UpdateUI();
+    }
+
+    IEnumerator HealEverySecond() {
+        while (gameObject) {
+            ReceiveHeal(5);
+            yield return new WaitForSeconds(1);
+        }
     }
 
     void UpdateWorkshopStats()

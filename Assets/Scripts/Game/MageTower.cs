@@ -38,7 +38,7 @@ public class MageTower : Building {
                 target = enemy;
             }
         }
-        if(target!= null) { Debug.LogWarning("Could not find Enemies."); m_targetInRange = false; return; }
+        if(target == null) { Debug.LogWarning("Could not find Enemies."); m_targetInRange = false; return; }
         Vector3 targetVector = (target.transform.position - transform.position);
         if (targetVector.magnitude < m_attackRange[m_level])
             m_targetInRange = true;
