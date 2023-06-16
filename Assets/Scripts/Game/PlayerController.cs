@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour, IAttackable
     [SerializeField] private float dashPower = 1f;
     [SerializeField] private float dashTime = 1f;
     [SerializeField] LayerMask attackMask;
+    [SerializeField] LayerMask repairMask;
 
     //Internal variables
     public int gold = 0;
@@ -46,6 +47,10 @@ public class PlayerController : MonoBehaviour, IAttackable
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] ParticleSystem dashParticleSystem;
     public GameUI gameUI;
+
+    //Sprites
+    [SerializeField] Sprite spriteWithSword;
+    [SerializeField] Sprite spriteWithHammer;
 
     private void Awake()
     {
@@ -88,13 +93,10 @@ public class PlayerController : MonoBehaviour, IAttackable
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             battleMode = !battleMode;
+            if (battleMode) sprite.sprite = spriteWithSword;
+            else sprite.sprite = spriteWithHammer;
             gameUI.SwitchBattleMode();
         }
-        if (Input.GetKeyDown(KeyCode.Mouse1) && canDash)
-        {
-            StartCoroutine(Dash());
-        }
-
 
         Vector2 currentPos = new Vector2(transform.position.x, transform.position.y);
         if (Input.GetKey(KeyCode.A))
@@ -111,17 +113,30 @@ public class PlayerController : MonoBehaviour, IAttackable
         }
 
         //BattleMode Only
-        if (!battleMode)
-            return;
-        //if (Input.GetKey(KeyCode.Mouse1) && canShoot)
-        //{
-        //    StartCoroutine(Shoot());
-        //}
-        if (Input.GetKey(KeyCode.Mouse0) && canAttack)
-        {
-            StartCoroutine(Attack());
+        if (battleMode) {
+            if (Input.GetKey(KeyCode.Mouse0) && canAttack) {
+                StartCoroutine(Attack());
+            }
+            if (Input.GetKeyDown(KeyCode.Mouse1) && canDash) {
+                StartCoroutine(Dash());
+            }
+            //if (Input.GetKey(KeyCode.Mouse1) && canShoot)
+            //{
+            //    StartCoroutine(Shoot());
+            //}
+        }
+        else {
+            if (Input.GetKey(KeyCode.Mouse1) && canAttack) {
+                StartCoroutine(Repair());
+            }
         }
 
+
+    }
+
+    IEnumerator AutoRefillShield() {
+        yield return new WaitForSeconds(10);
+        RefillShield();
     }
 
     void RefillShield()
@@ -135,7 +150,9 @@ public class PlayerController : MonoBehaviour, IAttackable
         if(shield > 0) {
             shield -= dmg;
             if(shield <= 0){
-                shieldGO.SetActive(false); shield = 0;
+                shieldGO.SetActive(false); 
+                shield = 0;
+                StartCoroutine(AutoRefillShield());
             }
         }
         else
@@ -189,6 +206,20 @@ public class PlayerController : MonoBehaviour, IAttackable
             Enemy enemy = collider2D.GetComponent<Enemy>();
             if (enemy.GetHealth() <= attackDamage && refillShieldOnKill) RefillShield();
             enemy.GetDamage(attackDamage, knockback);
+        }
+        yield return new WaitForSeconds(attackCooldown);
+        canAttack = true;
+    }
+
+    IEnumerator Repair() {
+        canAttack = false;
+
+        animator.SetTrigger("Attack");
+
+        Collider2D[] hitBuildings = Physics2D.OverlapCircleAll(attackPos.position, attackRange, repairMask);
+        foreach (Collider2D collider2D in hitBuildings) {
+            Building building = collider2D.GetComponent<Building>();
+            building.ReceiveHeal(attackDamage);
         }
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;

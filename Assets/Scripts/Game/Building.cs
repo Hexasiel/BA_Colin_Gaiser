@@ -19,15 +19,14 @@ public class Building : MonoBehaviour, IAttackable
         Shrine.OnHealingTriggered += ReceiveHeal;
     }
     
-    void ReceiveHeal(int health)
+    public void ReceiveHeal(int health)
     {
         m_health += health;
         if (m_health > m_maxHealth[m_level]) {
             m_health = m_maxHealth[m_level];
             healthbar.gameObject.SetActive(false);
         }
-        PlayerController.instance.gameUI.UpdateUI();
-
+        healthbar.value = (float)m_health / (float)m_maxHealth[m_level];
     }
 
     void IAttackable.GetDamage(int dmg)

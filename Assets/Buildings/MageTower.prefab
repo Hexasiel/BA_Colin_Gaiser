@@ -1272,4 +1272,5 @@ MonoBehaviour:
   - 0.5
   - 1
   - 1
+  m_attackDamage: 0a0000000a00000014000000
   m_canAttack: 1
