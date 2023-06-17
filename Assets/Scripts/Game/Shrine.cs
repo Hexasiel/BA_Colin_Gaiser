@@ -28,6 +28,7 @@ public class Shrine : Building
 
     IEnumerator HealEverySecond(){
         while (gameObject){
+            yield return new WaitForEndOfFrame();
             Heal();
             yield return new WaitForSeconds(1);
         }

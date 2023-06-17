@@ -21,6 +21,7 @@ public class Building : MonoBehaviour, IAttackable
     
     public void ReceiveHeal(int health)
     {
+        if (healthbar == null || gameObject == null) return;
         m_health += health;
         if (m_health > m_maxHealth[m_level]) {
             m_health = m_maxHealth[m_level];
