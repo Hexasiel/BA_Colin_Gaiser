@@ -19,7 +19,7 @@ public class PlayerAnalizer : MonoBehaviour
     IEnumerator WrapUpWave() {
         currentWavePerformance.WrapUp();
         pastWavePerformanceList.Add(currentWavePerformance);
-        yield return new WaitForSeconds(currentWavePerformance.wavePauseDuration);
+        yield return new WaitForSeconds(currentWavePerformance.m_wavePauseDuration);
         NextWave();
     }
 
@@ -34,8 +34,8 @@ public class PlayerAnalizer : MonoBehaviour
         EnemyWave newWave = new EnemyWave(difficulty);
         OnNewWave?.Invoke(newWave);
         currentWavePerformance = new WavePerformance();
-        currentWavePerformance.wavePauseDuration = CalculatePauseDuration();
-        currentWavePerformance.waveDifficulty= difficulty;
+        currentWavePerformance.m_wavePauseDuration = CalculatePauseDuration();
+        currentWavePerformance.m_waveDifficulty = difficulty;
     }
 
     float CalculateNewDifficulty(){
@@ -43,10 +43,10 @@ public class PlayerAnalizer : MonoBehaviour
 
         //Placeholder
         if(pastWavePerformanceList.Count > 0) {
-            difficulty = pastWavePerformanceList.Last<WavePerformance>().waveDifficulty + 0.4f;
+            difficulty = pastWavePerformanceList.Last<WavePerformance>().m_waveDifficulty + 0.4f;
         }
         else {
-            difficulty = 0.4f;
+            difficulty = 3.4f;
         }
         return difficulty;
     }

@@ -1,10 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Building : MonoBehaviour, IAttackable
-{
+public class Building : MonoBehaviour, IAttackable {
+
+    public static event Action<int> OnBuildingDamaged;
+    public static event Action OnBuildingDestroyed;
+    public static event Action<int> OnBuildingHealed;
+
+    public static int count;
+
     public BuildingMenu parentMenu;
     public int m_health;
     public int[] m_maxHealth;
@@ -17,22 +24,29 @@ public class Building : MonoBehaviour, IAttackable
     private void Awake()
     {
         Shrine.OnHealingTriggered += ReceiveHeal;
+        count++;
     }
     
     public void ReceiveHeal(int health)
     {
         if (healthbar == null || gameObject == null) return;
-        m_health += health;
-        if (m_health > m_maxHealth[m_level]) {
+
+        if (m_health + health > m_maxHealth[m_level]) {
+            OnBuildingHealed?.Invoke(m_maxHealth[m_level] - m_health);
             m_health = m_maxHealth[m_level];
             Debug.Log(gameObject);
             healthbar.gameObject.SetActive(false);
+        }
+        else {
+            m_health += health;
+            OnBuildingHealed?.Invoke(health);
         }
         healthbar.value = (float)m_health / (float)m_maxHealth[m_level];
     }
 
     void IAttackable.GetDamage(int dmg)
     {
+        OnBuildingDamaged?.Invoke(dmg);
         m_health -= dmg;
         healthbar.gameObject.SetActive(true);
         healthbar.value = (float)m_health / (float)m_maxHealth[m_level];
@@ -55,7 +69,9 @@ public class Building : MonoBehaviour, IAttackable
     protected virtual void Die()
     {
         Shrine.OnHealingTriggered -= ReceiveHeal;
+        OnBuildingDestroyed?.Invoke();
         parentMenu.ShowBanner(true);
+        count--;
         Destroy(gameObject);
     }
 }
