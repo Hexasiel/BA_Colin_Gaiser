@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,10 @@ using UnityEngine.Rendering;
 public class PlayerController : MonoBehaviour, IAttackable
 {
     public static PlayerController instance;
+
+    //Events
+    public static event Action<int> OnPlayerDealtDamage;
+    public static event Action<int> OnPlayerGetDamage;
 
     //Properties
     public int maxHealth = 500;
@@ -58,6 +63,10 @@ public class PlayerController : MonoBehaviour, IAttackable
         GoldPiece.OnGoldPieceCollected += PickUpGoldPiece;
         Workshop.OnWorkshopLevelUpdated += UpdateWorkshopStats;
         Shrine.OnHealingTriggered += ReceiveHeal;
+    }
+
+    private void Start() {
+        Time.timeScale = 1;
         StartCoroutine(HealEverySecond());
     }
 
@@ -69,6 +78,7 @@ public class PlayerController : MonoBehaviour, IAttackable
     }
 
     IEnumerator HealEverySecond() {
+        yield return new WaitForEndOfFrame();
         while (gameObject) {
             ReceiveHeal(5);
             yield return new WaitForSeconds(1);
@@ -138,8 +148,6 @@ public class PlayerController : MonoBehaviour, IAttackable
                 StartCoroutine(Repair());
             }
         }
-
-
     }
 
     IEnumerator AutoRefillShield() {
@@ -166,12 +174,18 @@ public class PlayerController : MonoBehaviour, IAttackable
         else
         {
             m_health -= dmg;
+            OnPlayerGetDamage?.Invoke(dmg);
         }
         gameUI.UpdateUI();
 
         if(m_health <= 0) {
-            Time.timeScale = 0;
+            Die();
         }
+    }
+
+    void Die() {
+        Time.timeScale = 0;
+        gameUI.ShowDeathScreen();
     }
 
     void PickUpGoldPiece()
@@ -214,6 +228,7 @@ public class PlayerController : MonoBehaviour, IAttackable
             Enemy enemy = collider2D.GetComponent<Enemy>();
             if (enemy.GetHealth() <= attackDamage && refillShieldOnKill) RefillShield();
             enemy.GetDamage(attackDamage, knockback);
+            OnPlayerDealtDamage?.Invoke(attackDamage);
         }
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;

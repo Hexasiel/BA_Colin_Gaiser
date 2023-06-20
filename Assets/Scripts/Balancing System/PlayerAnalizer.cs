@@ -3,17 +3,28 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using System.IO;
 
 public class PlayerAnalizer : MonoBehaviour
 {
     WavePerformance currentWavePerformance;
     List<WavePerformance> pastWavePerformanceList;
     public static event Action<EnemyWave> OnNewWave;
+    int gameSessionID;
 
     private void Start() {
         pastWavePerformanceList = new List<WavePerformance>();
+        gameSessionID = GetNewGameSessionID();
         Enemy.OnAllEnemiesDefeated += CheckForClearedWave;
         NextWave();
+    }
+
+    int GetNewGameSessionID() {
+        int i = 0;
+        while(Directory.Exists("saveFiles/" + i)) {
+            i++;
+        }
+        return i;
     }
 
     IEnumerator WrapUpWave() {
@@ -33,9 +44,10 @@ public class PlayerAnalizer : MonoBehaviour
         float difficulty = CalculateNewDifficulty();
         EnemyWave newWave = new EnemyWave(difficulty);
         OnNewWave?.Invoke(newWave);
+        int waveNumber = 0;
+        if(pastWavePerformanceList.Count > 0) { waveNumber = pastWavePerformanceList.Last<WavePerformance>().m_waveNumber + 1; }
         currentWavePerformance = new WavePerformance();
-        currentWavePerformance.m_wavePauseDuration = CalculatePauseDuration();
-        currentWavePerformance.m_waveDifficulty = difficulty;
+        currentWavePerformance.Init(gameSessionID, waveNumber, CalculateSpawnDuration(difficulty), CalculatePauseDuration(difficulty), difficulty);
     }
 
     float CalculateNewDifficulty(){
@@ -46,7 +58,7 @@ public class PlayerAnalizer : MonoBehaviour
             difficulty = pastWavePerformanceList.Last<WavePerformance>().m_waveDifficulty + 0.4f;
         }
         else {
-            difficulty = 3.4f;
+            difficulty = 1.4f;
         }
         return difficulty;
     }
@@ -63,7 +75,13 @@ public class PlayerAnalizer : MonoBehaviour
         return difficulty;
     }
 
-    float CalculatePauseDuration() {
+    float CalculatePauseDuration(float difficulty) {
+        //Placeholder
+        float duration = 20;
+        return duration;
+    }
+
+    float CalculateSpawnDuration(float difficulty) {
         //Placeholder
         float duration = 20;
         return duration;

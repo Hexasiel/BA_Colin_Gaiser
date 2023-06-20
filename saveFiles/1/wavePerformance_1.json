@@ -1,0 +1,19 @@
+{
+    "m_waveNumber": 1,
+    "m_waveSpawntime": 71.38162994384766,
+    "m_waveSpawnDuration": 20.0,
+    "m_wavePauseDuration": 20.0,
+    "m_waveDifficulty": 1.7999999523162842,
+    "m_waveClearDuration": 31.930259704589845,
+    "m_lostHP": 0,
+    "m_lostBuildingHP": 10,
+    "m_lostBuildings": 0,
+    "m_healedtBuildingHP": 0,
+    "m_damageDealtInCloseCombat": 430,
+    "m_bciStats_eng": [],
+    "m_bciStats_exc": [],
+    "m_bciStats_foc": [],
+    "m_bciStats_int": [],
+    "m_bciStats_rel": [],
+    "m_bciStats_str": []
+}

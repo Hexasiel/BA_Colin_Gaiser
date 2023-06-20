@@ -394,7 +394,7 @@ MonoBehaviour:
     m_Options:
     - m_Text: <Known Devices>
       m_Image: {fileID: 0}
-    - m_Text: 123
+    - m_Text: EPOCX-1321429C
       m_Image: {fileID: 0}
     - m_Text: 356
       m_Image: {fileID: 0}

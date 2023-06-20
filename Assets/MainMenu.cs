@@ -92,4 +92,9 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
         #endif
     }
+
+    void OnApplicationQuit() {
+        Debug.Log("Application ending after " + Time.time + " seconds");
+        euITF.Stop();
+    }
 }

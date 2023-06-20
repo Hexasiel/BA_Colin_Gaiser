@@ -18,6 +18,7 @@ public class TownHall : Building
     protected override void Die()
     {
         Time.timeScale = 0;
+        PlayerController.instance.gameUI.ShowDeathScreen();
     }
 
     public override void Upgrade()

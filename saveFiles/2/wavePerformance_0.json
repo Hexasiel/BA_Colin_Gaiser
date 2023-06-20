@@ -1,0 +1,50 @@
+{
+    "m_gameSession": 2,
+    "m_waveNumber": 0,
+    "m_waveSpawntime": 11.653175354003907,
+    "m_waveSpawnDuration": 20.0,
+    "m_wavePauseDuration": 20.0,
+    "m_waveDifficulty": 1.399999976158142,
+    "m_waveClearDuration": 39.649723052978519,
+    "m_lostHP": 120,
+    "m_lostBuildingHP": 10,
+    "m_lostBuildings": 0,
+    "m_healedtBuildingHP": 0,
+    "m_damageDealtInCloseCombat": 310,
+    "m_bciStats_eng": [
+        0.44999998807907107,
+        0.44999998807907107,
+        0.44999998807907107,
+        0.44999998807907107
+    ],
+    "m_bciStats_exc": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+    ],
+    "m_bciStats_foc": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+    ],
+    "m_bciStats_int": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929
+    ],
+    "m_bciStats_rel": [
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421
+    ],
+    "m_bciStats_str": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+    ]
+}

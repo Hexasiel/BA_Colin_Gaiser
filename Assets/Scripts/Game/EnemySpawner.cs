@@ -38,7 +38,7 @@ public class EnemySpawner : MonoBehaviour
     private void Awake()
     {
         //StartCoroutine(SpawnContinuously());
-        if(instance == null)instance= this;
+        instance= this;
         PlayerAnalizer.OnNewWave +=  SpawnWave;
         Enemy.OnAllEnemiesDefeated += FadeToDay;
     }
@@ -122,6 +122,11 @@ public class EnemySpawner : MonoBehaviour
         }
         if(spawn.m_side) Instantiate(prefab, leftPortal.transform.position, Quaternion.identity);
         else Instantiate(prefab, rightPortal.transform.position, Quaternion.identity);
+    }
+
+    private void OnDestroy() {
+        PlayerAnalizer.OnNewWave -= SpawnWave;
+        Enemy.OnAllEnemiesDefeated -= FadeToDay;
     }
 
 }

@@ -3,11 +3,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using System.IO;
 
 [Serializable]
 public class WavePerformance 
 {
     //General
+    public int m_gameSession;
     public int m_waveNumber;
     public float m_waveSpawntime;
     public float m_waveSpawnDuration;
@@ -35,13 +38,14 @@ public class WavePerformance
     public List<float> m_bciStats_str;
 
 
-    public void Init(int waveNumber, float waveSpawnTime,float waveSpawnDuration, float wavePauseDuration, float waveDifficulty) {
+    public void Init(int gameSession, int waveNumber,float waveSpawnDuration, float wavePauseDuration, float waveDifficulty) {
+        m_gameSession = gameSession;
         m_waveNumber = waveNumber;
-        m_waveSpawntime = waveSpawnTime;
+        m_waveSpawntime = Time.realtimeSinceStartup;
         m_waveSpawnDuration = waveSpawnDuration;
         m_wavePauseDuration = wavePauseDuration;
         m_waveDifficulty = waveDifficulty;
-        m_waveClearDuration = 0;
+        m_waveClearDuration = -1;
         m_lostHP = 0;
         m_lostBuildingHP = 0;
         m_lostBuildings = 0;
@@ -57,21 +61,28 @@ public class WavePerformance
         Building.OnBuildingDamaged += AddBuildingDamage;
         Building.OnBuildingDestroyed += AddDestroyedBuilding;
         Building.OnBuildingHealed += AddBuildingHeal;
-        //EmotivUnityItf.Instance.PerfDataReceived += AddBCIMetrics;
+        EmotivUnityItf.Instance.PerfDataReceived += AddBCIMetrics;
+        PlayerController.OnPlayerDealtDamage += AddPlayerMeleeDamageDealt;
+        PlayerController.OnPlayerGetDamage += AddPlayerDamage;
     }
 
-    void AddBCIMetrics(float eng, float exc, float foc, float intel, float rel, float str ) {
+    void AddBCIMetrics(object sender ,ArrayList metrics ) {
 
-        m_bciStats_eng.Add( eng );
-        m_bciStats_exc.Add( exc );
-        m_bciStats_foc.Add( foc );
-        m_bciStats_int.Add(intel);
-        m_bciStats_rel.Add( rel );
-        m_bciStats_str.Add( str );
+        m_bciStats_eng.Add(float.Parse(metrics[2].ToString()));
+        m_bciStats_exc.Add(float.Parse(metrics[4].ToString()));
+        m_bciStats_foc.Add(float.Parse(metrics[7].ToString()));
+        m_bciStats_int.Add(float.Parse(metrics[9].ToString()));
+        m_bciStats_rel.Add(float.Parse(metrics[11].ToString()));
+        m_bciStats_str.Add(float.Parse(metrics[13].ToString()));
+
     }
 
     void AddBuildingDamage(int dmg) {
         m_lostBuildingHP += dmg;
+    }
+
+    void AddPlayerMeleeDamageDealt(int dmg) {
+        m_damageDealtInCloseCombat+= dmg;
     }
 
     void AddBuildingHeal(int heal) {
@@ -89,6 +100,23 @@ public class WavePerformance
     public void WrapUp() {
         //TODO
         Building.OnBuildingDamaged -= AddBuildingDamage;
+        Building.OnBuildingDestroyed -= AddDestroyedBuilding;
+        Building.OnBuildingHealed -= AddBuildingHeal;
+        EmotivUnityItf.Instance.PerfDataReceived -= AddBCIMetrics;
+        PlayerController.OnPlayerDealtDamage -= AddPlayerMeleeDamageDealt;
+        PlayerController.OnPlayerGetDamage -= AddPlayerDamage;
 
+        m_waveClearDuration = Time.realtimeSinceStartup - m_waveSpawntime;
+
+        SaveToJSON("saveFiles/" + m_gameSession);
+
+    }
+
+    public void SaveToJSON(string filePath) {
+
+        if (!Directory.Exists(filePath)) {Directory.CreateDirectory(filePath); }
+        string jsonString = JsonUtility.ToJson(this, true);
+        string saveFile =  filePath + "/" + "wavePerformance_" + m_waveNumber + ".json";
+        File.WriteAllText(saveFile, jsonString);
     }
 }

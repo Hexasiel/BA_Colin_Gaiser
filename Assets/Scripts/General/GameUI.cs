@@ -4,6 +4,7 @@ using System.Drawing;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameUI : MonoBehaviour
 {
@@ -11,9 +12,9 @@ public class GameUI : MonoBehaviour
     [SerializeField] Image buildModeSprite;
     [SerializeField] Image battleModeSprite;
     [SerializeField] Slider healthSlider;
+    [SerializeField] GameObject deathScreen;
 
-    private void Start()
-    {
+    private void Start() {
         PlayerController.instance.gameUI = this;
         UpdateUI();
     }
@@ -31,4 +32,11 @@ public class GameUI : MonoBehaviour
         battleModeSprite.color = c;
     }
 
+    public void ShowDeathScreen() {
+        deathScreen.SetActive(true);
+    }
+
+    public void BackToMenu() {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
