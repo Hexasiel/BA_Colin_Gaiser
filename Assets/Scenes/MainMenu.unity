@@ -396,11 +396,11 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: EPOCX-1321429C
       m_Image: {fileID: 0}
-    - m_Text: 356
+    - m_Text: EPOCX-17E3FFCE
       m_Image: {fileID: 0}
-    - m_Text: 356
+    - m_Text: EPOCX-E20205C0
       m_Image: {fileID: 0}
-    - m_Text: 356
+    - m_Text: EPOCX-E20205AB
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
