@@ -63,7 +63,8 @@ public class Building : MonoBehaviour, IAttackable {
             m_level += 1;
         }
         GetComponent<SpriteRenderer>().sprite = m_sprites[m_level];
-        m_health = m_maxHealth[m_level];
+        m_health = m_maxHealth[m_level] - m_maxHealth[m_level - 1] + m_health;
+        healthbar.value = (float)m_health / (float)m_maxHealth[m_level];
     }
 
     protected virtual void Die()
@@ -71,6 +72,7 @@ public class Building : MonoBehaviour, IAttackable {
         Shrine.OnHealingTriggered -= ReceiveHeal;
         OnBuildingDestroyed?.Invoke();
         parentMenu.ShowBanner(true);
+        parentMenu.SetButtonsEnabled(new bool[] { true, true, true, true, true, true, false, false });
         count--;
         Destroy(gameObject);
     }

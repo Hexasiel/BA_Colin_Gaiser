@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class BuildingMenu : MonoBehaviour
 {
-    //
+    //External References
     [SerializeField] GameObject banner;
     Transform[] childButton = new Transform[9];
     TextMeshPro[] costTexts = new TextMeshPro[7];
@@ -18,11 +18,13 @@ public class BuildingMenu : MonoBehaviour
     public GameObject[] buildingPrefabs;
 
 
-    //
+    //Properties
+    bool[] buttonStates = new bool[] { true, true, true, true, true, true, false, false};
     int activeElement = 0;
     private LayerMask _layerMask;
     public Color defaultColor = new Color(1, 1, 1, 0.5f);
     public Color hoveredColor = new Color(1, 1, 1, 1f);
+    public Color disabledColor = new Color(0.5f, 0.5f, 0.5f, 0.5f);
 
     private void Awake()
     {
@@ -37,6 +39,7 @@ public class BuildingMenu : MonoBehaviour
         {
             costTexts[i] = transform.GetChild(i+1).GetComponentInChildren<TextMeshPro>();
         }
+        
         UpdateUI();
     }
 
@@ -76,11 +79,23 @@ public class BuildingMenu : MonoBehaviour
         }  
     }
 
+    public void SetButtonsEnabled(bool[] newStates) {
+        if(newStates.Length != buttonStates.Length) {
+            Debug.LogError("Trying to edit button states but array length does not match!");
+            return;
+        }
+        buttonStates = newStates;
+    }
+
     public void SetActiveElement(int elementIndex)
     {
-        foreach(Transform t in childButton)
-        {
-            t.GetComponent<SpriteRenderer>().color = defaultColor;
+        for (int i = 0; i < buttonStates.Length; i++) {
+            if (buttonStates[i]) {
+                childButton[i+1].GetComponent<SpriteRenderer>().color = defaultColor;
+            }
+            else {
+                childButton[i+1].GetComponent<SpriteRenderer>().color = disabledColor;
+            }
         }
         childButton[elementIndex].GetComponent<SpriteRenderer>().color = hoveredColor;
         activeElement = elementIndex;
@@ -116,7 +131,7 @@ public class BuildingMenu : MonoBehaviour
             Debug.Log("Trying to build a building, but player has not enough gold!");
             return;
         }
-        
+        SetButtonsEnabled(new bool[] { false, false, false, false, false, false, true, true }) ;
         UpdateUI();
     }
 
@@ -143,6 +158,7 @@ public class BuildingMenu : MonoBehaviour
             Debug.Log("Trying to upgrade a building, but player has not enough gold!");
             return;
         }
+        if(currentBuilding.m_level == currentBuilding.m_maxLevel) SetButtonsEnabled(new bool[] { false, false, false, false, false, false, false, true });
         UpdateUI();
     }
 
@@ -157,6 +173,7 @@ public class BuildingMenu : MonoBehaviour
         Destroy(currentBuilding.gameObject);
         currentBuilding = null;
         ShowBanner(true);
+        SetButtonsEnabled(new bool[] { true, true, true, true, true, true, false, false });
         UpdateUI();
     }
 

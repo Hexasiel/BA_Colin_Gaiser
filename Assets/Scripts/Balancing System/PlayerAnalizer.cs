@@ -7,10 +7,14 @@ using System.IO;
 
 public class PlayerAnalizer : MonoBehaviour
 {
+
+    public static event Action<EnemyWave> OnNewWave;
+
+    int gameSessionID;
     WavePerformance currentWavePerformance;
     List<WavePerformance> pastWavePerformanceList;
-    public static event Action<EnemyWave> OnNewWave;
-    int gameSessionID;
+
+    private float systemWeight;
 
     private void Start() {
         pastWavePerformanceList = new List<WavePerformance>();
@@ -19,24 +23,17 @@ public class PlayerAnalizer : MonoBehaviour
         NextWave();
     }
 
-    int GetNewGameSessionID() {
-        int i = 0;
-        while(Directory.Exists("saveFiles/" + i)) {
-            i++;
-        }
-        return i;
-    }
-
-    IEnumerator WrapUpWave() {
+    IEnumerator SwitchtoPause() {
+        currentWavePerformance.SwitchToPauseMode();
+        yield return new WaitForSeconds(currentWavePerformance.m_wavePauseDuration);
         currentWavePerformance.WrapUp();
         pastWavePerformanceList.Add(currentWavePerformance);
-        yield return new WaitForSeconds(currentWavePerformance.m_wavePauseDuration);
         NextWave();
     }
 
     void CheckForClearedWave() {
         if(EnemySpawner.instance.isSpawning == false) {
-            StartCoroutine(WrapUpWave());
+            StartCoroutine(SwitchtoPause());
         }
     }
 
@@ -49,6 +46,7 @@ public class PlayerAnalizer : MonoBehaviour
         currentWavePerformance = new WavePerformance();
         currentWavePerformance.Init(gameSessionID, waveNumber, CalculateSpawnDuration(difficulty), CalculatePauseDuration(difficulty), difficulty);
     }
+
 
     float CalculateNewDifficulty(){
         float difficulty = 0;
@@ -85,5 +83,16 @@ public class PlayerAnalizer : MonoBehaviour
         //Placeholder
         float duration = 20;
         return duration;
+    }
+
+
+    //--------------------------------------------------------------------------
+    //Setup
+    int GetNewGameSessionID() {
+        int i = 0;
+        while (Directory.Exists("saveFiles/" + i)) {
+            i++;
+        }
+        return i;
     }
 }

@@ -83,6 +83,10 @@ public class EnemyWave
         return randomPos;
     }
 
+
+    //Types
+    //---------------------------------------------------------------------------------------------
+
     public struct Spawn {
         public EnemyType m_type;
         public float m_time;
