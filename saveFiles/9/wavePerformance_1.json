@@ -1,0 +1,83 @@
+{
+    "m_gameSession": 9,
+    "m_waveNumber": 1,
+    "estimatedPlayerSkillLevel": 0.0,
+    "systemWeight": 0.0,
+    "m_waveDifficulty": 1.7999999523162842,
+    "m_waveSpawntime": 79.1502685546875,
+    "m_waveSpawnDuration": 20.0,
+    "m_waveMaxClearDuration": 0.0,
+    "m_wavePauseDuration": 20.0,
+    "m_adjustedPlayerSkillLevelGM": 0.0,
+    "m_adjustedPlayerSkillLevelBCI": 0.0,
+    "m_adjustedPlayerSkillLevelWeighted": 0.0,
+    "m_Pause": true,
+    "m_waveClearDuration": 54.885223388671878,
+    "m_lostHP": 160,
+    "m_lostBuildingHP": 20,
+    "m_lostBuildings": 0,
+    "m_healedtBuildingHP": 130,
+    "m_damageDealtInCloseCombat": 300,
+    "m_bciStats_eng": [
+        0.2999989986419678,
+        0.2999989986419678,
+        0.2999989986419678,
+        0.2999989986419678
+    ],
+    "m_bciStats_exc": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+    ],
+    "m_bciStats_foc": [
+        0.20000000298023225,
+        0.20000000298023225,
+        0.20000000298023225,
+        0.20000000298023225
+    ],
+    "m_bciStats_int": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+    ],
+    "m_bciStats_rel": [
+        0.20000000298023225,
+        0.20000000298023225,
+        0.20000000298023225,
+        0.20000000298023225
+    ],
+    "m_bciStats_str": [
+        0.2999989986419678,
+        0.2999989986419678,
+        0.2999989986419678,
+        0.2999989986419678
+    ],
+    "m_bciStats_Pause_eng": [
+        0.2999989986419678,
+        0.2999989986419678
+    ],
+    "m_bciStats_Pause_exc": [
+        0.25,
+        0.25
+    ],
+    "m_bciStats_Pause_foc": [
+        0.20000000298023225,
+        0.20000000298023225
+    ],
+    "m_bciStats_Pause_int": [
+        0.5,
+        0.5
+    ],
+    "m_bciStats_Pause_rel": [
+        0.20000000298023225,
+        0.20000000298023225
+    ],
+    "m_bciStats_Pause_str": [
+        0.2999989986419678,
+        0.2999989986419678
+    ],
+    "m_boredom": -0.21249975264072419,
+    "m_frustration": -0.10000050067901612
+}

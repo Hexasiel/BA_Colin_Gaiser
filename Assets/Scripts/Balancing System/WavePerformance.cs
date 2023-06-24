@@ -10,14 +10,14 @@ using System.Linq;
 [Serializable]
 public class WavePerformance 
 {
-    static float[] bci_max_averages = new float[6];
-    static float[] bci_min_averages = new float[6];
+    public static float[] bci_max_averages = new float[6];
+    public static float[] bci_min_averages = new float[6];
 
     //General
     public int m_gameSession;
     public int m_waveNumber;
-    public float estimatedPlayerSkillLevel;
-    public float systemWeight;
+    public float m_estimatedPlayerSkillLevel;
+    public float m_systemWeight;
 
     public float m_waveDifficulty;
     public float m_waveSpawntime;
@@ -57,14 +57,18 @@ public class WavePerformance
     public List<float> m_bciStats_Pause_rel;
     public List<float> m_bciStats_Pause_str;
 
+    public float m_boredom;
+    public float m_frustration;
 
-    public void Init(int gameSession, int waveNumber,float waveSpawnDuration, float wavePauseDuration, float waveDifficulty) {
+    public void Init(int gameSession, int waveNumber,float waveSpawnDuration, float wavePauseDuration, float waveDifficulty, float estimatedPlayerSkillLevel, float systemWeight) {
         m_gameSession = gameSession;
         m_waveNumber = waveNumber;
         m_waveSpawntime = Time.realtimeSinceStartup;
         m_waveSpawnDuration = waveSpawnDuration;
         m_wavePauseDuration = wavePauseDuration;
         m_waveDifficulty = waveDifficulty;
+        m_estimatedPlayerSkillLevel= estimatedPlayerSkillLevel;
+        m_systemWeight = systemWeight;
         m_waveClearDuration = -1;
         m_lostHP = 0;
         m_lostBuildingHP = 0;
@@ -99,18 +103,18 @@ public class WavePerformance
         if (m_Pause) {
             m_bciStats_Pause_eng.Add(float.Parse(metrics[2].ToString()));
             m_bciStats_Pause_exc.Add(float.Parse(metrics[4].ToString()));
-            m_bciStats_Pause_foc.Add(float.Parse(metrics[7].ToString()));
-            m_bciStats_Pause_int.Add(float.Parse(metrics[9].ToString()));
-            m_bciStats_Pause_rel.Add(float.Parse(metrics[11].ToString()));
-            m_bciStats_Pause_str.Add(float.Parse(metrics[13].ToString()));
+            m_bciStats_Pause_foc.Add(float.Parse(metrics[13].ToString()));
+            m_bciStats_Pause_int.Add(float.Parse(metrics[11].ToString()));
+            m_bciStats_Pause_rel.Add(float.Parse(metrics[9].ToString()));
+            m_bciStats_Pause_str.Add(float.Parse(metrics[7].ToString()));
         }
         else {
             m_bciStats_eng.Add(float.Parse(metrics[2].ToString()));
             m_bciStats_exc.Add(float.Parse(metrics[4].ToString()));
-            m_bciStats_foc.Add(float.Parse(metrics[7].ToString()));
-            m_bciStats_int.Add(float.Parse(metrics[9].ToString()));
-            m_bciStats_rel.Add(float.Parse(metrics[11].ToString()));
-            m_bciStats_str.Add(float.Parse(metrics[13].ToString()));
+            m_bciStats_foc.Add(float.Parse(metrics[13].ToString()));
+            m_bciStats_int.Add(float.Parse(metrics[11].ToString()));
+            m_bciStats_rel.Add(float.Parse(metrics[9].ToString()));
+            m_bciStats_str.Add(float.Parse(metrics[7].ToString()));
         }
     }
 
@@ -147,34 +151,49 @@ public class WavePerformance
         PlayerController.OnPlayerGetDamage -= AddPlayerDamage;
 
         m_waveClearDuration = Time.realtimeSinceStartup - m_waveSpawntime;
+        EvaluatePredictedSkillLevel();
         SaveToJSON("saveFiles/" + m_gameSession);
 
     }
 
     float EvaluatePredictedSkillLevel() {
         //BCI
-        m_adjustedPlayerSkillLevelBCI = 0;
+        EvaluatePredictedSkillLevelBCI();
 
         //Game Metrics
-        m_adjustedPlayerSkillLevelGM = 0;
+        m_adjustedPlayerSkillLevelGM = m_estimatedPlayerSkillLevel;
 
         //Combination
-        m_adjustedPlayerSkillLevelWeighted = (m_adjustedPlayerSkillLevelGM * (1-systemWeight)) + (m_adjustedPlayerSkillLevelBCI * systemWeight);
+        m_adjustedPlayerSkillLevelWeighted = (m_adjustedPlayerSkillLevelGM * (1-m_systemWeight)) + (m_adjustedPlayerSkillLevelBCI * m_systemWeight);
         return m_adjustedPlayerSkillLevelWeighted;
     }
 
     void EvaluatePredictedSkillLevelBCI() {
-       float boredom = 
+       m_boredom = 
                 ((bci_max_averages[0] - m_bciStats_eng.Average()) 
             +   (bci_max_averages[1] - m_bciStats_exc.Average()) 
             +   (bci_max_averages[3] - m_bciStats_int.Average() ) 
             +   (m_bciStats_rel.Average() - bci_min_averages[4])) 
             /   4f;
 
-        float frustration = 
+        m_frustration = 
                 ((m_bciStats_str.Average() - bci_min_averages[5]) 
             +   (bci_max_averages[3] - m_bciStats_int.Average())) 
             /   2f;
+
+        if(m_boredom > 0 && m_frustration < 0) {
+            m_adjustedPlayerSkillLevelBCI = m_estimatedPlayerSkillLevel + m_boredom;
+        }
+        else if (m_boredom < 0 && m_frustration > 0) {
+            m_adjustedPlayerSkillLevelBCI = m_estimatedPlayerSkillLevel - m_frustration;
+        }
+        else if(m_boredom > 0 && m_frustration > 0){
+            m_adjustedPlayerSkillLevelBCI = m_estimatedPlayerSkillLevel - m_frustration + m_boredom;
+        }
+        else {
+            m_adjustedPlayerSkillLevelBCI = m_estimatedPlayerSkillLevel;
+        }
+        UpdateMinMaxAverages();
     }
 
     void UpdateMinMaxAverages() {

@@ -1,8 +1,10 @@
 using EmotivUnityPlugin;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using TMPro.EditorUtilities;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -28,9 +30,19 @@ public class MainMenu : MonoBehaviour
     [SerializeField] TMP_InputField headsetID;
     [SerializeField] TMP_Dropdown knownDevicesDropdown;
     [SerializeField] UnityEngine.UIElements.Button connectStreamButton;
+    [SerializeField] UnityEngine.UI.Button calibrationMenuButton;
+    [SerializeField] TextMeshProUGUI calibrationText;
 
     //Internal Variables
     int currentMode = 0;
+
+    //BCI values for calibration
+    List<float> m_bciStats_eng = new List<float>();
+    List<float> m_bciStats_exc = new List<float>();
+    List<float> m_bciStats_foc = new List<float>();
+    List<float> m_bciStats_int = new List<float>();
+    List<float> m_bciStats_rel = new List<float>();
+    List<float> m_bciStats_str = new List<float>();
 
 
     private void Start() {
@@ -83,6 +95,46 @@ public class MainMenu : MonoBehaviour
         else {
             UnityEngine.Debug.LogError("Must create a session first before subscribing data.");
         }
+    }
+
+    public void StartCalibration() {
+        StartCoroutine(CalibrateBCI());
+    }
+
+    IEnumerator CalibrateBCI() {
+        if(!euITF.IsSessionCreated) {
+            yield return null;
+        }
+        else {
+            calibrationText.text = "Calibrating...";
+            calibrationMenuButton.transform.parent.parent.gameObject.SetActive(true);
+            EmotivUnityItf.Instance.PerfDataReceived += AddBCIMetrics;
+            yield return new WaitForSeconds(30);
+            EmotivUnityItf.Instance.PerfDataReceived -= AddBCIMetrics;
+            UpdateMinMaxAverages();
+            calibrationMenuButton.interactable = true;
+            calibrationText.text = "Calibration Done!";
+        }
+    }
+
+    void UpdateMinMaxAverages() {
+
+        float[] bciValues = new float[] { m_bciStats_eng.Average(), m_bciStats_exc.Average(), m_bciStats_foc.Average(), m_bciStats_int.Average(), m_bciStats_rel.Average(), m_bciStats_str.Average() };
+        for (int i = 0; i < WavePerformance.bci_max_averages.Length; i++) {
+            WavePerformance.bci_max_averages[i] = bciValues[i];
+            WavePerformance.bci_min_averages[i] = bciValues[i];
+        }
+        Debug.Log("Calibration done: " + bciValues);
+    }
+
+    void AddBCIMetrics(object sender, ArrayList metrics) {
+
+        m_bciStats_eng.Add(float.Parse(metrics[2].ToString()));
+        m_bciStats_exc.Add(float.Parse(metrics[4].ToString()));
+        m_bciStats_foc.Add(float.Parse(metrics[13].ToString()));
+        m_bciStats_int.Add(float.Parse(metrics[11].ToString()));
+        m_bciStats_rel.Add(float.Parse(metrics[9].ToString()));
+        m_bciStats_str.Add(float.Parse(metrics[7].ToString()));
     }
 
     public void QuitGame() {

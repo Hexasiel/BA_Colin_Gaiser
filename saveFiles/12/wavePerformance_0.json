@@ -1,0 +1,89 @@
+{
+    "m_gameSession": 12,
+    "m_waveNumber": 0,
+    "estimatedPlayerSkillLevel": 0.0,
+    "systemWeight": 0.0,
+    "m_waveDifficulty": 1.399999976158142,
+    "m_waveSpawntime": 71.68241119384766,
+    "m_waveSpawnDuration": 20.0,
+    "m_waveMaxClearDuration": 0.0,
+    "m_wavePauseDuration": 20.0,
+    "m_adjustedPlayerSkillLevelGM": 0.0,
+    "m_adjustedPlayerSkillLevelBCI": 0.19812524318695069,
+    "m_adjustedPlayerSkillLevelWeighted": 0.0,
+    "m_Pause": true,
+    "m_waveClearDuration": 64.44239044189453,
+    "m_lostHP": 160,
+    "m_lostBuildingHP": 30,
+    "m_lostBuildings": 0,
+    "m_healedtBuildingHP": 0,
+    "m_damageDealtInCloseCombat": 250,
+    "m_bciStats_eng": [
+        0.4649989902973175,
+        0.20000000298023225,
+        0.20000000298023225,
+        0.20000000298023225,
+        0.20000000298023225
+    ],
+    "m_bciStats_exc": [
+        0.5,
+        0.26249998807907107,
+        0.25,
+        0.25,
+        0.25
+    ],
+    "m_bciStats_foc": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+    ],
+    "m_bciStats_int": [
+        0.5,
+        0.3799990117549896,
+        0.2999989986419678,
+        0.2999989986419678,
+        0.2999989986419678
+    ],
+    "m_bciStats_rel": [
+        0.5,
+        0.6200000047683716,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929
+    ],
+    "m_bciStats_str": [
+        0.5,
+        0.375,
+        0.25,
+        0.25,
+        0.25
+    ],
+    "m_bciStats_Pause_eng": [
+        0.3125,
+        0.6499999761581421
+    ],
+    "m_bciStats_Pause_exc": [
+        0.3100000023841858,
+        0.6499999761581421
+    ],
+    "m_bciStats_Pause_foc": [
+        0.5,
+        0.5
+    ],
+    "m_bciStats_Pause_int": [
+        0.2999989986419678,
+        0.2999989986419678
+    ],
+    "m_bciStats_Pause_rel": [
+        0.800000011920929,
+        0.5274999737739563
+    ],
+    "m_bciStats_Pause_str": [
+        0.25,
+        0.4299989938735962
+    ],
+    "m_boredom": 0.19812524318695069,
+    "m_frustration": -0.015499606728553772
+}
