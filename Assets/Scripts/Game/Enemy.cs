@@ -82,7 +82,6 @@ public class Enemy : MonoBehaviour
 
     public void GetDamage(int dmg, Vector2 knockBack)
     {
-        Debug.Log(knockBack);
         m_health -= dmg;
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.AddForce(knockBack);

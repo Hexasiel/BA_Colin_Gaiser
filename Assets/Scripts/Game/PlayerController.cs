@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour, IAttackable
     public static event Action<int> OnPlayerGetDamage;
 
     //Properties
+    public int score = 0;
     public int maxHealth = 500;
     public int m_health = 500;
     public int maxShield = 20;
@@ -248,19 +249,20 @@ public class PlayerController : MonoBehaviour, IAttackable
         canAttack = true;
     }
 
-    IEnumerator Shoot()
-    {
-        canShoot= false;
-        Vector3 directon = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        directon.z = 0;
-        directon = (directon - transform.position).normalized;
+
+    //IEnumerator Shoot()
+    //{
+    //    canShoot= false;
+    //    Vector3 directon = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    //    directon.z = 0;
+    //    directon = (directon - transform.position).normalized;
 
 
-        Rigidbody2D bulletrb = Instantiate(bulletPrefab,transform.position, Quaternion.identity).GetComponent<Rigidbody2D>();
-        bulletrb.AddForce(directon * 1500);
+    //    Rigidbody2D bulletrb = Instantiate(bulletPrefab,transform.position, Quaternion.identity).GetComponent<Rigidbody2D>();
+    //    bulletrb.AddForce(directon * 1500);
 
-        yield return new WaitForSeconds(gunCooldown);
-        canShoot= true;
-    }
+    //    yield return new WaitForSeconds(gunCooldown);
+    //    canShoot= true;
+    //}
 
 }

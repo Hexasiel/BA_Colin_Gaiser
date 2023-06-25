@@ -1,0 +1,88 @@
+{
+    "m_gameSession": 20,
+    "m_waveNumber": 3,
+    "m_systemWeight": 1.0,
+    "m_waveDifficulty": 1.9679964780807496,
+    "m_waveSpawntime": 235.56985473632813,
+    "m_waveSpawnDuration": 20.0,
+    "m_waveMaxClearDuration": 0.0,
+    "m_wavePauseDuration": 20.0,
+    "m_adjustedDifficultyGM": 1.9679964780807496,
+    "m_adjustedDifficultyBCI": 2.2631959915161135,
+    "m_adjustedDifficultyWeighted": 2.2631959915161135,
+    "m_Pause": true,
+    "m_waveClearDuration": 62.2825927734375,
+    "m_lostHP": 0,
+    "m_lostBuildingHP": 210,
+    "m_lostBuildings": 0,
+    "m_healedtBuildingHP": 0,
+    "m_damageDealtInCloseCombat": 50,
+    "m_bciStats_eng": [
+        0.1499989926815033,
+        0.1499989926815033,
+        0.1499989926815033,
+        0.1499989926815033,
+        0.1499989926815033
+    ],
+    "m_bciStats_exc": [
+        0.20000000298023225,
+        0.20000000298023225,
+        0.20000000298023225,
+        0.20000000298023225,
+        0.20000000298023225
+    ],
+    "m_bciStats_foc": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+    ],
+    "m_bciStats_int": [
+        0.1499989926815033,
+        0.1499989926815033,
+        0.1499989926815033,
+        0.1499989926815033,
+        0.1499989926815033
+    ],
+    "m_bciStats_rel": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929
+    ],
+    "m_bciStats_str": [
+        0.20000000298023225,
+        0.20000000298023225,
+        0.20000000298023225,
+        0.20000000298023225,
+        0.20000000298023225
+    ],
+    "m_bciStats_Pause_eng": [
+        0.1499989926815033,
+        0.1499989926815033
+    ],
+    "m_bciStats_Pause_exc": [
+        0.20000000298023225,
+        0.20000000298023225
+    ],
+    "m_bciStats_Pause_foc": [
+        0.25,
+        0.25
+    ],
+    "m_bciStats_Pause_int": [
+        0.1499989926815033,
+        0.1875
+    ],
+    "m_bciStats_Pause_rel": [
+        0.800000011920929,
+        0.5
+    ],
+    "m_bciStats_Pause_str": [
+        0.20000000298023225,
+        0.44749900698661806
+    ],
+    "m_boredom": 0.32500049471855166,
+    "m_frustration": 0.17500050365924836
+}

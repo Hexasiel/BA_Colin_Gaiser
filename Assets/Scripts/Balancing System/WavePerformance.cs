@@ -16,7 +16,6 @@ public class WavePerformance
     //General
     public int m_gameSession;
     public int m_waveNumber;
-    public float m_estimatedPlayerSkillLevel;
     public float m_systemWeight;
 
     public float m_waveDifficulty;
@@ -25,9 +24,9 @@ public class WavePerformance
     public float m_waveMaxClearDuration;
     public float m_wavePauseDuration;
 
-    public float m_adjustedPlayerSkillLevelGM;
-    public float m_adjustedPlayerSkillLevelBCI;
-    public float m_adjustedPlayerSkillLevelWeighted;
+    public float m_adjustedDifficultyGM;
+    public float m_adjustedDifficultyBCI;
+    public float m_adjustedDifficultyWeighted;
 
     public bool m_Pause;
 
@@ -39,6 +38,15 @@ public class WavePerformance
     public int m_lostBuildings;
     public int m_healedtBuildingHP;
     public int m_damageDealtInCloseCombat;
+
+    public int m_unneccessaryActions;
+    public int m_actionFrequency;
+    public int m_failedActions;
+    public int m_lostBuildingsPercentage;
+    public int m_lightningHits;
+    public int m_goldGenerated;
+    public int m_goldCollected;
+    public int m_goldLost;
 
 
     //--------------------------------------------------------------------------
@@ -60,14 +68,13 @@ public class WavePerformance
     public float m_boredom;
     public float m_frustration;
 
-    public void Init(int gameSession, int waveNumber,float waveSpawnDuration, float wavePauseDuration, float waveDifficulty, float estimatedPlayerSkillLevel, float systemWeight) {
+    public void Init(int gameSession, int waveNumber,float waveSpawnDuration, float wavePauseDuration, float waveDifficulty, float systemWeight) {
         m_gameSession = gameSession;
         m_waveNumber = waveNumber;
         m_waveSpawntime = Time.realtimeSinceStartup;
         m_waveSpawnDuration = waveSpawnDuration;
         m_wavePauseDuration = wavePauseDuration;
         m_waveDifficulty = waveDifficulty;
-        m_estimatedPlayerSkillLevel= estimatedPlayerSkillLevel;
         m_systemWeight = systemWeight;
         m_waveClearDuration = -1;
         m_lostHP = 0;
@@ -161,11 +168,11 @@ public class WavePerformance
         EvaluatePredictedSkillLevelBCI();
 
         //Game Metrics
-        m_adjustedPlayerSkillLevelGM = m_estimatedPlayerSkillLevel;
+        m_adjustedDifficultyGM = m_waveDifficulty;
 
         //Combination
-        m_adjustedPlayerSkillLevelWeighted = (m_adjustedPlayerSkillLevelGM * (1-m_systemWeight)) + (m_adjustedPlayerSkillLevelBCI * m_systemWeight);
-        return m_adjustedPlayerSkillLevelWeighted;
+        m_adjustedDifficultyWeighted = (m_adjustedDifficultyGM * (1-m_systemWeight)) + (m_adjustedDifficultyBCI * m_systemWeight);
+        return m_adjustedDifficultyWeighted;
     }
 
     void EvaluatePredictedSkillLevelBCI() {
@@ -182,16 +189,16 @@ public class WavePerformance
             /   2f;
 
         if(m_boredom > 0 && m_frustration < 0) {
-            m_adjustedPlayerSkillLevelBCI = m_estimatedPlayerSkillLevel + m_boredom;
+            m_adjustedDifficultyBCI = m_waveDifficulty * (1 + m_boredom);
         }
         else if (m_boredom < 0 && m_frustration > 0) {
-            m_adjustedPlayerSkillLevelBCI = m_estimatedPlayerSkillLevel - m_frustration;
+            m_adjustedDifficultyBCI = m_waveDifficulty * (1 - m_frustration);
         }
         else if(m_boredom > 0 && m_frustration > 0){
-            m_adjustedPlayerSkillLevelBCI = m_estimatedPlayerSkillLevel - m_frustration + m_boredom;
+            m_adjustedDifficultyBCI = m_waveDifficulty * (1 - m_frustration + m_boredom);
         }
         else {
-            m_adjustedPlayerSkillLevelBCI = m_estimatedPlayerSkillLevel;
+            m_adjustedDifficultyBCI = m_waveDifficulty;
         }
         UpdateMinMaxAverages();
     }

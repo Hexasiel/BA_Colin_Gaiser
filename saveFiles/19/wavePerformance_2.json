@@ -1,0 +1,82 @@
+{
+    "m_gameSession": 19,
+    "m_waveNumber": 2,
+    "m_systemWeight": 1.0,
+    "m_waveDifficulty": 0.9473377466201782,
+    "m_waveSpawntime": 177.53411865234376,
+    "m_waveSpawnDuration": 20.0,
+    "m_waveMaxClearDuration": 0.0,
+    "m_wavePauseDuration": 20.0,
+    "m_adjustedDifficultyGM": 0.9473377466201782,
+    "m_adjustedDifficultyBCI": 0.9967776536941528,
+    "m_adjustedDifficultyWeighted": 0.9967776536941528,
+    "m_Pause": true,
+    "m_waveClearDuration": 52.61695861816406,
+    "m_lostHP": 0,
+    "m_lostBuildingHP": 0,
+    "m_lostBuildings": 0,
+    "m_healedtBuildingHP": 0,
+    "m_damageDealtInCloseCombat": 0,
+    "m_bciStats_eng": [
+        0.34999901056289675,
+        0.34999901056289675,
+        0.34999901056289675,
+        0.34999901056289675
+    ],
+    "m_bciStats_exc": [
+        0.2999989986419678,
+        0.2999989986419678,
+        0.2999989986419678,
+        0.2999989986419678
+    ],
+    "m_bciStats_foc": [
+        0.2999989986419678,
+        0.2999989986419678,
+        0.2999989986419678,
+        0.2999989986419678
+    ],
+    "m_bciStats_int": [
+        0.2999989986419678,
+        0.2999989986419678,
+        0.2999989986419678,
+        0.2999989986419678
+    ],
+    "m_bciStats_rel": [
+        0.6850000023841858,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421
+    ],
+    "m_bciStats_str": [
+        0.2999989986419678,
+        0.2999989986419678,
+        0.2999989986419678,
+        0.2999989986419678
+    ],
+    "m_bciStats_Pause_eng": [
+        0.34999901056289675,
+        0.34999901056289675
+    ],
+    "m_bciStats_Pause_exc": [
+        0.2999989986419678,
+        0.2999989986419678
+    ],
+    "m_bciStats_Pause_foc": [
+        0.2999989986419678,
+        0.2999989986419678
+    ],
+    "m_bciStats_Pause_int": [
+        0.2999989986419678,
+        0.2999989986419678
+    ],
+    "m_bciStats_Pause_rel": [
+        0.6499999761581421,
+        0.6499999761581421
+    ],
+    "m_bciStats_Pause_str": [
+        0.2999989986419678,
+        0.2999989986419678
+    ],
+    "m_boredom": 0.17718824744224549,
+    "m_frustration": 0.125
+}

@@ -72,6 +72,7 @@ public class MainMenu : MonoBehaviour
         Debug.Log("onCreateSessionBtnClick");
         if (!euITF.IsSessionCreated) {
             euITF.CreateSessionWithHeadset(headsetID.text);
+            statusText.text = "Session Created";
         }
         else {
             UnityEngine.Debug.LogError("There is a session created.");
@@ -90,7 +91,7 @@ public class MainMenu : MonoBehaviour
             List<string> streams = new List<string>();
             streams.Add("met");
             euITF.SubscribeData(streams);
-            
+            statusText.text = "Stream Subscribed";
         }
         else {
             UnityEngine.Debug.LogError("Must create a session first before subscribing data.");
@@ -107,13 +108,14 @@ public class MainMenu : MonoBehaviour
         }
         else {
             calibrationText.text = "Calibrating...";
-            calibrationMenuButton.transform.parent.parent.gameObject.SetActive(true);
+            calibrationMenuButton.transform.parent.gameObject.SetActive(true);
             EmotivUnityItf.Instance.PerfDataReceived += AddBCIMetrics;
             yield return new WaitForSeconds(30);
             EmotivUnityItf.Instance.PerfDataReceived -= AddBCIMetrics;
             UpdateMinMaxAverages();
             calibrationMenuButton.interactable = true;
             calibrationText.text = "Calibration Done!";
+            statusText.text = "BCI Calibrated";
         }
     }
 

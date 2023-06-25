@@ -1,0 +1,82 @@
+{
+    "m_gameSession": 20,
+    "m_waveNumber": 4,
+    "m_systemWeight": 1.0,
+    "m_waveDifficulty": 2.7585086822509767,
+    "m_waveSpawntime": 297.860107421875,
+    "m_waveSpawnDuration": 20.0,
+    "m_waveMaxClearDuration": 0.0,
+    "m_wavePauseDuration": 20.0,
+    "m_adjustedDifficultyGM": 2.7585086822509767,
+    "m_adjustedDifficultyBCI": 2.0296578407287599,
+    "m_adjustedDifficultyWeighted": 2.0296578407287599,
+    "m_Pause": true,
+    "m_waveClearDuration": 66.59097290039063,
+    "m_lostHP": 100,
+    "m_lostBuildingHP": 1230,
+    "m_lostBuildings": 0,
+    "m_healedtBuildingHP": 750,
+    "m_damageDealtInCloseCombat": 0,
+    "m_bciStats_eng": [
+        0.1875,
+        0.20000000298023225,
+        0.20000000298023225,
+        0.20000000298023225
+    ],
+    "m_bciStats_exc": [
+        0.2475000023841858,
+        0.25,
+        0.25,
+        0.25
+    ],
+    "m_bciStats_foc": [
+        0.16499899327754975,
+        0.1499989926815033,
+        0.1499989926815033,
+        0.1499989926815033
+    ],
+    "m_bciStats_int": [
+        0.2174990028142929,
+        0.23999999463558198,
+        0.1499989926815033,
+        0.1499989926815033
+    ],
+    "m_bciStats_rel": [
+        0.2999989986419678,
+        0.2999989986419678,
+        0.2999989986419678,
+        0.2999989986419678
+    ],
+    "m_bciStats_str": [
+        0.75,
+        0.75,
+        0.75,
+        0.75
+    ],
+    "m_bciStats_Pause_eng": [
+        0.20000000298023225,
+        0.20000000298023225
+    ],
+    "m_bciStats_Pause_exc": [
+        0.25,
+        0.25
+    ],
+    "m_bciStats_Pause_foc": [
+        0.1499989926815033,
+        0.1499989926815033
+    ],
+    "m_bciStats_Pause_int": [
+        0.1499989926815033,
+        0.1499989926815033
+    ],
+    "m_bciStats_Pause_rel": [
+        0.2999989986419678,
+        0.2999989986419678
+    ],
+    "m_bciStats_Pause_str": [
+        0.75,
+        0.75
+    ],
+    "m_boredom": 0.16609369218349458,
+    "m_frustration": 0.4303128719329834
+}

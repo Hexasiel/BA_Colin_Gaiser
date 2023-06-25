@@ -78,7 +78,6 @@ public class EnemyWave
 
         if (hit.collider != null) {
             randomPos.y = hit.point.y;
-            Debug.Log(hit.collider.transform);
         }
         return randomPos;
     }

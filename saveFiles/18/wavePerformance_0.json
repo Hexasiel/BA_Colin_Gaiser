@@ -1,0 +1,77 @@
+{
+    "m_gameSession": 18,
+    "m_waveNumber": 0,
+    "m_estimatedPlayerSkillLevel": 0.4000000059604645,
+    "m_systemWeight": 1.0,
+    "m_waveDifficulty": 0.4000000059604645,
+    "m_waveSpawntime": 46.99127960205078,
+    "m_waveSpawnDuration": 20.0,
+    "m_waveMaxClearDuration": 0.0,
+    "m_wavePauseDuration": 20.0,
+    "m_adjustedPlayerSkillLevelGM": 0.4000000059604645,
+    "m_adjustedPlayerSkillLevelBCI": 0.5502085089683533,
+    "m_adjustedPlayerSkillLevelWeighted": 0.5502085089683533,
+    "m_Pause": true,
+    "m_waveClearDuration": 49.93107604980469,
+    "m_lostHP": 0,
+    "m_lostBuildingHP": 0,
+    "m_lostBuildings": 0,
+    "m_healedtBuildingHP": 0,
+    "m_damageDealtInCloseCombat": 0,
+    "m_bciStats_eng": [
+        0.550000011920929,
+        0.2175000011920929,
+        0.20000000298023225
+    ],
+    "m_bciStats_exc": [
+        0.550000011920929,
+        0.2874999940395355,
+        0.20000000298023225
+    ],
+    "m_bciStats_foc": [
+        0.550000011920929,
+        0.3400000035762787,
+        0.20000000298023225
+    ],
+    "m_bciStats_int": [
+        0.550000011920929,
+        0.35749998688697817,
+        0.20000000298023225
+    ],
+    "m_bciStats_rel": [
+        0.5,
+        0.5600000023841858,
+        0.6499999761581421
+    ],
+    "m_bciStats_str": [
+        0.5,
+        0.4300000071525574,
+        0.1499989926815033
+    ],
+    "m_bciStats_Pause_eng": [
+        0.20000000298023225,
+        0.20000000298023225
+    ],
+    "m_bciStats_Pause_exc": [
+        0.20000000298023225,
+        0.20000000298023225
+    ],
+    "m_bciStats_Pause_foc": [
+        0.20000000298023225,
+        0.20000000298023225
+    ],
+    "m_bciStats_Pause_int": [
+        0.20000000298023225,
+        0.20000000298023225
+    ],
+    "m_bciStats_Pause_rel": [
+        0.6499999761581421,
+        0.6499999761581421
+    ],
+    "m_bciStats_Pause_str": [
+        0.1499989926815033,
+        0.1499989926815033
+    ],
+    "m_boredom": 0.1706250011920929,
+    "m_frustration": 0.0204164981842041
+}

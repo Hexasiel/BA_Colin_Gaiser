@@ -20,7 +20,7 @@ public class PlayerAnalizer : MonoBehaviour
         pastWavePerformanceList = new List<WavePerformance>();
         gameSessionID = GetNewGameSessionID();
         Enemy.OnAllEnemiesDefeated += CheckForClearedWave;
-        NextWave();
+        TownHall.OnTownHallBuilt += NextWave;
     }
 
     IEnumerator SwitchtoPause() {
@@ -40,25 +40,13 @@ public class PlayerAnalizer : MonoBehaviour
     void NextWave(){
         int waveNumber = 0;
         if (pastWavePerformanceList.Count > 0) { waveNumber = pastWavePerformanceList.Last<WavePerformance>().m_waveNumber + 1; }
-        float predictedPlayerSkill = (float)PredictPlayerSkill(waveNumber);
-        float difficulty = CalculateNewDifficulty(predictedPlayerSkill);
+        float predictedDifficulty = (float)PredictDifficulty(waveNumber);
+        Debug.Log("Predicted fitting Difficulty: " + predictedDifficulty);
 
-        EnemyWave newWave = new EnemyWave(difficulty);
+        EnemyWave newWave = new EnemyWave(predictedDifficulty);
         OnNewWave?.Invoke(newWave);
         currentWavePerformance = new WavePerformance();
-        currentWavePerformance.Init(gameSessionID, waveNumber, CalculateSpawnDuration(difficulty), CalculatePauseDuration(difficulty), difficulty, predictedPlayerSkill, systemWeight);
-    }
-
-    float CalculateNewDifficulty(float predictedSkillLevel){
-        float difficulty = 0;
-
-        if(pastWavePerformanceList.Count > 0) {
-            difficulty = pastWavePerformanceList.Last<WavePerformance>().m_waveDifficulty + predictedSkillLevel;
-        }
-        else {
-            difficulty = predictedSkillLevel;
-        }
-        return difficulty;
+        currentWavePerformance.Init(gameSessionID, waveNumber, CalculateSpawnDuration(predictedDifficulty), CalculatePauseDuration(predictedDifficulty), predictedDifficulty, systemWeight);
     }
 
     float CalculatePauseDuration(float difficulty) {
@@ -85,15 +73,19 @@ public class PlayerAnalizer : MonoBehaviour
     }
 
 
-    double PredictPlayerSkill(int waveNumber) {
-        if(waveNumber == 0) { return 0.4;}
+    double PredictDifficulty(int waveNumber) {
+        if(pastWavePerformanceList.Count == 0) { return 0.4;}
 
         double rSquared, intercept, slope;
-        double[] xValues = new double[pastWavePerformanceList.Count];
-        double[] yValues = new double[pastWavePerformanceList.Count];
+        double[] xValues = new double[pastWavePerformanceList.Count + 2];
+        double[] yValues = new double[pastWavePerformanceList.Count + 2];
         foreach (WavePerformance wavePerformance in pastWavePerformanceList) {
             xValues[wavePerformance.m_waveNumber] = wavePerformance.m_waveNumber;
-            yValues[wavePerformance.m_waveNumber] = wavePerformance.m_adjustedPlayerSkillLevelWeighted;
+            yValues[wavePerformance.m_waveNumber] = wavePerformance.m_adjustedDifficultyWeighted;
+        }
+        for(int i = 0; i < 2; i++) {
+            xValues[pastWavePerformanceList.Count + i] = i;
+            yValues[pastWavePerformanceList.Count + i] = (i+1) * 0.4;
         }
         LinearRegression(xValues, yValues, out rSquared, out intercept, out slope);
         double predictedSkill = (slope * (double)waveNumber) + intercept;

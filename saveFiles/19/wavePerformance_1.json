@@ -1,0 +1,82 @@
+{
+    "m_gameSession": 19,
+    "m_waveNumber": 1,
+    "m_systemWeight": 1.0,
+    "m_waveDifficulty": 0.5827333331108093,
+    "m_waveSpawntime": 117.61268615722656,
+    "m_waveSpawnDuration": 20.0,
+    "m_waveMaxClearDuration": 0.0,
+    "m_wavePauseDuration": 20.0,
+    "m_adjustedDifficultyGM": 0.5827333331108093,
+    "m_adjustedDifficultyBCI": 0.6798554062843323,
+    "m_adjustedDifficultyWeighted": 0.6798554062843323,
+    "m_Pause": true,
+    "m_waveClearDuration": 59.91990661621094,
+    "m_lostHP": 0,
+    "m_lostBuildingHP": 0,
+    "m_lostBuildings": 0,
+    "m_healedtBuildingHP": 0,
+    "m_damageDealtInCloseCombat": 0,
+    "m_bciStats_eng": [
+        0.2999989986419678,
+        0.2999989986419678,
+        0.2999989986419678,
+        0.2999989986419678
+    ],
+    "m_bciStats_exc": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+    ],
+    "m_bciStats_foc": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+    ],
+    "m_bciStats_int": [
+        0.2999989986419678,
+        0.2999989986419678,
+        0.2999989986419678,
+        0.2999989986419678
+    ],
+    "m_bciStats_rel": [
+        0.6999989748001099,
+        0.6999989748001099,
+        0.6999989748001099,
+        0.6999989748001099
+    ],
+    "m_bciStats_str": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+    ],
+    "m_bciStats_Pause_eng": [
+        0.2999989986419678,
+        0.3174990117549896
+    ],
+    "m_bciStats_Pause_exc": [
+        0.25,
+        0.26499900221824648
+    ],
+    "m_bciStats_Pause_foc": [
+        0.25,
+        0.2524999976158142
+    ],
+    "m_bciStats_Pause_int": [
+        0.2999989986419678,
+        0.2999989986419678
+    ],
+    "m_bciStats_Pause_rel": [
+        0.6999989748001099,
+        0.6999989748001099
+    ],
+    "m_bciStats_Pause_str": [
+        0.25,
+        0.29499900341033938
+    ],
+    "m_boredom": 0.21250024437904359,
+    "m_frustration": 0.04583384096622467
+}

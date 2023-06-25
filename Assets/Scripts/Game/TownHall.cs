@@ -1,9 +1,13 @@
+using EmotivUnityPlugin;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TownHall : Building
 {
+    public static event Action OnTownHallBuilt;
+
     [SerializeField] GameObject[] buildslots;
 
     private void Awake()
@@ -13,6 +17,7 @@ public class TownHall : Building
         buildslots[2] = Instantiate(buildslots[2]);
         buildslots[m_level].SetActive(true);
         Shrine.OnHealingTriggered += ReceiveHeal;
+        OnTownHallBuilt?.Invoke();
     }
 
     protected override void Die()
@@ -25,5 +30,10 @@ public class TownHall : Building
     {
         base.Upgrade();
         buildslots[m_level].SetActive(true);
+    }
+
+    void OnApplicationQuit() {
+        Debug.Log("Application ending after " + Time.time + " seconds");
+        EmotivUnityItf.Instance.Stop();
     }
 }
