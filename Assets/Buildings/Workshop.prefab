@@ -1059,3 +1059,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c664f6b4067de5e48b507ba56de2cb4f, type: 3}
   - {fileID: 21300000, guid: df65dbd123074294c8aa436399523b65, type: 3}
   healthbar: {fileID: 1824143515905906992}
+  m_name: Workshop
+  m_description:
+  - 'Traits for the Hero: Increase Damage/Repair, Shield Refreshes on Takedown'
+  - Increase Hero Damage, Decrease Dash Cooldown
+  - Decrease Dash Cooldown, Shield Refreshes on Dash

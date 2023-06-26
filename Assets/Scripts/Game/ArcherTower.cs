@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class ArcherTower : Building
 {
+
     //References
     protected GameObject target;
     [SerializeField] GameObject bulletPrefab;

@@ -1262,6 +1262,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: cce16ee21b015fa419f44cfeb2852af3, type: 3}
   - {fileID: 21300000, guid: 14ff1b622eb9b0340b9c0c19fa8db91a, type: 3}
   healthbar: {fileID: 7384976135326173051}
+  m_name: Mage Tower
+  m_description:
+  - Area Damage
+  - Increase Attack Speed
+  - Increase Attack Range 6 Damage
   bulletPrefab: {fileID: 7435146924782358467, guid: 98ad0ffbaf77b7b4f8d4ef5968af6edd, type: 3}
   m_targetInRange: 0
   m_attackRange:

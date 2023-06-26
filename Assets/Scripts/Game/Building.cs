@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Building : MonoBehaviour, IAttackable {
 
     public static event Action<int> OnBuildingDamaged;
-    public static event Action OnBuildingDestroyed;
+    public static event Action<int> OnBuildingDestroyed;
     public static event Action<int> OnBuildingHealed;
 
     public static int count;
@@ -23,11 +23,13 @@ public class Building : MonoBehaviour, IAttackable {
 
     public string m_name;
     public string[] m_description;
+    public bool m_isBuilt = false;
 
     private void Awake()
     {
         Shrine.OnHealingTriggered += ReceiveHeal;
         count++;
+        m_isBuilt= true;
     }
     
     public void ReceiveHeal(int health)
@@ -72,10 +74,27 @@ public class Building : MonoBehaviour, IAttackable {
     protected virtual void Die()
     {
         Shrine.OnHealingTriggered -= ReceiveHeal;
-        OnBuildingDestroyed?.Invoke();
+        OnBuildingDestroyed?.Invoke(CalculateValue());
         parentMenu.ShowBanner(true);
         parentMenu.SetButtonsEnabled(new bool[] { true, true, true, true, true, true, false, false });
         count--;
         Destroy(gameObject);
+    }
+
+    public void Demolish() {
+        Shrine.OnHealingTriggered -= ReceiveHeal;
+        int value = CalculateValue();
+        value -= (int)(m_upgradeCost[m_level] * ((float)m_health / (float)m_maxHealth[m_level]) * 0.9);
+        OnBuildingDestroyed?.Invoke(value);
+        count--;
+        Destroy(gameObject);
+    }
+
+    public int CalculateValue() {
+        int value = 0;
+        for(int i = 0; i < m_level+1; i++) {
+            value += m_upgradeCost[i];
+        }
+        return value;
     }
 }

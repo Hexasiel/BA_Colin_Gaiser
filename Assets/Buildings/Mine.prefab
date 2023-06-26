@@ -777,6 +777,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6eb658d5f68d61f4c96598841c69ee46, type: 3}
   - {fileID: 21300000, guid: 421b43a6930b78449822615376dc2b02, type: 3}
   healthbar: {fileID: 2344779458832932601}
+  m_name: Gold Mine
+  m_description:
+  - Produces Gold Over Time
+  - Higher Production Rate
+  - Even Higher Production Rate
   productionTimes:
   - 12
   - 6

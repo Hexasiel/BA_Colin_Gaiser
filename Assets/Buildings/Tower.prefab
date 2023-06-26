@@ -926,6 +926,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b221b6ebd8fd3c247bb858d2a3dc2b79, type: 3}
   - {fileID: 21300000, guid: 4c0688ad5a48aa640a15393d53950ec2, type: 3}
   healthbar: {fileID: 6665457265316242553}
+  m_name: Archer Tower
+  m_description:
+  - High Single Target Damage
+  - Increased Attack Range, Speed and Damage
+  - Further Increased Attack Range, Speed and Damage
   bulletPrefab: {fileID: 7435146924782358467, guid: cdbc21ff1ab1e08469d6c5243ec78043, type: 3}
   m_targetInRange: 0
   m_attackRange:

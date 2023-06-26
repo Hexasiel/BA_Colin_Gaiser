@@ -814,6 +814,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6a061106486f58e448dc7f0bf2c354bc, type: 3}
   - {fileID: 21300000, guid: 03d1c4675f0f2364281e3afd650d5ca8, type: 3}
   healthbar: {fileID: 7092885665218859926}
+  m_name: Wall
+  m_description:
+  - Very Robust
+  - Even More Robust
+  - Extremely Robust
 --- !u!60 &8803332463306202607
 PolygonCollider2D:
   m_ObjectHideFlags: 0

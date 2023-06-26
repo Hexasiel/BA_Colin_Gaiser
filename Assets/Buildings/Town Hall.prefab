@@ -1069,6 +1069,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 96c2134ac5ffd1840b4fff1f72c350b8, type: 3}
   - {fileID: 21300000, guid: 406059541fe03b7478fd91a6bb71ea5e, type: 3}
   healthbar: {fileID: 630457818706297086}
+  m_name: Town Hall
+  m_description:
+  - The Heart of your Kingdom
+  - More Build Slots
+  - Even More Build Slots
   buildslots:
   - {fileID: 7656855518324197571, guid: 096143b4f4385ab4e8ec21bdd55faa9b, type: 3}
   - {fileID: 1704659770688316617, guid: a5043a694d6e5384b993dbae41403533, type: 3}

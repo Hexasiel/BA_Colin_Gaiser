@@ -814,6 +814,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 03866fb2af6b0954b88e47894d5005ff, type: 3}
   - {fileID: 21300000, guid: 7cc8b932729c70041a255329ec4e4afc, type: 3}
   healthbar: {fileID: 7092885665218859926}
+  m_name: Shrine
+  m_description:
+  - Robust and heals Player + Buildings Over Time
+  - Stronger Healing
+  - Even Stronger Healing
   healingAmount: 03000000060000000c000000
 --- !u!60 &7792420473320466071
 PolygonCollider2D:

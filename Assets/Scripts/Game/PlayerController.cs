@@ -11,6 +11,13 @@ public class PlayerController : MonoBehaviour, IAttackable
     //Events
     public static event Action<int> OnPlayerDealtDamage;
     public static event Action<int> OnPlayerGetDamage;
+    public static event Action<int> OnPlayerHealed;
+    public static event Action OnPlayerDash;
+    public static event Action OnPlayerAttack;
+    public static event Action OnPlayerRepair;
+    public static event Action OnPlayerSwitchMode;
+    public static event Action OnPlayerUnneccessaryAction;
+    public static event Action OnPlayerFailedAction;
 
     //Properties
     public int score = 0;
@@ -31,6 +38,7 @@ public class PlayerController : MonoBehaviour, IAttackable
     [SerializeField] LayerMask repairMask;
 
     //Internal variables
+    float timeOfLastHit = 0;
     public int gold = 0;
     private bool canDash = true;
     private bool canShoot = true;
@@ -74,8 +82,15 @@ public class PlayerController : MonoBehaviour, IAttackable
     void ReceiveHeal(int health)
     {
         m_health += health;
-        if (m_health > maxHealth) m_health = maxHealth;
+        if (m_health > maxHealth) {
+            OnPlayerHealed?.Invoke(maxHealth - health);
+            m_health = maxHealth;
+        }
+        else {
+            OnPlayerHealed?.Invoke(health);
+        }
         gameUI.UpdateUI();
+
     }
 
     IEnumerator HealEverySecond() {
@@ -88,8 +103,8 @@ public class PlayerController : MonoBehaviour, IAttackable
 
     void UpdateWorkshopStats()
     {
-        refillShieldOnDash= false;
-        refillShieldOnKill= false;
+        refillShieldOnDash = false;
+        refillShieldOnKill = false;
         switch(Workshop.workshopHighestLevel)
         {
             case 0: break;
@@ -111,6 +126,7 @@ public class PlayerController : MonoBehaviour, IAttackable
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
+            OnPlayerSwitchMode?.Invoke();
             battleMode = !battleMode;
             if (battleMode) sprite.sprite = spriteWithSword;
             else sprite.sprite = spriteWithHammer;
@@ -174,6 +190,7 @@ public class PlayerController : MonoBehaviour, IAttackable
         }
         else
         {
+            timeOfLastHit = Time.realtimeSinceStartup;
             m_health -= dmg;
             OnPlayerGetDamage?.Invoke(dmg);
         }
@@ -197,6 +214,10 @@ public class PlayerController : MonoBehaviour, IAttackable
 
     IEnumerator Dash()
     {
+        if(Time.realtimeSinceStartup - timeOfLastHit < 0.3f) {
+            OnPlayerFailedAction?.Invoke();
+        }
+        OnPlayerDash?.Invoke();
         if(refillShieldOnDash) RefillShield();
         dashParticleSystem.Play();
         canDash = false;
@@ -220,6 +241,7 @@ public class PlayerController : MonoBehaviour, IAttackable
     IEnumerator Attack()
     {
         canAttack = false;
+        OnPlayerAttack?.Invoke();
 
         animator.SetTrigger("Attack");
 
@@ -231,13 +253,14 @@ public class PlayerController : MonoBehaviour, IAttackable
             enemy.GetDamage(attackDamage, knockback);
             OnPlayerDealtDamage?.Invoke(attackDamage);
         }
+        if(hitEnemies.Length == 0) { OnPlayerUnneccessaryAction?.Invoke(); }
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
     }
 
     IEnumerator Repair() {
         canAttack = false;
-
+        OnPlayerRepair?.Invoke();
         animator.SetTrigger("Attack");
 
         Collider2D[] hitBuildings = Physics2D.OverlapCircleAll(attackPos.position, attackRange, repairMask);
@@ -245,6 +268,7 @@ public class PlayerController : MonoBehaviour, IAttackable
             Building building = collider2D.GetComponent<Building>();
             building.ReceiveHeal(attackDamage);
         }
+        if (hitBuildings.Length == 0) { OnPlayerUnneccessaryAction?.Invoke(); }
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
     }

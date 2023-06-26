@@ -13,6 +13,25 @@ public class WavePerformance
     public static float[] bci_max_averages = new float[6];
     public static float[] bci_min_averages = new float[6];
 
+    public static int[] ref_damageDealtInCloseCombat;
+    public static int[] ref_unneccessaryActions;
+    public static int[] ref_actionFrequency;
+
+    public static int[] ref_failedActions;
+
+    //Performance
+    public static int[] ref_lostHP;
+    public static int[] ref_healedHP;
+    public static int[] ref_healedHPPause;
+    public static int[] ref_lostBuildingHP;
+    public static int[] ref_lostBuildings;
+    public static int[] ref_healedBuildingHP;
+    public static int[] ref_healedBuildingHPPause;
+    public static int[] ref_lostBuildingsPercentage;
+    public static int[] ref_goldCollected;
+    public static int[] ref_goldLost;
+
+    //--------------------------------------------------------------------------
     //General
     public int m_gameSession;
     public int m_waveNumber;
@@ -33,20 +52,29 @@ public class WavePerformance
     //--------------------------------------------------------------------------
     //Game Metrics
     public float m_waveClearDuration;
+
+
+    public int m_damageDealtInCloseCombat;
+    public int m_unneccessaryActions;
+    public int m_actionFrequency; 
+    public List<float> m_actionTimes;
+
+    public int m_failedActions;
+
+    //Performance
     public int m_lostHP;
+    public int m_healedHP;
+    public int m_healedHPPause;
     public int m_lostBuildingHP;
     public int m_lostBuildings;
-    public int m_healedtBuildingHP;
-    public int m_damageDealtInCloseCombat;
-
-    public int m_unneccessaryActions;
-    public int m_actionFrequency;
-    public int m_failedActions;
+    public int m_healedBuildingHP;
+    public int m_healedBuildingHPPause;
     public int m_lostBuildingsPercentage;
-    public int m_lightningHits;
-    public int m_goldGenerated;
     public int m_goldCollected;
     public int m_goldLost;
+
+    public float m_boredom_GM;
+    public float m_frustration_GM;
 
 
     //--------------------------------------------------------------------------
@@ -65,8 +93,9 @@ public class WavePerformance
     public List<float> m_bciStats_Pause_rel;
     public List<float> m_bciStats_Pause_str;
 
-    public float m_boredom;
-    public float m_frustration;
+    public float m_boredom_BCI;
+    public float m_frustration_BCI;
+
 
     public void Init(int gameSession, int waveNumber,float waveSpawnDuration, float wavePauseDuration, float waveDifficulty, float systemWeight) {
         m_gameSession = gameSession;
@@ -103,9 +132,17 @@ public class WavePerformance
         EmotivUnityItf.Instance.PerfDataReceived += AddBCIMetrics;
         PlayerController.OnPlayerDealtDamage += AddPlayerMeleeDamageDealt;
         PlayerController.OnPlayerGetDamage += AddPlayerDamage;
+        PlayerController.OnPlayerHealed += AddPlayerHealing;
+        GoldPiece.OnGoldPieceCollected += AddGoldPieceCollected;
+        PlayerController.OnPlayerUnneccessaryAction += AddUnneccessaryAction;
+        PlayerController.OnPlayerFailedAction += AddFailedAction;
+
+        PlayerController.OnPlayerAttack += AddPlayerAction;
+        PlayerController.OnPlayerDash += AddPlayerAction;
+        PlayerController.OnPlayerRepair+= AddPlayerAction;
     }
 
-    void AddBCIMetrics(object sender ,ArrayList metrics ) {
+    void AddBCIMetrics(object sender, ArrayList metrics ) {
 
         if (m_Pause) {
             m_bciStats_Pause_eng.Add(float.Parse(metrics[2].ToString()));
@@ -125,8 +162,33 @@ public class WavePerformance
         }
     }
 
+    void AddPlayerHealing(int heal) {
+        if (!m_Pause) {
+            m_healedHP += heal;
+        }
+        else {
+            m_healedHPPause += heal;
+        }
+    }
+
+    void AddUnneccessaryAction() {
+        m_unneccessaryActions++;
+    }
+
+    void AddFailedAction() {
+        m_failedActions++;
+    }
+
+    void AddPlayerAction() {
+        m_actionTimes.Add(Time.realtimeSinceStartup - m_waveSpawntime);
+    }
+
     void AddBuildingDamage(int dmg) {
         m_lostBuildingHP += dmg;
+    }
+
+    void AddGoldPieceCollected() {
+        m_goldCollected++;
     }
 
     void AddPlayerMeleeDamageDealt(int dmg) {
@@ -134,11 +196,17 @@ public class WavePerformance
     }
 
     void AddBuildingHeal(int heal) {
-        m_healedtBuildingHP += heal;
+        if (!m_Pause) {
+            m_healedBuildingHP += heal;
+        }
+        else {
+            m_healedBuildingHPPause += heal;
+        }
     }
 
-    void AddDestroyedBuilding() {
+    void AddDestroyedBuilding(int value) {
         m_lostBuildings++;
+        m_goldLost += value;
     }
 
     void AddPlayerDamage(int dmg) {
@@ -168,34 +236,57 @@ public class WavePerformance
         EvaluatePredictedSkillLevelBCI();
 
         //Game Metrics
-        m_adjustedDifficultyGM = m_waveDifficulty;
+        EvaluatePredictedSkillLevelGM();
 
         //Combination
         m_adjustedDifficultyWeighted = (m_adjustedDifficultyGM * (1-m_systemWeight)) + (m_adjustedDifficultyBCI * m_systemWeight);
         return m_adjustedDifficultyWeighted;
     }
 
+    void EvaluatePredictedSkillLevelGM() {
+
+        m_lostBuildingsPercentage = 0;
+        m_actionFrequency = 0;
+
+
+        m_boredom_GM = 0;
+        m_frustration_GM = 0;
+
+        if (m_boredom_GM > 0 && m_frustration_GM < 0) {
+            m_adjustedDifficultyGM = m_waveDifficulty * (1 + m_boredom_GM);
+        }
+        else if (m_boredom_GM < 0 && m_frustration_BCI > 0) {
+            m_adjustedDifficultyGM = m_waveDifficulty * (1 - m_frustration_GM);
+        }
+        else if (m_boredom_GM > 0 && m_frustration_BCI > 0) {
+            m_adjustedDifficultyGM = m_waveDifficulty * (1 - m_frustration_GM + m_boredom_GM);
+        }
+        else {
+            m_adjustedDifficultyGM = m_waveDifficulty;
+        }
+    }
+
     void EvaluatePredictedSkillLevelBCI() {
-       m_boredom = 
+        m_boredom_BCI = 
                 ((bci_max_averages[0] - m_bciStats_eng.Average()) 
             +   (bci_max_averages[1] - m_bciStats_exc.Average()) 
             +   (bci_max_averages[3] - m_bciStats_int.Average() ) 
             +   (m_bciStats_rel.Average() - bci_min_averages[4])) 
             /   4f;
 
-        m_frustration = 
+        m_frustration_BCI = 
                 ((m_bciStats_str.Average() - bci_min_averages[5]) 
             +   (bci_max_averages[3] - m_bciStats_int.Average())) 
             /   2f;
 
-        if(m_boredom > 0 && m_frustration < 0) {
-            m_adjustedDifficultyBCI = m_waveDifficulty * (1 + m_boredom);
+        if(m_boredom_BCI > 0 && m_frustration_BCI < 0) {
+            m_adjustedDifficultyBCI = m_waveDifficulty * (1 + m_boredom_BCI);
         }
-        else if (m_boredom < 0 && m_frustration > 0) {
-            m_adjustedDifficultyBCI = m_waveDifficulty * (1 - m_frustration);
+        else if (m_boredom_BCI < 0 && m_frustration_BCI > 0) {
+            m_adjustedDifficultyBCI = m_waveDifficulty * (1 - m_frustration_BCI);
         }
-        else if(m_boredom > 0 && m_frustration > 0){
-            m_adjustedDifficultyBCI = m_waveDifficulty * (1 - m_frustration + m_boredom);
+        else if(m_boredom_BCI > 0 && m_frustration_BCI > 0){
+            m_adjustedDifficultyBCI = m_waveDifficulty * (1 - m_frustration_BCI + m_boredom_BCI);
         }
         else {
             m_adjustedDifficultyBCI = m_waveDifficulty;

@@ -6,6 +6,15 @@ using UnityEngine;
 
 public class BuildingMenu : MonoBehaviour
 {
+    //Events
+    public static event Action<Building> OnUpdateDisplay;
+    public static event Action OnShowDisplay;
+    public static event Action OnHideDisplay;
+
+    public static event Action OnWallBuilt;
+    public static event Action OnArcherTowerBuilt;
+    public static event Action OnBuildingUpgraded;
+
     //External References
     [SerializeField] GameObject banner;
     Transform[] childButton = new Transform[9];
@@ -76,7 +85,8 @@ public class BuildingMenu : MonoBehaviour
       foreach( Transform t in transform)
         {
             t.gameObject.SetActive(true);
-        }  
+        }
+        OnShowDisplay?.Invoke();
     }
 
     public void SetButtonsEnabled(bool[] newStates) {
@@ -99,6 +109,16 @@ public class BuildingMenu : MonoBehaviour
         }
         childButton[elementIndex].GetComponent<SpriteRenderer>().color = hoveredColor;
         activeElement = elementIndex;
+
+        //Building Info
+        Building infoBuilding;
+        if(elementIndex== 0 || elementIndex == 8) { infoBuilding = null; return; }
+        else if (elementIndex == 7) { if (currentBuilding) infoBuilding = currentBuilding; else return; }
+        else {
+            infoBuilding = buildingPrefabs[elementIndex - 1].GetComponent<Building>();
+        }
+        if(infoBuilding == null) { return; }
+        OnUpdateDisplay(infoBuilding);
     }
 
     private void OnMouseUpAsButton()
@@ -125,6 +145,8 @@ public class BuildingMenu : MonoBehaviour
             ShowBanner(false);
             PlayerController.instance.gold -= currentBuilding.m_upgradeCost[0];
             PlayerController.instance.gameUI.UpdateUI();
+            if(buildingIndex -1 == 0) OnArcherTowerBuilt?.Invoke();
+            if (buildingIndex - 1 == 2) OnWallBuilt?.Invoke();
         }
         else
         {
@@ -152,6 +174,7 @@ public class BuildingMenu : MonoBehaviour
             PlayerController.instance.gold -= currentBuilding.m_upgradeCost[currentBuilding.m_level + 1];
             PlayerController.instance.gameUI.UpdateUI();
             currentBuilding.Upgrade();
+            OnBuildingUpgraded?.Invoke();
         }
         else
         {
@@ -170,7 +193,7 @@ public class BuildingMenu : MonoBehaviour
         }
         PlayerController.instance.gold += (int)(currentBuilding.m_upgradeCost[currentBuilding.m_level] * ((float)currentBuilding.m_health / (float)currentBuilding.m_maxHealth[currentBuilding.m_level]) * 0.9);
         PlayerController.instance.gameUI.UpdateUI();
-        Destroy(currentBuilding.gameObject);
+        currentBuilding.Demolish();
         currentBuilding = null;
         ShowBanner(true);
         SetButtonsEnabled(new bool[] { true, true, true, true, true, true, false, false });
@@ -185,6 +208,7 @@ public class BuildingMenu : MonoBehaviour
                 continue;
             t.gameObject.SetActive(false);
         }
+        OnHideDisplay?.Invoke();
     }
 
     void UpdateUI(){
