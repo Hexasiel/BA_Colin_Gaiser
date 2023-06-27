@@ -13,29 +13,23 @@ public class WavePerformance
     public static float[] bci_max_averages = new float[6];
     public static float[] bci_min_averages = new float[6];
 
-    public static int[] ref_damageDealtInCloseCombat;
-    public static int[] ref_unneccessaryActions;
-    public static int[] ref_actionFrequency;
+    public static int[] ref_damageDealtInCloseCombat = new int[3] { 0, 80, 800 };
+    public static int[] ref_unneccessaryActions = new int[3] { 0, 3, 30 };
+    public static float[] ref_actionFrequency = new float[3] { 0f, 2f, 20f };
 
-    public static int[] ref_failedActions;
+    public static int[] ref_failedActions = new int[3] { 0, 5, 30 };
 
-    //Performance
-    public static int[] ref_lostHP;
-    public static int[] ref_healedHP;
-    public static int[] ref_healedHPPause;
-    public static int[] ref_lostBuildingHP;
-    public static int[] ref_lostBuildings;
-    public static int[] ref_healedBuildingHP;
-    public static int[] ref_healedBuildingHPPause;
-    public static int[] ref_lostBuildingsPercentage;
-    public static int[] ref_goldCollected;
-    public static int[] ref_goldLost;
+
+    public static float[] ref_lostHPPercentage = new float[3] { 0f, 25f, 100f};
+    public static float[] ref_lostBuildingHPPercentage = new float[3] { 0f, 25f, 100f };
+    public static float[] ref_lostBuildingsPercentage = new float[3] { 0f, 12f, 100f };
+    public static int[] ref_goldProfit = new int[3] { -90, 10, 110 };
 
     //--------------------------------------------------------------------------
     //General
     public int m_gameSession;
     public int m_waveNumber;
-    public float m_systemWeight;
+    public static float m_systemWeight;
 
     public float m_waveDifficulty;
     public float m_waveSpawntime;
@@ -56,22 +50,26 @@ public class WavePerformance
 
     public int m_damageDealtInCloseCombat;
     public int m_unneccessaryActions;
-    public int m_actionFrequency; 
+    public float m_actionFrequency; 
     public List<float> m_actionTimes;
 
     public int m_failedActions;
 
     //Performance
+    public float m_performance;
     public int m_lostHP;
     public int m_healedHP;
     public int m_healedHPPause;
+    public float m_lostHPPercentage;
     public int m_lostBuildingHP;
     public int m_lostBuildings;
     public int m_healedBuildingHP;
     public int m_healedBuildingHPPause;
-    public int m_lostBuildingsPercentage;
+    public float m_lostBuildingHPPercentage;
+    public float m_lostBuildingsPercentage;
     public int m_goldCollected;
     public int m_goldLost;
+    public int m_goldProfit;
 
     public float m_boredom_GM;
     public float m_frustration_GM;
@@ -97,14 +95,13 @@ public class WavePerformance
     public float m_frustration_BCI;
 
 
-    public void Init(int gameSession, int waveNumber,float waveSpawnDuration, float wavePauseDuration, float waveDifficulty, float systemWeight) {
+    public void Init(int gameSession, int waveNumber,float waveSpawnDuration, float wavePauseDuration, float waveDifficulty) {
         m_gameSession = gameSession;
         m_waveNumber = waveNumber;
         m_waveSpawntime = Time.realtimeSinceStartup;
         m_waveSpawnDuration = waveSpawnDuration;
         m_wavePauseDuration = wavePauseDuration;
         m_waveDifficulty = waveDifficulty;
-        m_systemWeight = systemWeight;
         m_waveClearDuration = -1;
         m_lostHP = 0;
         m_lostBuildingHP = 0;
@@ -228,29 +225,54 @@ public class WavePerformance
         m_waveClearDuration = Time.realtimeSinceStartup - m_waveSpawntime;
         EvaluatePredictedSkillLevel();
         SaveToJSON("saveFiles/" + m_gameSession);
-
     }
 
-    float EvaluatePredictedSkillLevel() {
-        //BCI
-        EvaluatePredictedSkillLevelBCI();
+    float EvaluateSingleStatINT(int stat, int reference, int min, int max) {
+        if(stat == reference) return 0;
+        else if(stat < reference) {
+            return -1 * Mathf.InverseLerp(reference, min, stat);
+        }
+        else{
+            return Mathf.InverseLerp(reference, max, stat);
+        }
+    }
 
-        //Game Metrics
-        EvaluatePredictedSkillLevelGM();
-
-        //Combination
-        m_adjustedDifficultyWeighted = (m_adjustedDifficultyGM * (1-m_systemWeight)) + (m_adjustedDifficultyBCI * m_systemWeight);
-        return m_adjustedDifficultyWeighted;
+    float EvaluateSingleStatFLOAT(float stat, float reference, float min, float max) {
+        if (stat == reference) return 0;
+        else if (stat < reference) {
+            return -1 * Mathf.InverseLerp(reference, min, stat);
+        }
+        else {
+            return Mathf.InverseLerp(reference, max, stat);
+        }
     }
 
     void EvaluatePredictedSkillLevelGM() {
 
-        m_lostBuildingsPercentage = 0;
-        m_actionFrequency = 0;
+        m_lostHPPercentage = (float)(m_lostHP - m_healedHP) / PlayerController.instance.maxHealth; 
+        m_lostBuildingsPercentage = (float)m_lostBuildings / (float)Building.count;
+        m_lostBuildingHPPercentage = ((float)m_lostBuildingHP - m_healedBuildingHP) / (float)Building.count * 500;
+        m_actionFrequency = m_actionTimes.Count / m_waveClearDuration;
+        m_goldProfit = m_goldCollected - m_goldLost;
 
+        m_performance = 
+                (-1 * EvaluateSingleStatFLOAT(m_lostHPPercentage, ref_lostHPPercentage[1], ref_lostHPPercentage[0], ref_lostHPPercentage[2])
+            -   EvaluateSingleStatFLOAT(m_lostBuildingHPPercentage, ref_lostBuildingHPPercentage[1], ref_lostBuildingHPPercentage[0], ref_lostBuildingHPPercentage[2])
+            -   EvaluateSingleStatFLOAT(m_lostBuildingsPercentage, ref_lostBuildingsPercentage[1], ref_lostBuildingsPercentage[0], ref_lostBuildingsPercentage[2])
+            +   EvaluateSingleStatINT(m_goldProfit, ref_goldProfit[1], ref_goldProfit[0], ref_goldProfit[2]))
+            /   4f;
 
-        m_boredom_GM = 0;
-        m_frustration_GM = 0;
+        m_boredom_GM = 
+                (-1 * EvaluateSingleStatFLOAT(m_actionFrequency, ref_actionFrequency[1], ref_actionFrequency[0], ref_actionFrequency[2])
+            +   EvaluateSingleStatINT(m_unneccessaryActions, ref_unneccessaryActions[1], ref_unneccessaryActions[0], ref_unneccessaryActions[2])
+            -   EvaluateSingleStatFLOAT(m_damageDealtInCloseCombat, ref_damageDealtInCloseCombat[1] * m_waveDifficulty, ref_damageDealtInCloseCombat[0] * m_waveDifficulty, ref_damageDealtInCloseCombat[2] * m_waveDifficulty)
+            +   m_performance)
+            /   4f;
+
+        m_frustration_GM = 
+                (EvaluateSingleStatINT(m_failedActions, ref_failedActions[1], ref_failedActions[0], ref_failedActions[2])
+            -   m_performance) 
+            /   2;
 
         if (m_boredom_GM > 0 && m_frustration_GM < 0) {
             m_adjustedDifficultyGM = m_waveDifficulty * (1 + m_boredom_GM);
@@ -292,6 +314,18 @@ public class WavePerformance
             m_adjustedDifficultyBCI = m_waveDifficulty;
         }
         UpdateMinMaxAverages();
+    }
+
+    float EvaluatePredictedSkillLevel() {
+        //BCI
+        EvaluatePredictedSkillLevelBCI();
+
+        //Game Metrics
+        EvaluatePredictedSkillLevelGM();
+
+        //Combination
+        m_adjustedDifficultyWeighted = (m_adjustedDifficultyGM * (1 - m_systemWeight)) + (m_adjustedDifficultyBCI * m_systemWeight);
+        return m_adjustedDifficultyWeighted;
     }
 
     void UpdateMinMaxAverages() {

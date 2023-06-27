@@ -46,7 +46,7 @@ public class PlayerAnalizer : MonoBehaviour
         EnemyWave newWave = new EnemyWave(predictedDifficulty);
         OnNewWave?.Invoke(newWave);
         currentWavePerformance = new WavePerformance();
-        currentWavePerformance.Init(gameSessionID, waveNumber, CalculateSpawnDuration(predictedDifficulty), CalculatePauseDuration(predictedDifficulty), predictedDifficulty, systemWeight);
+        currentWavePerformance.Init(gameSessionID, waveNumber, CalculateSpawnDuration(predictedDifficulty), CalculatePauseDuration(predictedDifficulty), predictedDifficulty);
     }
 
     float CalculatePauseDuration(float difficulty) {

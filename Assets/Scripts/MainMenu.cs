@@ -58,6 +58,15 @@ public class MainMenu : MonoBehaviour
     public void SetMode(int mode) {
         currentMode= mode;
         modeDisplay.text = mode.ToString();
+        float weight;
+        switch (mode){
+            case 1: weight = 0f;    break;
+            case 2: weight = 0.5f;  break;
+            case 3: weight = 0.8f;  break;
+            case 4: weight = 1f;    break;
+            default: weight = 0f;   break;
+        }
+        WavePerformance.m_systemWeight = weight;
     }
 
     public void LoadGame() {
