@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour, IAttackable
     {
         m_health += health;
         if (m_health > maxHealth) {
-            OnPlayerHealed?.Invoke(maxHealth - health);
+            OnPlayerHealed?.Invoke(health + maxHealth - m_health);
             m_health = maxHealth;
         }
         else {

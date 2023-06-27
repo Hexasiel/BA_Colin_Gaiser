@@ -20,9 +20,9 @@ public class WavePerformance
     public static int[] ref_failedActions = new int[3] { 0, 5, 30 };
 
 
-    public static float[] ref_lostHPPercentage = new float[3] { 0f, 25f, 100f};
-    public static float[] ref_lostBuildingHPPercentage = new float[3] { 0f, 25f, 100f };
-    public static float[] ref_lostBuildingsPercentage = new float[3] { 0f, 12f, 100f };
+    public static float[] ref_lostHPPercentage = new float[3] { 0f, 0.25f, 1f};
+    public static float[] ref_lostBuildingHPPercentage = new float[3] { 0f, 0.25f, 1f };
+    public static float[] ref_lostBuildingsPercentage = new float[3] { 0f, 0.12f, 1f };
     public static int[] ref_goldProfit = new int[3] { -90, 10, 110 };
 
     //--------------------------------------------------------------------------
@@ -51,7 +51,7 @@ public class WavePerformance
     public int m_damageDealtInCloseCombat;
     public int m_unneccessaryActions;
     public float m_actionFrequency; 
-    public List<float> m_actionTimes;
+    public List<float> m_actionTimes = new List<float>();
 
     public int m_failedActions;
 
@@ -238,6 +238,7 @@ public class WavePerformance
     }
 
     float EvaluateSingleStatFLOAT(float stat, float reference, float min, float max) {
+        Debug.Log(stat + "       " + reference + "        " + min + "         " + max);
         if (stat == reference) return 0;
         else if (stat < reference) {
             return -1 * Mathf.InverseLerp(reference, min, stat);
@@ -251,9 +252,16 @@ public class WavePerformance
 
         m_lostHPPercentage = (float)(m_lostHP - m_healedHP) / PlayerController.instance.maxHealth; 
         m_lostBuildingsPercentage = (float)m_lostBuildings / (float)Building.count;
-        m_lostBuildingHPPercentage = ((float)m_lostBuildingHP - m_healedBuildingHP) / (float)Building.count * 500;
-        m_actionFrequency = m_actionTimes.Count / m_waveClearDuration;
+        m_lostBuildingHPPercentage = ((float)m_lostBuildingHP - m_healedBuildingHP) / ((float)Building.count * 500);
+        m_actionFrequency = m_waveClearDuration / m_actionTimes.Count;
         m_goldProfit = m_goldCollected - m_goldLost;
+
+        float a = EvaluateSingleStatFLOAT(m_lostHPPercentage, ref_lostHPPercentage[1], ref_lostHPPercentage[0], ref_lostHPPercentage[2]);
+        float b = EvaluateSingleStatFLOAT(m_lostBuildingHPPercentage, ref_lostBuildingHPPercentage[1], ref_lostBuildingHPPercentage[0], ref_lostBuildingHPPercentage[2]);
+        float c = EvaluateSingleStatFLOAT(m_lostBuildingsPercentage, ref_lostBuildingsPercentage[1], ref_lostBuildingsPercentage[0], ref_lostBuildingsPercentage[2]);
+        float d = EvaluateSingleStatINT(m_goldProfit, ref_goldProfit[1], ref_goldProfit[0], ref_goldProfit[2]);
+
+        Debug.Log(a + "       " + b + "        " + c + "         " + d);
 
         m_performance = 
                 (-1 * EvaluateSingleStatFLOAT(m_lostHPPercentage, ref_lostHPPercentage[1], ref_lostHPPercentage[0], ref_lostHPPercentage[2])
@@ -266,13 +274,15 @@ public class WavePerformance
                 (-1 * EvaluateSingleStatFLOAT(m_actionFrequency, ref_actionFrequency[1], ref_actionFrequency[0], ref_actionFrequency[2])
             +   EvaluateSingleStatINT(m_unneccessaryActions, ref_unneccessaryActions[1], ref_unneccessaryActions[0], ref_unneccessaryActions[2])
             -   EvaluateSingleStatFLOAT(m_damageDealtInCloseCombat, ref_damageDealtInCloseCombat[1] * m_waveDifficulty, ref_damageDealtInCloseCombat[0] * m_waveDifficulty, ref_damageDealtInCloseCombat[2] * m_waveDifficulty)
+            +   m_performance
             +   m_performance)
-            /   4f;
+            /   5f;
 
         m_frustration_GM = 
                 (EvaluateSingleStatINT(m_failedActions, ref_failedActions[1], ref_failedActions[0], ref_failedActions[2])
+            -   m_performance
             -   m_performance) 
-            /   2;
+            /   3;
 
         if (m_boredom_GM > 0 && m_frustration_GM < 0) {
             m_adjustedDifficultyGM = m_waveDifficulty * (1 + m_boredom_GM);

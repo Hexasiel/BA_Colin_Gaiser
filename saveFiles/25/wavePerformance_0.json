@@ -1,0 +1,147 @@
+{
+    "m_gameSession": 25,
+    "m_waveNumber": 0,
+    "m_waveDifficulty": 0.4000000059604645,
+    "m_waveSpawntime": 154.78038024902345,
+    "m_waveSpawnDuration": 20.0,
+    "m_waveMaxClearDuration": 0.0,
+    "m_wavePauseDuration": 20.0,
+    "m_adjustedDifficultyGM": 0.4645032584667206,
+    "m_adjustedDifficultyBCI": 0.4000000059604645,
+    "m_adjustedDifficultyWeighted": 0.4645032584667206,
+    "m_Pause": true,
+    "m_waveClearDuration": 109.79362487792969,
+    "m_damageDealtInCloseCombat": 80,
+    "m_unneccessaryActions": 12,
+    "m_actionFrequency": 5.778611660003662,
+    "m_actionTimes": [
+        2.0306396484375,
+        2.5782012939453127,
+        12.200836181640625,
+        12.708099365234375,
+        13.216751098632813,
+        13.723434448242188,
+        14.228759765625,
+        14.733993530273438,
+        15.2431640625,
+        15.74969482421875,
+        16.254837036132814,
+        16.763168334960939,
+        17.269149780273439,
+        87.79228210449219,
+        88.00645446777344,
+        88.51200866699219,
+        89.28794860839844,
+        89.79275512695313,
+        90.7919921875
+    ],
+    "m_failedActions": 0,
+    "m_performance": 0.6882888674736023,
+    "m_lostHP": 200,
+    "m_healedHP": 65,
+    "m_healedHPPause": 100,
+    "m_lostHPPercentage": 0.27000001072883608,
+    "m_lostBuildingHP": 1060,
+    "m_lostBuildings": 1,
+    "m_healedBuildingHP": 0,
+    "m_healedBuildingHPPause": 0,
+    "m_lostBuildingHPPercentage": 0.7066666483879089,
+    "m_lostBuildingsPercentage": 0.3333333432674408,
+    "m_goldCollected": 2,
+    "m_goldLost": 10,
+    "m_goldProfit": -8,
+    "m_boredom_GM": 0.16125816106796266,
+    "m_frustration_GM": -0.8441444635391235,
+    "m_bciStats_eng": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+    ],
+    "m_bciStats_exc": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+    ],
+    "m_bciStats_foc": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+    ],
+    "m_bciStats_int": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+    ],
+    "m_bciStats_rel": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+    ],
+    "m_bciStats_str": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+    ],
+    "m_bciStats_Pause_eng": [
+        0.5,
+        0.5
+    ],
+    "m_bciStats_Pause_exc": [
+        0.5,
+        0.5
+    ],
+    "m_bciStats_Pause_foc": [
+        0.5,
+        0.5
+    ],
+    "m_bciStats_Pause_int": [
+        0.5,
+        0.5
+    ],
+    "m_bciStats_Pause_rel": [
+        0.5,
+        0.5
+    ],
+    "m_bciStats_Pause_str": [
+        0.5,
+        0.5
+    ],
+    "m_boredom_BCI": 0.0,
+    "m_frustration_BCI": 0.0
+}
