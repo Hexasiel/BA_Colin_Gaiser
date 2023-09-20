@@ -35,6 +35,12 @@ public class BuildingMenu : MonoBehaviour
     public Color hoveredColor = new Color(1, 1, 1, 1f);
     public Color disabledColor = new Color(0.5f, 0.5f, 0.5f, 0.5f);
 
+    [Header("Wwise")] 
+    public AK.Wwise.Event wwEvent_MenuOpen;
+    public AK.Wwise.Event wwEvent_ButtonHovered;
+    public AK.Wwise.Event wwEvent_ButtonPressed;
+    public AK.Wwise.Event wwEvent_GoldSpent;
+    
     private void Awake()
     {
         _layerMask = LayerMask.GetMask("UI");
@@ -87,6 +93,7 @@ public class BuildingMenu : MonoBehaviour
             t.gameObject.SetActive(true);
         }
         OnShowDisplay?.Invoke();
+        wwEvent_MenuOpen.Post(gameObject);
     }
 
     public void SetButtonsEnabled(bool[] newStates) {
@@ -97,9 +104,10 @@ public class BuildingMenu : MonoBehaviour
         buttonStates = newStates;
     }
 
-    public void SetActiveElement(int elementIndex)
-    {
-        for (int i = 0; i < buttonStates.Length; i++) {
+    public void SetActiveElement(int elementIndex) {
+         if(elementIndex != activeElement)
+             wwEvent_ButtonHovered.Post(gameObject);
+         for (int i = 0; i < buttonStates.Length; i++) {
             if (buttonStates[i]) {
                 childButton[i+1].GetComponent<SpriteRenderer>().color = defaultColor;
             }
@@ -125,6 +133,7 @@ public class BuildingMenu : MonoBehaviour
     {
         if (PlayerController.instance.battleMode)
             return;
+        wwEvent_ButtonPressed.Post(gameObject);
         if(activeElement == 8) { DemolishBuilding();return; }
             
         if(activeElement == 7) { UpgradeBuilding(); return; }
@@ -138,8 +147,8 @@ public class BuildingMenu : MonoBehaviour
             Debug.LogWarning("Trying to build, but there is alredy a building in this slot!");
             return;
         }
-        if (buildingPrefabs[buildingIndex -1].GetComponent<Building>().m_upgradeCost[0] <= PlayerController.instance.gold)
-        {
+        if (buildingPrefabs[buildingIndex -1].GetComponent<Building>().m_upgradeCost[0] <= PlayerController.instance.gold) {
+            wwEvent_GoldSpent.Post(gameObject);
             currentBuilding = Instantiate(buildingPrefabs[buildingIndex - 1], transform.parent).GetComponent<Building>();
             currentBuilding.parentMenu = this;
             ShowBanner(false);
@@ -171,6 +180,7 @@ public class BuildingMenu : MonoBehaviour
         }
         if (currentBuilding.m_upgradeCost[currentBuilding.m_level +1] <= PlayerController.instance.gold)
         {
+            wwEvent_GoldSpent.Post(gameObject);
             PlayerController.instance.gold -= currentBuilding.m_upgradeCost[currentBuilding.m_level + 1];
             PlayerController.instance.gameUI.UpdateUI();
             currentBuilding.Upgrade();

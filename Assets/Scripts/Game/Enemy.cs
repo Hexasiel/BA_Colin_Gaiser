@@ -11,13 +11,21 @@ public class Enemy : MonoBehaviour
     static int count;
     public static event Action OnAllEnemiesDefeated;
 
-    //External References
+    [Header("External References")] 
     [SerializeField] protected GameObject target;
     [SerializeField] protected SpriteRenderer sprite;
     [SerializeField] protected GameObject goldPiece;
     [SerializeField] protected Slider healthbar;
 
-    //Properties
+    
+    [Header("Wwise")] 
+    public AK.Wwise.Event wwEvent_Attack;
+    public AK.Wwise.Event wwEvent_Walk;
+    public AK.Wwise.Event wwEvent_Die;
+    public AK.Wwise.Event wwEvent_Grunt;
+    public AK.Wwise.Event wwEvent_Spawn;
+    
+    [Header("Properties")] 
     [SerializeField] protected float m_speed = 10f;
     [SerializeField] protected float m_attackSpeed = 1f;
     [SerializeField] protected int m_maxHealth = 10;
@@ -66,6 +74,7 @@ public class Enemy : MonoBehaviour
     protected virtual void Attack()
     {
         //TBI
+        wwEvent_Attack.Post(gameObject);
     }
 
     public void GetDamage(int dmg)
@@ -80,8 +89,8 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void GetDamage(int dmg, Vector2 knockBack)
-    {
+    public void GetDamage(int dmg, Vector2 knockBack) {
+        wwEvent_Grunt.Post(gameObject);
         m_health -= dmg;
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.AddForce(knockBack);
@@ -102,8 +111,8 @@ public class Enemy : MonoBehaviour
         sprite.color = Color.white;
     }
 
-    protected void Die()
-    {
+    protected void Die() {
+        wwEvent_Die.Post(gameObject);
         count--;
         if(count == 0) OnAllEnemiesDefeated?.Invoke();
 

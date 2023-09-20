@@ -115,6 +115,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 664668a7a41435c4d884e949c49f0743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wwEvent_HitGround:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c9cc86f343126a54d9632ec4b78317de, type: 2}
+  wwEvent_PickUp:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0007aeebcba09f34eaa6474e730d4fa9, type: 2}
 --- !u!50 &1965890595711161597
 Rigidbody2D:
   serializedVersion: 4

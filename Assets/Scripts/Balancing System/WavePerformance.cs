@@ -261,8 +261,6 @@ public class WavePerformance
         float c = EvaluateSingleStatFLOAT(m_lostBuildingsPercentage, ref_lostBuildingsPercentage[1], ref_lostBuildingsPercentage[0], ref_lostBuildingsPercentage[2]);
         float d = EvaluateSingleStatINT(m_goldProfit, ref_goldProfit[1], ref_goldProfit[0], ref_goldProfit[2]);
 
-        Debug.Log(a + "       " + b + "        " + c + "         " + d);
-
         m_performance = 
                 (-1 * EvaluateSingleStatFLOAT(m_lostHPPercentage, ref_lostHPPercentage[1], ref_lostHPPercentage[0], ref_lostHPPercentage[2])
             -   EvaluateSingleStatFLOAT(m_lostBuildingHPPercentage, ref_lostBuildingHPPercentage[1], ref_lostBuildingHPPercentage[0], ref_lostBuildingHPPercentage[2])
@@ -328,7 +326,7 @@ public class WavePerformance
 
     float EvaluatePredictedSkillLevel() {
         //BCI
-        EvaluatePredictedSkillLevelBCI();
+        //EvaluatePredictedSkillLevelBCI();
 
         //Game Metrics
         EvaluatePredictedSkillLevelGM();

@@ -6144,6 +6144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1f2c452e4fe5db4791fb2882e775b2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
   maxHealth: 500
   m_health: 500
   maxShield: 20
@@ -6175,6 +6176,34 @@ MonoBehaviour:
   gameUI: {fileID: 0}
   spriteWithSword: {fileID: 21300000, guid: 7e5731ab11bc2a946a0378fefd72c994, type: 3}
   spriteWithHammer: {fileID: 21300000, guid: 0ad35840c42e7c345bba4dbc43e24aa3, type: 3}
+  wwEvent_Attack:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d85e2a2faa2dbba448993b36840e7a44, type: 2}
+  wwEvent_Dash:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: fc2b74f7944ad8b4fbb45cddc900347e, type: 2}
+  wwEvent_Footstep:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 361f03b4cfd772e4db46ad606dfb9fea, type: 2}
+  wwEvent_Hit:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3134519cde32c7749a6b1976df3d0905, type: 2}
+  wwEvent_ShieldBreak:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 802e6cde75cea724e87e5459c8877452, type: 2}
+  wwEvent_ShieldHit:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b57781d8c1628ac42b56b39a61930353, type: 2}
+  wwEvent_ShieldRefill:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 118bef64a24cb74409377156a56bfe4f, type: 2}
 --- !u!70 &8409302036927222659
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -6217,8 +6246,8 @@ MonoBehaviour:
   - {fileID: 1401330349038301223}
   - {fileID: 7497233785872233609}
   m_Bounds:
-    m_Center: {x: -0.26798892, y: -0.50604856, z: 0}
-    m_Extent: {x: 1.0556568, y: 1.4938966, z: 0}
+    m_Center: {x: -0.26798904, y: -0.50604856, z: 0}
+    m_Extent: {x: 1.0556567, y: 1.4938966, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0

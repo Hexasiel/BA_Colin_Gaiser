@@ -228,3 +228,11 @@ MonoBehaviour:
   m_lightningFadeTime: 0.3
   m_lightningSprite: {fileID: 1023031231129031597}
   chargeIndicator: {fileID: 1023031232041255818}
+  wwEvent_Charge:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3600072eb7817284ba5191006832e30f, type: 2}
+  wwEvent_Explode:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 53402be9f5d31624694aee9d9ecfd357, type: 2}

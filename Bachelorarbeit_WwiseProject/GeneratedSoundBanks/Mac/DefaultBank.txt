@@ -1,0 +1,87 @@
+Event	ID	Name			Wwise Object Path	Notes
+	353565384	Menu_Opened			\Default Work Unit\Menu\Menu_Opened	
+	362191200	Player_Shield_Hit			\Default Work Unit\Player\Shield\Player_Shield_Hit	
+	370760792	Menu_Battlemode_Switched			\Default Work Unit\Menu\Menu_Battlemode_Switched	
+	417627684	PlayMusic			\Default Work Unit\Music\PlayMusic	
+	508669141	Missle_Fired			\Default Work Unit\Objects\Missles\Missle_Fired	
+	582686005	Enemy_Walk			\Default Work Unit\Enemies\Enemy_Walk	
+	748814056	Hostile_Missle_Fired			\Default Work Unit\Objects\Hostile_Missles\Hostile_Missle_Fired	
+	863959723	Lightning_Explode			\Default Work Unit\Objects\Lightning\Lightning_Explode	
+	871813740	Player_Hit			\Default Work Unit\Player\Player_Hit	
+	877173992	Lightning_Charge			\Default Work Unit\Objects\Lightning\Lightning_Charge	
+	933808812	Building_Hit_Wood_			\Default Work Unit\Buildings\Wood\Building_Hit_Wood_	
+	949613739	Building_Collapse_Stone			\Default Work Unit\Buildings\Stone\Building_Collapse_Stone	
+	1048498120	Menu_Button_Pressed			\Default Work Unit\Menu\Menu_Button_Pressed	
+	1142304696	Enemy_Die			\Default Work Unit\Enemies\Enemy_Die	
+	1226288867	Building_Collapse_Wood			\Default Work Unit\Buildings\Wood\Building_Collapse_Wood	
+	1518274198	Gold_Spent			\Default Work Unit\Objects\Coin\Gold_Spent	
+	1526102535	Enemy_Spawn			\Default Work Unit\Enemies\Enemy_Spawn	
+	1619382169	Player_Shield_Refill			\Default Work Unit\Player\Shield\Player_Shield_Refill	
+	1764799359	Hostile_Missle_Explode			\Default Work Unit\Objects\Hostile_Missles\Hostile_Missle_Explode	
+	1781417190	Enemy_Attack			\Default Work Unit\Enemies\Enemy_Attack	
+	1895691808	Enemy_Grunt			\Default Work Unit\Enemies\Enemy_Grunt	
+	1984022031	Hostile_Missle_Hit			\Default Work Unit\Objects\Hostile_Missles\Hostile_Missle_Hit	
+	2328686806	Missle_Hit			\Default Work Unit\Objects\Missles\Missle_Hit	
+	2394582229	Player_Dash			\Default Work Unit\Player\Player_Dash	
+	2453392179	Player_FootStep			\Default Work Unit\Player\Player_FootStep	
+	2724548802	Building_Built_Stone			\Default Work Unit\Buildings\Stone\Building_Built_Stone	
+	2824512041	Player_Attack			\Default Work Unit\Player\Player_Attack	
+	2855695268	Building_Built_Wood			\Default Work Unit\Buildings\Wood\Building_Built_Wood	
+	3340371270	Player_Shield_Break			\Default Work Unit\Player\Shield\Player_Shield_Break	
+	3682466839	Menu_Button_Hovered			\Default Work Unit\Menu\Menu_Button_Hovered	
+	3726324797	Building_Hit_Stone			\Default Work Unit\Buildings\Stone\Building_Hit_Stone	
+	3821651910	Gold_PickUp			\Default Work Unit\Objects\Coin\Gold_PickUp	
+	3949099766	Building_Repaired_Stone			\Default Work Unit\Buildings\Stone\Building_Repaired_Stone	
+	3971162776	Gold_HitGround			\Default Work Unit\Objects\Coin\Gold_HitGround	
+	4181259360	Building_Repaired_Wood			\Default Work Unit\Buildings\Wood\Building_Repaired_Wood	
+	4235500122	Missle_Explode			\Default Work Unit\Objects\Missles\Missle_Explode	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	1705516017	DayNight			\Default Work Unit\DayNight	
+
+State	ID	Name	State Group			Notes
+	311764537	Day	DayNight			
+	748895195	None	DayNight			
+	1011622525	Night	DayNight			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	24589467	Bachelorarbeit Edit 1 Export Music 2 Track 10 Render 0	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export Music 2 Track 10 Render 0_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\DayNight\Combat\Combat_Playlist\Bachelorarbeit Edit 1 Export Music 2 Track 8 Render 0\Bachelorarbeit Edit 1 Export Music 2 Track 10 Render 0		3264096
+	27315710	Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_095D774F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Gold\PickUp\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0		108536
+	58885456	Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_06	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_CBB16083.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Gold\Spent\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_06		2494064
+	72657657	Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_01	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_07CFD7F2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Steps\Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_01		106932
+	74399385	Limbo_Menu_1	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Limbo_Menu_1 Track 7 Render 0_10C4C929.wem		\Actor-Mixer Hierarchy\Export\Menu\MenuSlider\Limbo_Menu_1		192096
+	79693638	Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_01	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_94338131.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Attack\Loud\Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_01		44884
+	97543533	Bachelorarbeit Edit 1 Export Music 2 Track 9 Render 0	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export Music 2 Track 9 Render 0_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\DayNight\Combat\Combat_Playlist\Bachelorarbeit Edit 1 Export Music 2 Track 8 Render 0\Bachelorarbeit Edit 1 Export Music 2 Track 9 Render 0		3264096
+	109974312	Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_03	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_FFBBC9AD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Gold\PickUp\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_03		186764
+	119222880	Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_3F537CFE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Steps\Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0		159848
+	135874364	Limbo_Spider_Strike_1	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Limbo_Spider_Strike_1_5F8860D8.wem		\Actor-Mixer Hierarchy\Export\Spider\Strike\Limbo_Spider_Strike_1		76952
+	146510560	Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_04	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_B2073D07.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Gold\PickUp\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_04		151980
+	191516730	Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_02	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_7D80E35F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Attack\Loud\Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_02		43996
+	240054931	Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_04	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_358CBAA3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Gold\HitGround\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_04		84228
+	248360685	Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_02	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_FFB4D283.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Gold\PickUp\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_02		133240
+	259389354	Bachelorarbeit Edit 1 Export 2 Ambience_1 Render 0	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 2 Ambience_1 Render 0_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bachelorarbeit Edit 1 Export 2 Ambience_1 Render 0		4032096
+	277192893	Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_05	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_6E2ADA6E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Gold\HitGround\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_05		119220
+	310114219	Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_03	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_850DC03C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Gold\HitGround\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_03		123040
+	316744461	Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_1FC22BDF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Attack\Loud\Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0		56152
+	321009407	Bachelorarbeit Edit 1 Export Music 2 Track 8 Render 0	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export Music 2 Track 8 Render 0_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\DayNight\Combat\Combat_Playlist\Bachelorarbeit Edit 1 Export Music 2 Track 8 Render 0\Bachelorarbeit Edit 1 Export Music 2 Track 8 Render 0		3264096
+	381744698	Collapse	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 2 Stone_Building_1 Render 0_FA81A368.wem		\Actor-Mixer Hierarchy\Default Work Unit\Buildings\Stone\Collapse		272192
+	417553382	Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_02	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_12AC5115.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Steps\Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_02		90072
+	430988626	Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_03	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_EFBDAFFA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Steps\Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_03		87120
+	438612542	Bachelorarbeit Edit 1 Export Music 2 Track 11 Render 0	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export Music 2 Track 11 Render 0_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\DayNight\Main\Main_Playlist\Bachelorarbeit Edit 1 Export Music 2 Track 8 Render 0\Bachelorarbeit Edit 1 Export Music 2 Track 11 Render 0		3264096
+	452196189	Bachelorarbeit Edit 1 Export 2 Stone_Building_1 Render 0	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 2 Stone_Building_1 Render 0_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Buildings\Stone\Bachelorarbeit Edit 1 Export 2 Stone_Building_1 Render 0		4032096
+	485376426	Bachelorarbeit Edit 1 Export 2 Slime_1 Render 0	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 2 Slime_1 Render 0_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bachelorarbeit Edit 1 Export 2 Slime_1 Render 0		4032096
+	526829532	Limbo_Steps_Grass	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Limbo_Steps_Grass_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Limbo_Steps_Grass		1852296
+	527390159	Bachelorarbeit Edit 1 Export Music 2 Track 12 Render 0	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export Music 2 Track 12 Render 0_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\DayNight\Combat\Combat_Playlist\Bachelorarbeit Edit 1 Export Music 2 Track 8 Render 0\Bachelorarbeit Edit 1 Export Music 2 Track 12 Render 0		3264096
+	569723677	Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_02	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_FF9E1C24.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Gold\HitGround\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_02		84548
+	621019206	Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_06	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_BA5FE0EA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Gold\HitGround\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_06		135596
+	650434608	Limbo_Spider_Strike_03	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Limbo_Spider_Strike_1_2B48FABB.wem		\Actor-Mixer Hierarchy\Export\Spider\Strike\Limbo_Spider_Strike_03		95132
+	650830417	Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_01	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_403F0349.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Gold\HitGround\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_01		95548
+	698323286	Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_05	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_EE62C86E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Gold\PickUp\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_05		113104
+	735069707	Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_01	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_E31E2303.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Gold\PickUp\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_01		90808
+	748064097	Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0_01	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0_A0FDA557.wem		\Actor-Mixer Hierarchy\Default Work Unit\Buildings\Wood\Collapse\Hit\Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0_01		62380
+	779924718	Limbo_Spider_Strike_02	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Limbo_Spider_Strike_1_3EC02D82.wem		\Actor-Mixer Hierarchy\Export\Spider\Strike\Limbo_Spider_Strike_02		80488
+	879428587	Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0_63764EF3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Buildings\Wood\Collapse\Hit\Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0		56268
+	894276602	Limbo_Spider_Strike_01	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Limbo_Spider_Strike_1_950F0F90.wem		\Actor-Mixer Hierarchy\Export\Spider\Strike\Limbo_Spider_Strike_01		86500
+	1005746686	Bachelorarbeit Edit 1 Export Music 2 Track 13 Render 0	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export Music 2 Track 13 Render 0_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\DayNight\Combat\Combat_Playlist\Bachelorarbeit Edit 1 Export Music 2 Track 8 Render 0\Bachelorarbeit Edit 1 Export Music 2 Track 13 Render 0		3264096
+	1055921261	Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0	D:\Work\Unity\Bachelorarbeit\BA_Colin_Gaiser_Unity\Bachelorarbeit_WwiseProject\.cache\Mac\SFX\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_1FB4610A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Gold\HitGround\Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0		117220
+

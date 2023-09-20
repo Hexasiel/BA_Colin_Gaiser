@@ -2937,6 +2937,23 @@ MonoBehaviour:
   - {fileID: 0}
   defaultColor: {r: 1, g: 1, b: 1, a: 0.5}
   hoveredColor: {r: 1, g: 1, b: 1, a: 1}
+  disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+  wwEvent_MenuOpen:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 73087586a2843cf43b3949200d5d4af3, type: 2}
+  wwEvent_ButtonHovered:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b067dc7b4fe6a79498c7d3ec29705b50, type: 2}
+  wwEvent_ButtonPressed:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c4bdea6380ba51c42bca7db0393f111d, type: 2}
+  wwEvent_GoldSpent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c3fdb482d83163e41ac68aa354e4af1d, type: 2}
 --- !u!50 &8061247935495383707
 Rigidbody2D:
   serializedVersion: 4

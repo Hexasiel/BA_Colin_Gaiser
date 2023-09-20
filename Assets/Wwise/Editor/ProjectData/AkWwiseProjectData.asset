@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: d1ee43736a0b01408f53718752254f67
     GuidInternal: 
-    m_lastTime: -8585137484757423735
+    m_lastTime: -8585160535362914882
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: c7af0585142be14b9c95bc4a2f328282
     GuidInternal: 
-    m_lastTime: -8585137484759142458
+    m_lastTime: -8585160535364305330
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1e973838ee163446991633c4b690b5d4
     GuidInternal: 
-    m_lastTime: -8585137484757423735
+    m_lastTime: -8585159781166964263
     List:
     - name: DefaultBank
       guid: f8f350a5acd201429df3ace5af254d2d
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e3d0e24943fc41408c6157df7c860e9b
     GuidInternal: 
-    m_lastTime: -8585137484759455027
+    m_lastTime: -8585063673295446069
     List:
     - name: Building_Built_Stone
       guid: 2e3cba4baad14040a3658bf962b112af
@@ -231,6 +231,52 @@ MonoBehaviour:
         ObjectType: 3
         guid: 9ceb18205e15fd4f8584275f14b49dac
       Path: Events\Default Work Unit\Buildings\Wood\Building_Hit_Wood_
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Building_Repaired_Stone
+      guid: 02143962a1eb7142b9d0f1c3d0ff065c
+      id: 3949099766
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Buildings
+        ObjectType: 4
+        guid: 2dcf9f9f7b676d4b94c3241bfbc00333
+      - ElementName: Stone
+        ObjectType: 4
+        guid: 64098babdf30df42904926843449e7b7
+      - ElementName: Building_Repaired_Stone
+        ObjectType: 3
+        guid: 02143962a1eb7142b9d0f1c3d0ff065c
+      Path: Events\Default Work Unit\Buildings\Stone\Building_Repaired_Stone
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Building_Repaired_Wood
+      guid: 83cf97861322de479f84d6bd7a074be3
+      id: 4181259360
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Buildings
+        ObjectType: 4
+        guid: 2dcf9f9f7b676d4b94c3241bfbc00333
+      - ElementName: Wood
+        ObjectType: 4
+        guid: 50fe926464986b49ae861f2fa350ca21
+      - ElementName: Building_Repaired_Wood
+        ObjectType: 3
+        guid: 83cf97861322de479f84d6bd7a074be3
+      Path: Events\Default Work Unit\Buildings\Wood\Building_Repaired_Wood
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -457,6 +503,95 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Hostile_Missle_Explode
+      guid: f990ba3d54ef4f4fa6ed56ad81323421
+      id: 1764799359
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 0be66cd7a26d864c8c4e4e6ab21c78e7
+      - ElementName: Hostile_Missles
+        ObjectType: 4
+        guid: 22cc8d6cb5f2504a911f558ace7e8df6
+      - ElementName: Hostile_Missle_Explode
+        ObjectType: 3
+        guid: f990ba3d54ef4f4fa6ed56ad81323421
+      Path: Events\Default Work Unit\Objects\Hostile_Missles\Hostile_Missle_Explode
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Hostile_Missle_Fired
+      guid: b16c9f9c9497fb4289ab8f343fceb506
+      id: 748814056
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 0be66cd7a26d864c8c4e4e6ab21c78e7
+      - ElementName: Hostile_Missles
+        ObjectType: 4
+        guid: 22cc8d6cb5f2504a911f558ace7e8df6
+      - ElementName: Hostile_Missle_Fired
+        ObjectType: 3
+        guid: b16c9f9c9497fb4289ab8f343fceb506
+      Path: Events\Default Work Unit\Objects\Hostile_Missles\Hostile_Missle_Fired
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Hostile_Missle_Hit
+      guid: 64f5840a7bcbde4ab76e98cb5e36bd42
+      id: 1984022031
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 0be66cd7a26d864c8c4e4e6ab21c78e7
+      - ElementName: Hostile_Missles
+        ObjectType: 4
+        guid: 22cc8d6cb5f2504a911f558ace7e8df6
+      - ElementName: Hostile_Missle_Hit
+        ObjectType: 3
+        guid: 64f5840a7bcbde4ab76e98cb5e36bd42
+      Path: Events\Default Work Unit\Objects\Hostile_Missles\Hostile_Missle_Hit
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Hostile_Missles
+      guid: 22cc8d6cb5f2504a911f558ace7e8df6
+      id: 2435591652
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 0be66cd7a26d864c8c4e4e6ab21c78e7
+      - ElementName: Hostile_Missles
+        ObjectType: 4
+        guid: 22cc8d6cb5f2504a911f558ace7e8df6
+      Path: Events\Default Work Unit\Objects\Hostile_Missles
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Lightning
       guid: 558a24696e6cd745baa356a9b60e3b57
       id: 3334464137
@@ -666,9 +801,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Missle_HitGround
+    - name: Missle_Hit
       guid: 779c7d965125074a82feb0482798ca0f
-      id: 3958138063
+      id: 2328686806
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -682,10 +817,10 @@ MonoBehaviour:
       - ElementName: Missles
         ObjectType: 4
         guid: 9621c9b3fa3acf498a7c42ea75be7a48
-      - ElementName: Missle_HitGround
+      - ElementName: Missle_Hit
         ObjectType: 3
         guid: 779c7d965125074a82feb0482798ca0f
-      Path: Events\Default Work Unit\Objects\Missles\Missle_HitGround
+      Path: Events\Default Work Unit\Objects\Missles\Missle_Hit
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -706,6 +841,23 @@ MonoBehaviour:
         ObjectType: 4
         guid: 9621c9b3fa3acf498a7c42ea75be7a48
       Path: Events\Default Work Unit\Objects\Missles
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Music
+      guid: 4e4684837a85a64f8252ac4849b7300e
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Music
+        ObjectType: 4
+        guid: 4e4684837a85a64f8252ac4849b7300e
+      Path: Events\Default Work Unit\Music
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -892,6 +1044,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: PlayMusic
+      guid: 0224a8d88149a74c9e58f861a165986a
+      id: 417627684
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3d0e24943fc41408c6157df7c860e9b
+      - ElementName: Music
+        ObjectType: 4
+        guid: 4e4684837a85a64f8252ac4849b7300e
+      - ElementName: PlayMusic
+        ObjectType: 3
+        guid: 0224a8d88149a74c9e58f861a165986a
+      Path: Events\Default Work Unit\Music\PlayMusic
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Shield
       guid: 9f374755cd822849a50b50d3f1a8371e
       id: 1161967626
@@ -964,8 +1136,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 2bd300d84a7de54286ae289db59a2a8d
     GuidInternal: 
-    m_lastTime: -8585137484759455027
-    List: []
+    m_lastTime: -8585064203781737243
+    List:
+    - name: Player_Health
+      guid: ab76d5d113b4fb469b67825b9b49459c
+      id: 215992295
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 2bd300d84a7de54286ae289db59a2a8d
+      - ElementName: Player_Health
+        ObjectType: 13
+        guid: ab76d5d113b4fb469b67825b9b49459c
+      Path: Game Parameters\Default Work Unit\Player_Health
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -978,8 +1164,74 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 81e4f64ac32e1241bb175b576c9152af
     GuidInternal: 
-    m_lastTime: -8585137484757423735
-    List: []
+    m_lastTime: -8585064203781603758
+    List:
+    - name: DayNight
+      guid: 67cb635f4e46f94da90511c9711e1c94
+      id: 1705516017
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 81e4f64ac32e1241bb175b576c9152af
+      - ElementName: DayNight
+        ObjectType: 9
+        guid: 67cb635f4e46f94da90511c9711e1c94
+      Path: States\Default Work Unit\DayNight
+      values:
+      - name: Day
+        guid: 98685db757a74040a09a96eb696813e9
+        id: 311764537
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 81e4f64ac32e1241bb175b576c9152af
+        - ElementName: DayNight
+          ObjectType: 9
+          guid: 67cb635f4e46f94da90511c9711e1c94
+        - ElementName: Day
+          ObjectType: 8
+          guid: 98685db757a74040a09a96eb696813e9
+      - name: Night
+        guid: d5d8bd8b53ab864fafe0b532d7112c95
+        id: 1011622525
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 81e4f64ac32e1241bb175b576c9152af
+        - ElementName: DayNight
+          ObjectType: 9
+          guid: 67cb635f4e46f94da90511c9711e1c94
+        - ElementName: Night
+          ObjectType: 8
+          guid: d5d8bd8b53ab864fafe0b532d7112c95
+      - name: None
+        guid: 1f1d0a663bb1eb48891f9350ec09e409
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 81e4f64ac32e1241bb175b576c9152af
+        - ElementName: DayNight
+          ObjectType: 9
+          guid: 67cb635f4e46f94da90511c9711e1c94
+        - ElementName: None
+          ObjectType: 8
+          guid: 1f1d0a663bb1eb48891f9350ec09e409
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -992,7 +1244,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 3e725a1dc77b1041bd8a84a98f5c0cdf
     GuidInternal: 
-    m_lastTime: -8585137484757423735
+    m_lastTime: -8585160535363114906
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -1006,10 +1258,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: bc8cd2a073e6bb459996d47963af9df5
     GuidInternal: 
-    m_lastTime: -8585137484757423735
+    m_lastTime: -8585160535363164909
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000070000000a0000000b0000000c0000000e0000000f0000002500000027000000280000002b0000000a0100000b0100000c010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

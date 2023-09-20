@@ -4918,3 +4918,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_damage: 10
+  wwEvent_Fired:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 41b398da38c5cae418f52fcc3ee64165, type: 2}
+  wwEvent_Hit:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1b81b238449851e45bbdb625481c47d1, type: 2}

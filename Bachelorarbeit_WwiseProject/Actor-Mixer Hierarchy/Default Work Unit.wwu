@@ -402,79 +402,1204 @@
 				</Folder>
 				<Folder Name="Buildings" ID="{B6B3870F-18F1-4AF5-B29F-46E2B809BDBC}" ShortID="1028698673">
 					<ChildrenList>
-						<Sound Name="Bachelorarbeit Edit 1 Export 1 Stone_Building_1 Render 0" ID="{265282A6-D8B0-4A87-8079-0EA36B7AE6F3}" ShortID="852224972">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
-								</Reference>
-							</ReferenceList>
+						<Folder Name="Wood" ID="{221732C1-15DF-4642-9A0A-3B5636BD4C6E}" ShortID="149166632">
 							<ChildrenList>
-								<AudioFileSource Name="Bachelorarbeit Edit 1 Export 1 Stone_Building_1 Render 0" ID="{1F93965E-462B-497E-BF50-2E4D093A7A69}">
-									<Language>SFX</Language>
-									<AudioFile>Bachelorarbeit Edit 1 Export 1 Stone_Building_1 Render 0.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="767632836"/>
-									</MediaIDList>
-								</AudioFileSource>
+								<RandomSequenceContainer Name="Repair" ID="{089E269A-615D-43C2-9CD6-CF8DA3CBC897}" ShortID="860569324">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{356A40C7-EC56-4F83-A5E7-523439CE3066}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="1036"/>
+															<Property Name="Min" Type="Real64" Value="-126"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{62CB2CAE-2DD2-49F8-B9A5-20A406D256B1}" ShortID="109587165">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{75A8BF7E-1316-4C22-A13E-C843C93881DC}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0518636651385084"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.14638937740708"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00167302145608092"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.294226455320256"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="879428587"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{75A8BF7E-1316-4C22-A13E-C843C93881DC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0_01" ID="{649C913F-221E-4E8C-9A71-8DF1A60B7BC0}" ShortID="1016020815">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{BF2B3C25-4A37-4735-870B-DBEEE0E011FF}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0518636651385084"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.14638937740708"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.268665329265521"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.593061882409721"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="748064097"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{BF2B3C25-4A37-4735-870B-DBEEE0E011FF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<BlendContainer Name="Build" ID="{89CDF247-EF19-4B66-9564-B89C788010F2}" ShortID="897290886">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="New Sequence Container" ID="{4B20901A-B85D-402C-BB44-C8ADBF4EB11D}" ShortID="586363217">
+											<PropertyList>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{1950F791-F7FE-4AA5-93B0-5B31035657B8}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="1"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="Repair" ID="{AF314B7D-7CF4-469E-B8C3-D02611E50D12}" ShortID="279117854">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{9C296A6D-41CE-4476-802B-EB320FCE70E6}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="1036"/>
+																			<Property Name="Min" Type="Real64" Value="-126"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{76077B68-1A9D-4FF6-916D-EAD2D729B60D}" ShortID="443611182">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{BAD7122E-FB91-4FAE-B179-48FF19A3819E}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0518636651385084"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.14638937740708"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.00167302145608092"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.294226455320256"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="879428587"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{BAD7122E-FB91-4FAE-B179-48FF19A3819E}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0_01" ID="{FC660BD9-7408-40F6-8A8D-C65795C99C59}" ShortID="731137168">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{36997A58-894B-4F62-8908-EC3DB2392BFF}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0518636651385084"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.14638937740708"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.268665329265521"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.593061882409721"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="748064097"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{36997A58-894B-4F62-8908-EC3DB2392BFF}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="Repair_01" ID="{AE88E2DE-1BC6-4ADB-88A3-949C86EB6F6A}" ShortID="701324380">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{65687296-40FD-47CC-B4EB-833652B1AE04}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="1036"/>
+																			<Property Name="Min" Type="Real64" Value="-126"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{A927E0ED-73D0-4F7A-AB3F-8C914F9E5E56}" ShortID="267163705">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{C4830F59-4A98-46BD-B17E-D3AA996107EF}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0518636651385084"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.14638937740708"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.00167302145608092"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.294226455320256"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="879428587"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{C4830F59-4A98-46BD-B17E-D3AA996107EF}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0_01" ID="{5A8AFA0B-53A7-493A-8459-4E18091D2E34}" ShortID="924713465">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{82E30BA4-1BCA-4C1B-8205-FBD0E3574A71}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0518636651385084"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.14638937740708"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.268665329265521"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.593061882409721"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="748064097"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{82E30BA4-1BCA-4C1B-8205-FBD0E3574A71}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="Repair_02" ID="{EBC9435B-8C0A-4D6D-B1A6-4E382DDD368C}" ShortID="732729775">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{AB584A50-7752-434D-8EEF-4F3BBFF2AAC5}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="1036"/>
+																			<Property Name="Min" Type="Real64" Value="-126"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{92F2994C-F1EF-4017-A360-BA48A714CA3E}" ShortID="831958722">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{EFB2EE2C-5BEE-4278-B4CF-5FE6EE9763F3}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0518636651385084"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.14638937740708"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.00167302145608092"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.294226455320256"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="879428587"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{EFB2EE2C-5BEE-4278-B4CF-5FE6EE9763F3}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0_01" ID="{58484312-B177-457D-A10B-D14797220E37}" ShortID="904259692">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{CDAB2E18-AC6D-4827-B0A2-8AB2D85AB8BE}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0518636651385084"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.14638937740708"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.268665329265521"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.593061882409721"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="748064097"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{CDAB2E18-AC6D-4827-B0A2-8AB2D85AB8BE}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<Playlist>
+												<ItemRef Name="Repair" ID="{AF314B7D-7CF4-469E-B8C3-D02611E50D12}"/>
+												<ItemRef Name="Repair_02" ID="{EBC9435B-8C0A-4D6D-B1A6-4E382DDD368C}"/>
+												<ItemRef Name="Repair_01" ID="{AE88E2DE-1BC6-4ADB-88A3-949C86EB6F6A}"/>
+												<ItemRef Name="Repair_02" ID="{EBC9435B-8C0A-4D6D-B1A6-4E382DDD368C}"/>
+											</Playlist>
+										</RandomSequenceContainer>
+									</ChildrenList>
+								</BlendContainer>
+								<RandomSequenceContainer Name="Hit" ID="{E78EACF6-8B61-49D8-8086-7A41803BBAFD}" ShortID="236624107">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>65</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>8</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{212DA6A1-1E10-498F-B3BC-134431366870}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="1036"/>
+															<Property Name="Min" Type="Real64" Value="-126"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{4FA76436-3DA5-491F-A150-17232A657D47}" ShortID="557020574">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{FDFBE793-376D-4BFF-AA94-11FDF6CCF7DF}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0518636651385084"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.14638937740708"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00167302145608092"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.294226455320256"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="879428587"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{FDFBE793-376D-4BFF-AA94-11FDF6CCF7DF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0_01" ID="{28C48542-8612-4432-BE10-E444D107928C}" ShortID="1011981469">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{263A97AE-A89C-40C9-8025-C8B5381687E7}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0518636651385084"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.14638937740708"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.268665329265521"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.593061882409721"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="748064097"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{263A97AE-A89C-40C9-8025-C8B5381687E7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Collapse" ID="{9F7EB1E8-CFC7-45E7-A166-86AC00DD532F}" ShortID="96458711">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{0023C006-1B9C-4F25-A9EB-C56A32417C6D}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="1"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Hit" ID="{F10D1CB0-211B-48E9-B804-42333C4906A3}" ShortID="125918250">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>65</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>8</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{639FAF11-1BC0-4CB3-B5B4-B857F1626D20}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="1036"/>
+																	<Property Name="Min" Type="Real64" Value="-126"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{CB2E8512-B673-4716-8DAF-A4983B798BA7}" ShortID="471386625">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{523E72A6-1677-49DF-81FE-C9B8E958E35A}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0518636651385084"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.14638937740708"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.00167302145608092"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.294226455320256"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="879428587"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{523E72A6-1677-49DF-81FE-C9B8E958E35A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0_01" ID="{59802190-5AD1-4D1D-A368-BC786235F0D7}" ShortID="194451848">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{92E65315-A52D-41A7-916A-5376AA3B34FE}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0518636651385084"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.14638937740708"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.268665329265521"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.593061882409721"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="748064097"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0" ID="{92E65315-A52D-41A7-916A-5376AA3B34FE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<Playlist>
+										<ItemRef Name="Hit" ID="{F10D1CB0-211B-48E9-B804-42333C4906A3}"/>
+										<ItemRef Name="Hit" ID="{F10D1CB0-211B-48E9-B804-42333C4906A3}"/>
+									</Playlist>
+								</RandomSequenceContainer>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Bachelorarbeit Edit 1 Export 1 Stone_Building_1 Render 0" ID="{1F93965E-462B-497E-BF50-2E4D093A7A69}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Bachelorarbeit Edit 1 Export 1 Wood_Building_1 Render 0" ID="{8101049B-F2E8-4E12-A098-36EE6E7DE631}" ShortID="154581372">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
-								</Reference>
-							</ReferenceList>
+						</Folder>
+						<Folder Name="Stone" ID="{6A170049-2542-45C7-922D-CF7964FEEC21}" ShortID="233186586">
 							<ChildrenList>
-								<AudioFileSource Name="Bachelorarbeit Edit 1 Export 1 Wood_Building_1 Render 0" ID="{86FE5245-728D-48A6-9F9D-0984E53D3B13}">
-									<Language>SFX</Language>
-									<AudioFile>Bachelorarbeit Edit 1 Export 1 Wood_Building_1 Render 0.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="774886854"/>
-									</MediaIDList>
-								</AudioFileSource>
+								<Sound Name="Bachelorarbeit Edit 1 Export 2 Stone_Building_1 Render 0" ID="{87A5A1FB-8681-4728-93D4-2A0223E7C7BE}" ShortID="656702659">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Stone_Building_1 Render 0" ID="{2DE83ABF-DD5E-4E18-8463-ACD46532CA3D}">
+											<Language>SFX</Language>
+											<AudioFile>Bachelorarbeit Edit 1 Export 2 Stone_Building_1 Render 0.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="452196189"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Stone_Building_1 Render 0" ID="{2DE83ABF-DD5E-4E18-8463-ACD46532CA3D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="Repair" ID="{C2239203-BCF7-4E61-96F4-F9AE0A759093}" ShortID="604984194">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<Sound Name="Collapse" ID="{0CFE48BB-6678-42EB-9FB9-12F7C41A5336}" ShortID="1036478337">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-430</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Stone_Building_1 Render 0" ID="{3DB851AE-ADED-4834-8C9E-B79643BB1A60}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.170383852509758"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.334991981205633"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="8.73841409551659"/>
+												<Property Name="TrimEnd" Type="Real64" Value="10.1555929352397"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Bachelorarbeit Edit 1 Export 2 Stone_Building_1 Render 0.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="381744698"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Stone_Building_1 Render 0" ID="{3DB851AE-ADED-4834-8C9E-B79643BB1A60}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Bachelorarbeit Edit 1 Export 1 Wood_Building_1 Render 0" ID="{86FE5245-728D-48A6-9F9D-0984E53D3B13}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Objects" ID="{DF429ACF-FE55-41BE-B2FC-1222E4692FBD}" ShortID="220234573">
 					<ChildrenList>
-						<Sound Name="Bachelorarbeit Edit 1 Export 1 Gold_2 Render 0" ID="{3B8AD0CD-BF78-4C3C-A1FC-D9F9BE063C07}" ShortID="620444250">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
-								</Reference>
-							</ReferenceList>
+						<Folder Name="Gold" ID="{01C8E89D-0702-4EBB-B39B-6F22F29C0395}" ShortID="778672290">
 							<ChildrenList>
-								<AudioFileSource Name="Bachelorarbeit Edit 1 Export 1 Gold_2 Render 0" ID="{9C9B34FE-D9CF-4821-949C-BE4E0F45EA69}">
-									<Language>SFX</Language>
-									<AudioFile>Bachelorarbeit Edit 1 Export 1 Gold_2 Render 0.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="501288731"/>
-									</MediaIDList>
-								</AudioFileSource>
+								<RandomSequenceContainer Name="HitGround" ID="{5AB07BAE-0364-4BCB-84A3-87F6997C50F4}" ShortID="700611897">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{DF5DA9C2-7C9D-4509-8898-589C08AC23A9}" ShortID="516085808">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{ECFC1208-F89D-4A4B-B58A-B7F709D6A3D8}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0393933811635172"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.19696690581759"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="15.1090643064818"/>
+														<Property Name="TrimEnd" Type="Real64" Value="15.7190916736754"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1055921261"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{ECFC1208-F89D-4A4B-B58A-B7F709D6A3D8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_01" ID="{8A35C26C-BBC1-427A-997F-F661123AF9D7}" ShortID="105940012">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{0CB11AA4-02ED-4A3D-A202-70EEEEDC844B}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0393933811635172"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.19696690581759"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="15.7811485320981"/>
+														<Property Name="TrimEnd" Type="Real64" Value="16.2782867520202"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="650830417"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{0CB11AA4-02ED-4A3D-A202-70EEEEDC844B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_02" ID="{D37969B7-66C7-45CC-8D8E-BDAE348CD2FB}" ShortID="574088586">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{CF800EC6-BFA1-43D0-9698-8E4B1FB04B81}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0393933811635172"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.19696690581759"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="16.70956033524"/>
+														<Property Name="TrimEnd" Type="Real64" Value="17.1494186495697"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="569723677"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{CF800EC6-BFA1-43D0-9698-8E4B1FB04B81}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_03" ID="{50F61FA9-B101-4C8E-B15D-FC6563065B2E}" ShortID="397781352">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{09554C84-DFE9-423F-9140-23D102C2C7A5}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0393933811635172"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.19696690581759"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="17.1367729644492"/>
+														<Property Name="TrimEnd" Type="Real64" Value="17.777110948352"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="310114219"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{09554C84-DFE9-423F-9140-23D102C2C7A5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_04" ID="{59C96EAE-2359-408C-A742-520E0EC6B735}" ShortID="1023051449">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{5234412B-1834-4D58-B973-39337AA60662}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0393933811635172"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.19696690581759"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="18.6489624720859"/>
+														<Property Name="TrimEnd" Type="Real64" Value="19.0871501225026"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="240054931"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{5234412B-1834-4D58-B973-39337AA60662}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_05" ID="{0D1A0DDE-38E5-4B8A-BF19-2EBFA1FD589B}" ShortID="1073232754">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{046E2E4A-A180-48ED-8885-54B89A0F322C}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0393933811635172"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.19696690581759"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="19.4452399475546"/>
+														<Property Name="TrimEnd" Type="Real64" Value="20.0656818430377"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="277192893"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{046E2E4A-A180-48ED-8885-54B89A0F322C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_06" ID="{A8246507-C2C0-459F-B18A-EE3986C23E51}" ShortID="838185341">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{0635C271-9165-485F-A0BA-4215C618C66C}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0393933811635172"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.19696690581759"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="20.2942713481965"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="621019206"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{0635C271-9165-485F-A0BA-4215C618C66C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="PickUp" ID="{2BC91597-E72C-4857-9574-2820867C4385}" ShortID="311641364">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{3D3138FF-E09B-4B77-AFED-9B03C78433B5}" ShortID="448243589">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{B9022A1E-F3F2-437E-A101-EFF2C0490894}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0394489707935968"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.230776479142527"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="5.97654116246607"/>
+														<Property Name="TrimEnd" Type="Real64" Value="6.54133080406281"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="27315710"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{B9022A1E-F3F2-437E-A101-EFF2C0490894}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_01" ID="{D50B6E1F-A98E-4FFE-86F5-5638856ADCD6}" ShortID="1012078031">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{D0DD9092-72BA-43B1-9869-A537A6656699}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0394489707935968"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.230776479142527"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="7.12764645620522"/>
+														<Property Name="TrimEnd" Type="Real64" Value="7.60010182437379"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="735069707"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{D0DD9092-72BA-43B1-9869-A537A6656699}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_02" ID="{D200E99F-9818-4ECB-B958-45C85B1B911B}" ShortID="45608963">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{74977767-757C-4568-8FC0-745A39CB170F}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0394489707935968"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.230776479142527"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="8.65074814099909"/>
+														<Property Name="TrimEnd" Type="Real64" Value="9.3442007542816"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="248360685"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{74977767-757C-4568-8FC0-745A39CB170F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_03" ID="{73BC70AF-9DA1-4370-9859-A5AF921C3043}" ShortID="425235829">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{877644D0-14C3-4941-9EDD-9D15539A00D6}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0394489707935968"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.230776479142527"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="10.0062313213557"/>
+														<Property Name="TrimEnd" Type="Real64" Value="10.9784633099795"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="109974312"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{877644D0-14C3-4941-9EDD-9D15539A00D6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_04" ID="{67DB94AF-1845-42B5-8FFE-BD4FF2DF7A6F}" ShortID="790416125">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{E123FA36-C310-4E45-B3C1-47A69DA59F46}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0394489707935968"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.230776479142527"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="11.4536204255611"/>
+														<Property Name="TrimEnd" Type="Real64" Value="12.2446791330926"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="146510560"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{E123FA36-C310-4E45-B3C1-47A69DA59F46}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_05" ID="{6CF70D14-29CC-420E-A837-5FDB450AD55F}" ShortID="611447174">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{493107DA-00B5-4FB8-8720-509175125357}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0394489707935968"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.230776479142527"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="12.400839131039"/>
+														<Property Name="TrimEnd" Type="Real64" Value="12.9894209907424"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="698323286"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{493107DA-00B5-4FB8-8720-509175125357}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Spent" ID="{28940835-467E-49E3-83F4-87D33E33C421}" ShortID="251653088">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_06" ID="{C1D6B497-15B9-489A-ABBB-69A8C8535F09}" ShortID="1033477478">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{B6A95513-4BA0-41D1-BD5B-E9546D942423}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0394489707935968"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.230776479142527"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="12.9894209907424"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="58885456"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0" ID="{B6A95513-4BA0-41D1-BD5B-E9546D942423}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Bachelorarbeit Edit 1 Export 1 Gold_2 Render 0" ID="{9C9B34FE-D9CF-4821-949C-BE4E0F45EA69}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Menu" ID="{704D840E-09DF-4AB3-AF68-CF25CFCF049E}" ShortID="469063118"/>
+				<Sound Name="Bachelorarbeit Edit 1 Export 2 Ambience_1 Render 0" ID="{6B3D2DF7-44EA-447A-9237-6F4EB9732FB0}" ShortID="77641691">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Ambience_1 Render 0" ID="{074A7C4A-5B0B-412A-BBE1-E356ED0792BC}">
+							<Language>SFX</Language>
+							<AudioFile>Bachelorarbeit Edit 1 Export 2 Ambience_1 Render 0.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="259389354"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Ambience_1 Render 0" ID="{074A7C4A-5B0B-412A-BBE1-E356ED0792BC}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Bachelorarbeit Edit 1 Export 2 Slime_1 Render 0" ID="{FF503F30-5079-493B-9E9E-0FE5888D7C0C}" ShortID="189899507">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{29607205-820D-40DE-8129-A36DA55751A5}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8505AFC7-2B14-4BE1-9C95-BC4A2F328282}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Bachelorarbeit Edit 1 Export 2 Slime_1 Render 0" ID="{300900D5-AE0C-48FA-A13A-89345B9E5DAD}">
+							<Language>SFX</Language>
+							<AudioFile>Bachelorarbeit Edit 1 Export 2 Slime_1 Render 0.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="485376426"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Bachelorarbeit Edit 1 Export 2 Slime_1 Render 0" ID="{300900D5-AE0C-48FA-A13A-89345B9E5DAD}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Folder Name="FromLimbo" ID="{992F5F60-6408-4122-A2E1-2FE7CD939D11}" ShortID="781206116"/>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

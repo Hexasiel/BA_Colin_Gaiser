@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 372887775109467256}
   - component: {fileID: 372887775109467259}
   - component: {fileID: 5087830174842427525}
+  - component: {fileID: -5481401892294973691}
   m_Layer: 10
   m_Name: SmallEnemy
   m_TagString: Enemy
@@ -183,6 +184,26 @@ MonoBehaviour:
   sprite: {fileID: 5439771311204357734}
   goldPiece: {fileID: 1965890595711161592, guid: 5932012715be16942aa430b358b825b8, type: 3}
   healthbar: {fileID: 2650374330664755131}
+  wwEvent_Attack:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 575fc38818a1aa74d8b384f0bc8e8a58, type: 2}
+  wwEvent_Walk:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bdbfdab622aced14698f1879760912dd, type: 2}
+  wwEvent_Die:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 754e7b6e2b2785e42b6e5971d6ba8a74, type: 2}
+  wwEvent_Grunt:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f8757c83bcb32cf4886dc2c39882a9c6, type: 2}
+  wwEvent_Spawn:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 49f52d9ae5b2d7942956ecd2044d3c51, type: 2}
   m_speed: 7
   m_attackSpeed: 1
   m_maxHealth: 40
@@ -232,6 +253,28 @@ CapsuleCollider2D:
   m_Offset: {x: 0.35904646, y: -0.6443993}
   m_Size: {x: 1.5333982, y: 2.7112014}
   m_Direction: 0
+--- !u!114 &-5481401892294973691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372887775109467253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edac784bf004a904aaeb354588c446e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &896695750894440381
 GameObject:
   m_ObjectHideFlags: 0

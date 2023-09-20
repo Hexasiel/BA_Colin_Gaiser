@@ -155,6 +155,26 @@ MonoBehaviour:
   attackLayer:
     serializedVersion: 2
     m_Bits: 8704
+  wwEvent_Attack:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 575fc38818a1aa74d8b384f0bc8e8a58, type: 2}
+  wwEvent_Walk:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bdbfdab622aced14698f1879760912dd, type: 2}
+  wwEvent_Die:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 754e7b6e2b2785e42b6e5971d6ba8a74, type: 2}
+  wwEvent_Grunt:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f8757c83bcb32cf4886dc2c39882a9c6, type: 2}
+  wwEvent_Spawn:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 49f52d9ae5b2d7942956ecd2044d3c51, type: 2}
   attackDelay: 0.8
   animator: {fileID: 1356044964685888174}
 --- !u!50 &1651039017660694603

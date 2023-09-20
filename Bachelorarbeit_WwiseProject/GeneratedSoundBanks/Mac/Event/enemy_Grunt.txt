@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	1895691808	enemy_Grunt			\Default Work Unit\Enemies\enemy_Grunt	
-

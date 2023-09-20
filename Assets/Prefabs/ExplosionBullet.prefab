@@ -5019,3 +5019,15 @@ MonoBehaviour:
   hitMask:
     serializedVersion: 2
     m_Bits: 0
+  wwEvent_Fired:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9a9b38ec2185a8d42b30661a4794ecb6, type: 2}
+  wwEvent_Hit:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: cd04390bddd5549418d36a79305c62af, type: 2}
+  wwEvent_Explode:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 118927aea93090a428a7a10bac62644a, type: 2}

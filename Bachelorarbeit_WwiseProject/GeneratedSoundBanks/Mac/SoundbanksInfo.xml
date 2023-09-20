@@ -9,21 +9,329 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1142304696" Type="Event" Language="SFX" Hash="{81159C40-71EB-F2AC-F5DE-F6E6A772D298}">
-			<ShortName>enemy_Die</ShortName>
-			<Path>Event/enemy_Die.bnk</Path>
+		<SoundBank Id="187290962" Type="User" Language="SFX" Hash="{A99D550A-3B7C-7B39-0752-462F86A39B11}">
+			<ShortName>DefaultBank</ShortName>
+			<Path>DefaultBank.bnk</Path>
+			<Media>
+				<File Id="24589467" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export Music 2 Track 10 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export Music 2 Track 10 Render 0_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="27315710" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_095D774F.wem</CachePath>
+				</File>
+				<File Id="58885456" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_CBB16083.wem</CachePath>
+				</File>
+				<File Id="72657657" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_07CFD7F2.wem</CachePath>
+				</File>
+				<File Id="74399385" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Limbo_Menu_1 Track 7 Render 0.wav</ShortName>
+					<CachePath>SFX/Limbo_Menu_1 Track 7 Render 0_10C4C929.wem</CachePath>
+				</File>
+				<File Id="79693638" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_94338131.wem</CachePath>
+				</File>
+				<File Id="97543533" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export Music 2 Track 9 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export Music 2 Track 9 Render 0_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="109974312" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_FFBBC9AD.wem</CachePath>
+				</File>
+				<File Id="119222880" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_3F537CFE.wem</CachePath>
+				</File>
+				<File Id="135874364" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Limbo_Spider_Strike_1.wav</ShortName>
+					<CachePath>SFX/Limbo_Spider_Strike_1_5F8860D8.wem</CachePath>
+				</File>
+				<File Id="146510560" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_B2073D07.wem</CachePath>
+				</File>
+				<File Id="191516730" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_7D80E35F.wem</CachePath>
+				</File>
+				<File Id="240054931" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_358CBAA3.wem</CachePath>
+				</File>
+				<File Id="248360685" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_FFB4D283.wem</CachePath>
+				</File>
+				<File Id="259389354" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 2 Ambience_1 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 2 Ambience_1 Render 0_10C4C929.wem</CachePath>
+				</File>
+				<File Id="277192893" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_6E2ADA6E.wem</CachePath>
+				</File>
+				<File Id="310114219" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_850DC03C.wem</CachePath>
+				</File>
+				<File Id="316744461" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_1FC22BDF.wem</CachePath>
+				</File>
+				<File Id="321009407" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export Music 2 Track 8 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export Music 2 Track 8 Render 0_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="381744698" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 2 Stone_Building_1 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 2 Stone_Building_1 Render 0_FA81A368.wem</CachePath>
+				</File>
+				<File Id="417553382" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_12AC5115.wem</CachePath>
+				</File>
+				<File Id="430988626" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_EFBDAFFA.wem</CachePath>
+				</File>
+				<File Id="438612542" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export Music 2 Track 11 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export Music 2 Track 11 Render 0_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="452196189" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 2 Stone_Building_1 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 2 Stone_Building_1 Render 0_10C4C929.wem</CachePath>
+				</File>
+				<File Id="485376426" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 2 Slime_1 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 2 Slime_1 Render 0_10C4C929.wem</CachePath>
+				</File>
+				<File Id="526829532" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Limbo_Steps_Grass.wav</ShortName>
+					<CachePath>SFX/Limbo_Steps_Grass_10C4C929.wem</CachePath>
+				</File>
+				<File Id="527390159" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export Music 2 Track 12 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export Music 2 Track 12 Render 0_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="569723677" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_FF9E1C24.wem</CachePath>
+				</File>
+				<File Id="621019206" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_BA5FE0EA.wem</CachePath>
+				</File>
+				<File Id="650434608" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Limbo_Spider_Strike_1.wav</ShortName>
+					<CachePath>SFX/Limbo_Spider_Strike_1_2B48FABB.wem</CachePath>
+				</File>
+				<File Id="650830417" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_403F0349.wem</CachePath>
+				</File>
+				<File Id="698323286" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_EE62C86E.wem</CachePath>
+				</File>
+				<File Id="735069707" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_E31E2303.wem</CachePath>
+				</File>
+				<File Id="748064097" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0_A0FDA557.wem</CachePath>
+				</File>
+				<File Id="779924718" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Limbo_Spider_Strike_1.wav</ShortName>
+					<CachePath>SFX/Limbo_Spider_Strike_1_3EC02D82.wem</CachePath>
+				</File>
+				<File Id="879428587" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 2 Wood_Building_1 Render 0_63764EF3.wem</CachePath>
+				</File>
+				<File Id="894276602" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Limbo_Spider_Strike_1.wav</ShortName>
+					<CachePath>SFX/Limbo_Spider_Strike_1_950F0F90.wem</CachePath>
+				</File>
+				<File Id="1005746686" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export Music 2 Track 13 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export Music 2 Track 13 Render 0_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="1055921261" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</ShortName>
+					<CachePath>SFX/Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_1FB4610A.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="1142304696" Name="enemy_Die" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2724548802" Name="Building_Built_Stone" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2855695268" Name="Building_Built_Wood" DurationType="OneShot" DurationMin="0.40202773" DurationMax="0.87221664">
+					<MediaRefs>
+						<MediaRef Id="748064097"/>
+						<MediaRef Id="879428587"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="949613739" Name="Building_Collapse_Stone" DurationType="OneShot" DurationMin="1.816744" DurationMax="1.816744">
+					<MediaRefs>
+						<MediaRef Id="381744698"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1226288867" Name="Building_Collapse_Wood" DurationType="OneShot" DurationMin="0.24121663" DurationMax="0.52333">
+					<MediaRefs>
+						<MediaRef Id="748064097"/>
+						<MediaRef Id="879428587"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3726324797" Name="Building_Hit_Stone" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="933808812" Name="Building_Hit_Wood_" DurationType="OneShot" DurationMin="0.16081108" DurationMax="0.34888667">
+					<MediaRefs>
+						<MediaRef Id="748064097"/>
+						<MediaRef Id="879428587"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3949099766" Name="Building_Repaired_Stone" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4181259360" Name="Building_Repaired_Wood" DurationType="OneShot" DurationMin="0.16081108" DurationMax="0.34888667">
+					<MediaRefs>
+						<MediaRef Id="748064097"/>
+						<MediaRef Id="879428587"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1781417190" Name="Enemy_Attack" DurationType="OneShot" DurationMin="0.45325437" DurationMax="0.8320482">
+					<MediaRefs>
+						<MediaRef Id="72657657"/>
+						<MediaRef Id="79693638"/>
+						<MediaRef Id="119222880"/>
+						<MediaRef Id="191516730"/>
+						<MediaRef Id="316744461"/>
+						<MediaRef Id="417553382"/>
+						<MediaRef Id="430988626"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1142304696" Name="Enemy_Die" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1895691808" Name="Enemy_Grunt" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1526102535" Name="Enemy_Spawn" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="582686005" Name="Enemy_Walk" DurationType="OneShot" DurationMin="0.45325437" DurationMax="0.8320482">
+					<MediaRefs>
+						<MediaRef Id="72657657"/>
+						<MediaRef Id="119222880"/>
+						<MediaRef Id="417553382"/>
+						<MediaRef Id="430988626"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3971162776" Name="Gold_HitGround" DurationType="OneShot" DurationMin="0.43818766" DurationMax="0.70572865">
+					<MediaRefs>
+						<MediaRef Id="240054931"/>
+						<MediaRef Id="277192893"/>
+						<MediaRef Id="310114219"/>
+						<MediaRef Id="569723677"/>
+						<MediaRef Id="621019206"/>
+						<MediaRef Id="650830417"/>
+						<MediaRef Id="1055921261"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3821651910" Name="Gold_PickUp" DurationType="OneShot" DurationMin="0.47245538" DurationMax="0.972232">
+					<MediaRefs>
+						<MediaRef Id="27315710"/>
+						<MediaRef Id="109974312"/>
+						<MediaRef Id="146510560"/>
+						<MediaRef Id="248360685"/>
+						<MediaRef Id="698323286"/>
+						<MediaRef Id="735069707"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1518274198" Name="Gold_Spent" DurationType="OneShot" DurationMin="0.47245538" DurationMax="0.972232">
+					<MediaRefs>
+						<MediaRef Id="27315710"/>
+						<MediaRef Id="109974312"/>
+						<MediaRef Id="146510560"/>
+						<MediaRef Id="248360685"/>
+						<MediaRef Id="698323286"/>
+						<MediaRef Id="735069707"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1764799359" Name="Hostile_Missle_Explode" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="748814056" Name="Hostile_Missle_Fired" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1984022031" Name="Hostile_Missle_Hit" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="877173992" Name="Lightning_Charge" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="863959723" Name="Lightning_Explode" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="370760792" Name="Menu_Battlemode_Switched" DurationType="OneShot" DurationMin="1.1553527" DurationMax="1.1553527">
+					<MediaRefs>
+						<MediaRef Id="74399385"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3682466839" Name="Menu_Button_Hovered" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
+					<MediaRefs>
+						<MediaRef Id="74399385"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1048498120" Name="Menu_Button_Pressed" DurationType="OneShot" DurationMin="1" DurationMax="1">
+					<MediaRefs>
+						<MediaRef Id="74399385"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="353565384" Name="Menu_Opened" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4235500122" Name="Missle_Explode" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="508669141" Name="Missle_Fired" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2328686806" Name="Missle_Hit" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2824512041" Name="Player_Attack" DurationType="OneShot" DurationMin="0.40031144" DurationMax="0.49498576">
+					<MediaRefs>
+						<MediaRef Id="135874364"/>
+						<MediaRef Id="650434608"/>
+						<MediaRef Id="779924718"/>
+						<MediaRef Id="894276602"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2394582229" Name="Player_Dash" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2453392179" Name="Player_FootStep" DurationType="OneShot" DurationMin="10.5" DurationMax="10.5">
+					<MediaRefs>
+						<MediaRef Id="526829532"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="871813740" Name="Player_Hit" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3340371270" Name="Player_Shield_Break" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="362191200" Name="Player_Shield_Hit" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1619382169" Name="Player_Shield_Refill" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="417627684" Name="PlayMusic" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1705516017" Id="1011622525"/>
+							<MediaRefs>
+								<MediaRef Id="24589467"/>
+								<MediaRef Id="97543533"/>
+								<MediaRef Id="321009407"/>
+								<MediaRef Id="527390159"/>
+								<MediaRef Id="1005746686"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1705516017" Id="311764537"/>
+							<MediaRefs>
+								<MediaRef Id="24589467"/>
+								<MediaRef Id="321009407"/>
+								<MediaRef Id="438612542"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
 			</Events>
+			<StateGroups>
+				<StateGroup Id="1705516017" Name="DayNight">
+					<States>
+						<State Id="311764537" Name="Day"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="1011622525" Name="Night"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1170980947" Type="Event" Language="SFX" Hash="{7BDBF200-35B0-76CE-1C44-18E53DAC1F11}">
-			<ShortName>player_PickUpGold</ShortName>
-			<Path>Event/player_PickUpGold.bnk</Path>
-			<Events>
-				<Event Id="1170980947" Name="player_PickUpGold" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-			</Events>
-		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F56A610C-C7C4-F874-B68B-7ADDF94EBB7A}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{0FF870B0-18B1-0EE1-E033-2F84DA589A28}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -35,46 +343,19 @@
 			<Busses>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
-		</SoundBank>
-		<SoundBank Id="1526036006" Type="Event" Language="SFX" Hash="{64C1A3B0-6E94-0E6E-1236-30750DADA983}">
-			<ShortName>tower_Collapse</ShortName>
-			<Path>Event/tower_Collapse.bnk</Path>
-			<Events>
-				<Event Id="1526036006" Name="tower_Collapse" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-			</Events>
-		</SoundBank>
-		<SoundBank Id="1895691808" Type="Event" Language="SFX" Hash="{3BB991BA-0CB7-B5E6-1EEA-6B7675B0CF59}">
-			<ShortName>enemy_Grunt</ShortName>
-			<Path>Event/enemy_Grunt.bnk</Path>
-			<Events>
-				<Event Id="1895691808" Name="enemy_Grunt" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-			</Events>
-		</SoundBank>
-		<SoundBank Id="2453392179" Type="Event" Language="SFX" Hash="{982027FD-CB45-2C2D-B657-7AA6E7FFD1B8}">
-			<ShortName>player_FootStep</ShortName>
-			<Path>Event/player_FootStep.bnk</Path>
-			<Media>
-				<File Id="526829532" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Limbo_Steps_Grass.wav</ShortName>
-					<Path>Media/526829532.wem</Path>
-					<CachePath>SFX/Limbo_Steps_Grass_10C4C929.wem</CachePath>
-				</File>
-			</Media>
-			<Events>
-				<Event Id="2453392179" Name="player_FootStep" DurationType="OneShot" DurationMin="10.5" DurationMax="10.5">
-					<MediaRefs>
-						<MediaRef Id="526829532"/>
-					</MediaRefs>
-				</Event>
-			</Events>
-		</SoundBank>
-		<SoundBank Id="3672125978" Type="Event" Language="SFX" Hash="{C2FE0125-92ED-BB06-B9C6-CC743C5FAE42}">
-			<ShortName>tower_Hit</ShortName>
-			<Path>Event/tower_Hit.bnk</Path>
-			<Events>
-				<Event Id="3672125978" Name="tower_Hit" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-			</Events>
+			<GameParameters>
+				<GameParameter Id="215992295" Name="Player_Health"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="1705516017" Name="DayNight">
+					<States>
+						<State Id="311764537" Name="Day"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="1011622525" Name="Night"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E8F0D5F1-DE4D-FA88-849F-A68A5AD31B5A}</FileHash>
+	<FileHash>{EE31DD28-3660-FBED-67DB-E86257015B61}</FileHash>
 </SoundBanksInfo>

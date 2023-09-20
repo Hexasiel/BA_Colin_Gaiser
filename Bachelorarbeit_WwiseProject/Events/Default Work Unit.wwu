@@ -16,7 +16,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Player_Attack" ID="{BAD80239-2CA8-4D35-86DC-931493401619}"/>
+						<Event Name="Player_Attack" ID="{BAD80239-2CA8-4D35-86DC-931493401619}">
+							<ChildrenList>
+								<Action Name="" ID="{B9F4D45D-840E-4817-AEE8-84BC43CD8A08}" ShortID="298386588">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Strike" ID="{2DFDADF9-CB17-4DD2-8130-6042E1029168}" WorkUnitID="{A1D53C13-F723-4350-B6CB-2D18A3A65A4F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Player_Hit" ID="{BB1E583B-732E-4050-998B-234BB4F353B4}"/>
 						<Event Name="Player_Dash" ID="{4B04E444-2B26-42BA-A340-7C35AF9DD511}"/>
 						<Folder Name="Shield" ID="{5547379F-82CD-4928-A50B-50D3F1A8371E}" ShortID="679184884">
@@ -33,15 +43,67 @@
 						<Folder Name="Stone" ID="{AB8B0964-30DF-42DF-9049-26843449E7B7}" ShortID="666446106">
 							<ChildrenList>
 								<Event Name="Building_Hit_Stone" ID="{ACBC3B7D-9A8E-4003-AAE9-00AA6530391E}"/>
-								<Event Name="Building_Collapse_Stone" ID="{084D1DE7-374F-474A-90DD-1497ED7B05CC}"/>
+								<Event Name="Building_Collapse_Stone" ID="{084D1DE7-374F-474A-90DD-1497ED7B05CC}">
+									<ChildrenList>
+										<Action Name="" ID="{7A95370D-6AC0-47C3-92C4-B09A95DBC442}" ShortID="28266619">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Collapse" ID="{0CFE48BB-6678-42EB-9FB9-12F7C41A5336}" WorkUnitID="{481E7428-1181-4879-958C-0F804E0AD950}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 								<Event Name="Building_Built_Stone" ID="{4BBA3C2E-D1AA-4040-A365-8BF962B112AF}"/>
+								<Event Name="Building_Repaired_Stone" ID="{62391402-EBA1-4271-B9D0-F1C3D0FF065C}"/>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Wood" ID="{6492FE50-9864-496B-AE86-1F2FA350CA21}" ShortID="984974705">
 							<ChildrenList>
-								<Event Name="Building_Collapse_Wood" ID="{0DC146FB-7A02-4A3F-A9C2-901116063A85}"/>
-								<Event Name="Building_Hit_Wood_" ID="{2018EB9C-155E-4FFD-8584-275F14B49DAC}"/>
-								<Event Name="Building_Built_Wood" ID="{ADBDCB4A-5F0C-4C08-8FF7-94FC4BAD0B03}"/>
+								<Event Name="Building_Collapse_Wood" ID="{0DC146FB-7A02-4A3F-A9C2-901116063A85}">
+									<ChildrenList>
+										<Action Name="" ID="{D04D4B98-46AC-4F52-B8DC-BBBD9976AF38}" ShortID="659748020">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Collapse" ID="{9F7EB1E8-CFC7-45E7-A166-86AC00DD532F}" WorkUnitID="{481E7428-1181-4879-958C-0F804E0AD950}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Building_Hit_Wood_" ID="{2018EB9C-155E-4FFD-8584-275F14B49DAC}">
+									<ChildrenList>
+										<Action Name="" ID="{F7BEDAAF-EC6A-46A7-ADB3-A9F240D9201E}" ShortID="352874824">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Hit" ID="{E78EACF6-8B61-49D8-8086-7A41803BBAFD}" WorkUnitID="{481E7428-1181-4879-958C-0F804E0AD950}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Building_Built_Wood" ID="{ADBDCB4A-5F0C-4C08-8FF7-94FC4BAD0B03}">
+									<ChildrenList>
+										<Action Name="" ID="{95D49481-3C4A-4C37-95A2-FBD5528B583A}" ShortID="461633520">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Build" ID="{89CDF247-EF19-4B66-9564-B89C788010F2}" WorkUnitID="{481E7428-1181-4879-958C-0F804E0AD950}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Building_Repaired_Wood" ID="{8697CF83-2213-47DE-9F84-D6BD7A074BE3}">
+									<ChildrenList>
+										<Action Name="" ID="{DA74FA36-5B31-469D-AB9C-F56E01CF1BEF}" ShortID="977070748">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Repair" ID="{089E269A-615D-43C2-9CD6-CF8DA3CBC897}" WorkUnitID="{481E7428-1181-4879-958C-0F804E0AD950}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
@@ -79,14 +141,44 @@
 					<ChildrenList>
 						<Folder Name="Coin" ID="{88AABFD7-28B0-4586-A5E3-5E5914D95D8A}" ShortID="257289749">
 							<ChildrenList>
-								<Event Name="Gold_HitGround" ID="{9CFBEB7C-3727-44E4-99EA-C77B56D60C66}"/>
-								<Event Name="Gold_PickUp" ID="{98AB897B-827D-4775-957C-702103578465}"/>
-								<Event Name="Gold_Spent" ID="{E2107404-C67F-4FB6-AD64-DAC88EA5A240}"/>
+								<Event Name="Gold_HitGround" ID="{9CFBEB7C-3727-44E4-99EA-C77B56D60C66}">
+									<ChildrenList>
+										<Action Name="" ID="{E86A2D91-5BB4-40E3-AE0D-830EB6373F0A}" ShortID="804286592">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="HitGround" ID="{5AB07BAE-0364-4BCB-84A3-87F6997C50F4}" WorkUnitID="{481E7428-1181-4879-958C-0F804E0AD950}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Gold_PickUp" ID="{98AB897B-827D-4775-957C-702103578465}">
+									<ChildrenList>
+										<Action Name="" ID="{0A83073D-8B9C-421A-B075-EEBCC2010010}" ShortID="794620259">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="PickUp" ID="{2BC91597-E72C-4857-9574-2820867C4385}" WorkUnitID="{481E7428-1181-4879-958C-0F804E0AD950}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Gold_Spent" ID="{E2107404-C67F-4FB6-AD64-DAC88EA5A240}">
+									<ChildrenList>
+										<Action Name="" ID="{A00DCA0F-571C-4B66-A3E9-D4A2BD979233}" ShortID="814814229">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="PickUp" ID="{2BC91597-E72C-4857-9574-2820867C4385}" WorkUnitID="{481E7428-1181-4879-958C-0F804E0AD950}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Missles" ID="{B3C92196-3AFA-49CF-8A7C-42EA75BE7A48}" ShortID="783291974">
 							<ChildrenList>
-								<Event Name="Missle_HitGround" ID="{967D9C77-2551-4A07-82FE-B0482798CA0F}"/>
+								<Event Name="Missle_Hit" ID="{967D9C77-2551-4A07-82FE-B0482798CA0F}"/>
 								<Event Name="Missle_Fired" ID="{2F8BE0F2-0C17-4331-9AD5-06BC071EE9E4}"/>
 								<Event Name="Missle_Explode" ID="{0FF4E2D4-F106-4333-ABA7-F46E1FAE163C}"/>
 							</ChildrenList>
@@ -97,14 +189,66 @@
 								<Event Name="Lightning_Charge" ID="{DC156C1F-93ED-4D25-8BC4-9444C0AEF740}"/>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Hostile_Missles" ID="{6C8DCC22-F2B5-4A50-911F-558ACE7E8DF6}" ShortID="1043497461">
+							<ChildrenList>
+								<Event Name="Hostile_Missle_Hit" ID="{0A84F564-CB7B-4ADE-B76E-98CB5E36BD42}"/>
+								<Event Name="Hostile_Missle_Fired" ID="{9C9F6CB1-9794-42FB-89AB-8F343FCEB506}"/>
+								<Event Name="Hostile_Missle_Explode" ID="{3DBA90F9-EF54-4F4F-A6ED-56AD81323421}"/>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Menu" ID="{A59965F5-D8E2-4C78-B002-C53EE609D82F}" ShortID="979610816">
 					<ChildrenList>
-						<Event Name="Menu_Button_Hovered" ID="{E411446F-3AD0-4839-9FAB-19DAF62BB0B9}"/>
-						<Event Name="Menu_Button_Pressed" ID="{62DFA122-D0D0-41D8-B767-FDC746227B66}"/>
+						<Event Name="Menu_Button_Hovered" ID="{E411446F-3AD0-4839-9FAB-19DAF62BB0B9}">
+							<ChildrenList>
+								<Action Name="" ID="{5E5FFEEB-1C4B-4547-B216-D35CBDB9EF75}" ShortID="983060002">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MenuSlider" ID="{3AD2F81B-8500-4F0B-8F9A-8AB5CB86CB59}" WorkUnitID="{A1D53C13-F723-4350-B6CB-2D18A3A65A4F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Menu_Button_Pressed" ID="{62DFA122-D0D0-41D8-B767-FDC746227B66}">
+							<ChildrenList>
+								<Action Name="" ID="{18BE0A90-115B-4A6D-B1F7-9F98CFF3AB4E}" ShortID="527243125">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MenuScroll" ID="{87B68B19-8154-4F91-A205-6BDD211F6B09}" WorkUnitID="{A1D53C13-F723-4350-B6CB-2D18A3A65A4F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Menu_Opened" ID="{2D5FAB73-7BC0-4686-BFDC-6ECEA9574F82}"/>
-						<Event Name="Menu_Battlemode_Switched" ID="{545095AC-01D8-4022-94E8-A4A17E5157C4}"/>
+						<Event Name="Menu_Battlemode_Switched" ID="{545095AC-01D8-4022-94E8-A4A17E5157C4}">
+							<ChildrenList>
+								<Action Name="" ID="{46AADF70-3C96-4FA6-A14F-55BC86B97598}" ShortID="314621788">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MenuPause" ID="{D1E8EC7D-F4BE-4A4F-9DAF-D9E7F67887FC}" WorkUnitID="{A1D53C13-F723-4350-B6CB-2D18A3A65A4F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{8384464E-857A-4FA6-8252-AC4849B7300E}" ShortID="108221995">
+					<ChildrenList>
+						<Event Name="PlayMusic" ID="{D8A82402-4981-4CA7-9E58-F861A165986A}">
+							<ChildrenList>
+								<Action Name="" ID="{FABFE5DD-423F-4139-A55A-D4E5D3CD4513}" ShortID="135623472">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DayNight" ID="{B9577C82-6AF4-4880-A399-80C132B99A14}" WorkUnitID="{C55E50FA-144D-4B2A-A9AA-217B01C98B19}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

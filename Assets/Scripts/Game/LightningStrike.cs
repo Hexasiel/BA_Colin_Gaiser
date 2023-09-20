@@ -25,6 +25,11 @@ public class LightningStrike : MonoBehaviour
     [SerializeField] SpriteRenderer m_lightningSprite;
     [SerializeField] SpriteRenderer chargeIndicator;
 
+    [Header("Wwise")] 
+    public AK.Wwise.Event wwEvent_Charge;
+    public AK.Wwise.Event wwEvent_Explode;
+    
+    
     private void Start()
     {
         StartCoroutine(Charge());
@@ -32,6 +37,7 @@ public class LightningStrike : MonoBehaviour
 
     void Strike()
     {
+        wwEvent_Explode.Post(gameObject);
         Collider2D[] hitObjects = Physics2D.OverlapCircleAll(transform.position, m_explosionRadius, m_hitLayer);
         foreach (Collider2D collider2D in hitObjects)
         {
@@ -42,8 +48,8 @@ public class LightningStrike : MonoBehaviour
         }
     }
 
-    IEnumerator LightningEffect()
-    {
+    IEnumerator LightningEffect() {
+        
         float passedTime = 0;
         while(passedTime < m_lightningExpansionTime)
         {
@@ -64,6 +70,7 @@ public class LightningStrike : MonoBehaviour
 
     IEnumerator Charge(){
         float chargeTimePassed = 0f;
+        wwEvent_Charge.Post(gameObject);
         while(chargeTimePassed < m_chargeTime)
         {
             float progress = chargeTimePassed/ m_chargeTime;

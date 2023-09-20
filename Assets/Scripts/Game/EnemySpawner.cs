@@ -30,6 +30,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float nightIntensity;
     [SerializeField] float nightDayFadeDuration;
 
+    [Header("Wwise")]
+    public AK.Wwise.Event wwEvent_PlayMusic;
     void SpawnEnemy(GameObject prefab)
     {
         Instantiate(prefab, transform.position, Quaternion.identity);
@@ -43,16 +45,23 @@ public class EnemySpawner : MonoBehaviour
         Enemy.OnAllEnemiesDefeated += FadeToDay;
     }
 
+    private void Start() {
+        AkSoundEngine.SetState("DayNight", "Day");
+        wwEvent_PlayMusic.Post(gameObject);
+    }
+
     void SpawnWave(EnemyWave wave) {
         Debug.Log("TEste");
         StartCoroutine(SpawnWaveCoroutine(wave));
     }
 
     void FadeToDay() {
+        AkSoundEngine.SetState("DayNight", "Day");
         StartCoroutine(FadeDaytime(dayColor, dayIntensity, nightDayFadeDuration));
     }
 
     IEnumerator SpawnWaveCoroutine(EnemyWave wave) {
+        AkSoundEngine.SetState("DayNight", "Night");
         isSpawning = true;
         float passedTime = 0;
 

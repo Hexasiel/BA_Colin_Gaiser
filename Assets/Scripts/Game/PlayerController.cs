@@ -66,6 +66,16 @@ public class PlayerController : MonoBehaviour, IAttackable
     [SerializeField] Sprite spriteWithSword;
     [SerializeField] Sprite spriteWithHammer;
 
+    [Header("Wwise")] 
+    public AK.Wwise.Event wwEvent_Attack;
+    public AK.Wwise.Event wwEvent_Dash;
+    public AK.Wwise.Event wwEvent_Footstep;
+    public AK.Wwise.Event wwEvent_Hit;
+    public AK.Wwise.Event wwEvent_ShieldBreak;
+    public AK.Wwise.Event wwEvent_ShieldHit;
+    public AK.Wwise.Event wwEvent_ShieldRefill;
+    public AK.Wwise.Event wwEvent_SwitchMode;
+    
     private void Awake()
     {
         instance = this;
@@ -124,8 +134,8 @@ public class PlayerController : MonoBehaviour, IAttackable
 
     void CheckInput()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
+        if (Input.GetKeyDown(KeyCode.LeftShift)) {
+            wwEvent_SwitchMode.Post(gameObject);
             OnPlayerSwitchMode?.Invoke();
             battleMode = !battleMode;
             if (battleMode) sprite.sprite = spriteWithSword;
@@ -172,8 +182,8 @@ public class PlayerController : MonoBehaviour, IAttackable
         RefillShield();
     }
 
-    void RefillShield()
-    {
+    void RefillShield() {
+        wwEvent_ShieldRefill.Post(gameObject);
         shield = maxShield;
         shieldGO.SetActive(true);
     }
@@ -181,15 +191,17 @@ public class PlayerController : MonoBehaviour, IAttackable
     void IAttackable.GetDamage(int dmg)
     {
         if(shield > 0) {
+            wwEvent_ShieldHit.Post(gameObject);
             shield -= dmg;
-            if(shield <= 0){
+            if(shield <= 0) {
+                wwEvent_ShieldBreak.Post(gameObject);
                 shieldGO.SetActive(false); 
                 shield = 0;
                 StartCoroutine(AutoRefillShield());
             }
         }
-        else
-        {
+        else {
+            wwEvent_Hit.Post(gameObject);
             timeOfLastHit = Time.realtimeSinceStartup;
             m_health -= dmg;
             OnPlayerGetDamage?.Invoke(dmg);
@@ -221,6 +233,7 @@ public class PlayerController : MonoBehaviour, IAttackable
         if(refillShieldOnDash) RefillShield();
         dashParticleSystem.Play();
         canDash = false;
+        wwEvent_Dash.Post(gameObject);
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
         playerCollider.enabled = false;
@@ -238,8 +251,8 @@ public class PlayerController : MonoBehaviour, IAttackable
         canDash = true;
     }
 
-    IEnumerator Attack()
-    {
+    IEnumerator Attack() {
+        wwEvent_Attack.Post(gameObject);
         canAttack = false;
         OnPlayerAttack?.Invoke();
 
@@ -266,7 +279,7 @@ public class PlayerController : MonoBehaviour, IAttackable
         Collider2D[] hitBuildings = Physics2D.OverlapCircleAll(attackPos.position, attackRange, repairMask);
         foreach (Collider2D collider2D in hitBuildings) {
             Building building = collider2D.GetComponent<Building>();
-            building.ReceiveHeal(attackDamage);
+            building.GetRepaired(attackDamage);
         }
         if (hitBuildings.Length == 0) { OnPlayerUnneccessaryAction?.Invoke(); }
         yield return new WaitForSeconds(attackCooldown);

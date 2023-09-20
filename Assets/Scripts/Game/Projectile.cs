@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,11 +13,21 @@ public class Projectile : MonoBehaviour
     public LayerMask damageMask;
     public LayerMask hitMask;
 
+    [Header("Wwise")] 
+    public AK.Wwise.Event wwEvent_Fired;
+    public AK.Wwise.Event wwEvent_Hit;
+    public AK.Wwise.Event wwEvent_Explode;
+
+    private void Awake() {
+        wwEvent_Fired.Post(gameObject);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision){
-        if(collision.transform.tag == "Enemy"){
+        if(collision.transform.tag == "Enemy") {
+            wwEvent_Hit.Post(gameObject);
             collision.gameObject.GetComponent<Enemy>().GetDamage(m_damage);
         }
-
+        
         if(explode){
             if (collision.transform.tag == "Terrain"){
                 StartCoroutine(Explode());
@@ -26,7 +37,8 @@ public class Projectile : MonoBehaviour
         GameObject.Destroy(this.gameObject);
     }
 
-    IEnumerator Explode(){
+    IEnumerator Explode() {
+        wwEvent_Explode.Post(gameObject);
         ps.Play();
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, explosionRange, damageMask);
         foreach(Collider2D collider2D in hitEnemies) {

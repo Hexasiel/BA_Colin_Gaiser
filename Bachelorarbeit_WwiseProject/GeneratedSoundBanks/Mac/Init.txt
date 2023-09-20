@@ -1,3 +1,11 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	1705516017	DayNight			\Default Work Unit\DayNight	
+
+State	ID	Name	State Group			Notes
+	311764537	Day	DayNight			
+	748895195	None	DayNight			
+	1011622525	Night	DayNight			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 

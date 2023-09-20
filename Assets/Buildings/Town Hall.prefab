@@ -1074,6 +1074,40 @@ MonoBehaviour:
   - The Heart of your Kingdom
   - More Build Slots
   - Even More Build Slots
+  m_isBuilt: 0
+  m_materialIsStone: 000101
+  wwEvent_Wood_Built:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8ec7efa087f749a49ba02b494a69249c, type: 2}
+  wwEvent_Wood_Collapse:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: aa4551e6b22548245a9608d7e7ec4a5b, type: 2}
+  wwEvent_Wood_Hit:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f46129ce8cbb14849b2c41fa15309e2a, type: 2}
+  wwEvent_Wood_Repaired:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 17301f5004583134990da438df930e7c, type: 2}
+  wwEvent_Stone_Built:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: cb4bd1831ac2e4946b5d20a28763ee7d, type: 2}
+  wwEvent_Stone_Collapse:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b9c9953975e7be14cb89c70bcc46cfb9, type: 2}
+  wwEvent_Stone_Hit:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: dc918a7f8156d6445b26eac8a3b1f3d5, type: 2}
+  wwEvent_Stone_Repaired:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ab1b6bc6e8a589246b9669a80e2532ce, type: 2}
   buildslots:
   - {fileID: 7656855518324197571, guid: 096143b4f4385ab4e8ec21bdd55faa9b, type: 3}
   - {fileID: 1704659770688316617, guid: a5043a694d6e5384b993dbae41403533, type: 3}
