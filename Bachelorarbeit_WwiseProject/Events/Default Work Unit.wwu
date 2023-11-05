@@ -10,7 +10,7 @@
 								<Action Name="" ID="{C406F046-7063-417C-A4FB-EE07466E0C2A}" ShortID="1002920304">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Limbo_Steps_Grass" ID="{7C2DEC75-BAE7-49A9-BCED-F791FF3A8E42}" WorkUnitID="{481E7428-1181-4879-958C-0F804E0AD950}"/>
+											<ObjectRef Name="Grass" ID="{0572931F-A13A-4F74-9493-28A2D7C9B1FC}" WorkUnitID="{A1D53C13-F723-4350-B6CB-2D18A3A65A4F}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -28,7 +28,17 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Player_Hit" ID="{BB1E583B-732E-4050-998B-234BB4F353B4}"/>
-						<Event Name="Player_Dash" ID="{4B04E444-2B26-42BA-A340-7C35AF9DD511}"/>
+						<Event Name="Player_Dash" ID="{4B04E444-2B26-42BA-A340-7C35AF9DD511}">
+							<ChildrenList>
+								<Action Name="" ID="{B2EB0493-D15D-40C8-9E47-12A30EE0400A}" ShortID="295335846">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Strike" ID="{2DFDADF9-CB17-4DD2-8130-6042E1029168}" WorkUnitID="{A1D53C13-F723-4350-B6CB-2D18A3A65A4F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Folder Name="Shield" ID="{5547379F-82CD-4928-A50B-50D3F1A8371E}" ShortID="679184884">
 							<ChildrenList>
 								<Event Name="Player_Shield_Hit" ID="{0409C87B-B597-47B3-AA32-72B1A7287FBB}"/>

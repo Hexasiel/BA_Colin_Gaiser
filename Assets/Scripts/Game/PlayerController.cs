@@ -149,12 +149,17 @@ public class PlayerController : MonoBehaviour, IAttackable
             transform.Translate(Vector3.left * speedMod * Time.deltaTime);
             sprite.flipX = false;
             faceDirection = false;
+            animator.SetBool("IsWalking", true);
         }
-        if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(Vector3.right * speedMod * Time.deltaTime);
             sprite.flipX = true;
             faceDirection = true;
+            animator.SetBool("IsWalking", true);
+        }
+        else {
+            animator.SetBool("IsWalking", false);
         }
 
         //BattleMode Only
@@ -286,6 +291,9 @@ public class PlayerController : MonoBehaviour, IAttackable
         canAttack = true;
     }
 
+    public void PlayFootstepSound() {
+        wwEvent_Footstep.Post(gameObject);
+    }
 
     //IEnumerator Shoot()
     //{

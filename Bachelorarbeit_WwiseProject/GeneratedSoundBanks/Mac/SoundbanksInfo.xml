@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="187290962" Type="User" Language="SFX" Hash="{A99D550A-3B7C-7B39-0752-462F86A39B11}">
+		<SoundBank Id="187290962" Type="User" Language="SFX" Hash="{97C9CEAB-686D-90DF-03B7-CC12E594244B}">
 			<ShortName>DefaultBank</ShortName>
 			<Path>DefaultBank.bnk</Path>
 			<Media>
@@ -57,6 +57,10 @@
 					<ShortName>Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0.wav</ShortName>
 					<CachePath>SFX/Bachelorarbeit Edit 1 Export 2 Gold_2 Render 0_B2073D07.wem</CachePath>
 				</File>
+				<File Id="156734654" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Limbo_Steps_Grass.wav</ShortName>
+					<CachePath>SFX/Limbo_Steps_Grass_F69F922A.wem</CachePath>
+				</File>
 				<File Id="191516730" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0.wav</ShortName>
 					<CachePath>SFX/Bachelorarbeit Edit 1 Export 1 Slime_1 Render 0_7D80E35F.wem</CachePath>
@@ -88,6 +92,10 @@
 				<File Id="321009407" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bachelorarbeit Edit 1 Export Music 2 Track 8 Render 0.wav</ShortName>
 					<CachePath>SFX/Bachelorarbeit Edit 1 Export Music 2 Track 8 Render 0_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="338792658" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Limbo_Steps_Grass.wav</ShortName>
+					<CachePath>SFX/Limbo_Steps_Grass_1AE7D5CA.wem</CachePath>
 				</File>
 				<File Id="381744698" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bachelorarbeit Edit 1 Export 2 Stone_Building_1 Render 0.wav</ShortName>
@@ -160,6 +168,10 @@
 				<File Id="894276602" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Limbo_Spider_Strike_1.wav</ShortName>
 					<CachePath>SFX/Limbo_Spider_Strike_1_950F0F90.wem</CachePath>
+				</File>
+				<File Id="929531131" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Limbo_Steps_Grass.wav</ShortName>
+					<CachePath>SFX/Limbo_Steps_Grass_B62EA9FE.wem</CachePath>
 				</File>
 				<File Id="1005746686" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bachelorarbeit Edit 1 Export Music 2 Track 13 Render 0.wav</ShortName>
@@ -288,10 +300,19 @@
 						<MediaRef Id="894276602"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2394582229" Name="Player_Dash" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2453392179" Name="Player_FootStep" DurationType="OneShot" DurationMin="10.5" DurationMax="10.5">
+				<Event Id="2394582229" Name="Player_Dash" DurationType="OneShot" DurationMin="0.40031144" DurationMax="0.49498576">
 					<MediaRefs>
-						<MediaRef Id="526829532"/>
+						<MediaRef Id="135874364"/>
+						<MediaRef Id="650434608"/>
+						<MediaRef Id="779924718"/>
+						<MediaRef Id="894276602"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2453392179" Name="Player_FootStep" DurationType="OneShot" DurationMin="0.45019886" DurationMax="0.88825756">
+					<MediaRefs>
+						<MediaRef Id="156734654"/>
+						<MediaRef Id="338792658"/>
+						<MediaRef Id="929531131"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="871813740" Name="Player_Hit" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -357,5 +378,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EE31DD28-3660-FBED-67DB-E86257015B61}</FileHash>
+	<FileHash>{7E0D8F4A-3081-4753-55B2-79831B3D75E6}</FileHash>
 </SoundBanksInfo>

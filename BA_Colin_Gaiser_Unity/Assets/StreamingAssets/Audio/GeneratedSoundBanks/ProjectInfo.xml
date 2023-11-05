@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="Bachelorarbeit_WwiseProject" GUID="{D0467CBB-E668-46D2-B813-AF2E3060DF0A}" Generator="2022.1.4.8202"/>
+	<CacheRoot>../../../../../Bachelorarbeit_WwiseProject/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Mac" GUID="{7E0B06A4-C088-4A2A-B0EA-FAB0CF111736}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="../../../../../Bachelorarbeit_WwiseProject/GeneratedSoundBanks/Mac"/>
+		<Platform Name="Windows" GUID="{115FB423-BCA7-465A-915C-3A95BFAA2025}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="../../../../../Bachelorarbeit_WwiseProject/GeneratedSoundBanks/Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{8E0D36CA-0F9F-43D1-8E57-C1FDF96EFDF8}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{FE488DCF-2E72-9926-2B66-14BC68C2E8BE}</FileHash>
+</ProjectInfo>
