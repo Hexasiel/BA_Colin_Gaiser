@@ -184,6 +184,7 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Gold_Ambient" ID="{A46B6178-9D41-47F8-9891-DA950ED77708}"/>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Missles" ID="{B3C92196-3AFA-49CF-8A7C-42EA75BE7A48}" ShortID="783291974">
